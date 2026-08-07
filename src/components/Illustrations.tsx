@@ -1,289 +1,315 @@
 import React from 'react';
 
-interface IconProps {
-  className?: string;
-  size?: number;
-  color?: string;
-}
+/* Shared monoline stroke settings — flat, no fills, single hairline weight. */
+const line = {
+  fill: 'none' as const,
+  stroke: 'currentColor',
+  strokeWidth: 1.6,
+  strokeLinecap: 'round' as const,
+  strokeLinejoin: 'round' as const,
+};
 
-// Hero Composition: Big cooking pot with lid lifting off and ingredients tumbling in
-export const HeroPotIllustration: React.FC<{ className?: string }> = ({ className = "w-full max-w-lg h-auto" }) => (
-  <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    {/* Decorative background circle */}
-    <circle cx="300" cy="240" r="130" fill="#F7E7A9" opacity="0.4" />
-
-    {/* Flying Ingredients */}
-    {/* Bok Choy / Herbs */}
-    <g transform="translate(180, 70) rotate(-20)" stroke="#D93A2B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
-      <path d="M20,60 Q10,30 30,10 Q50,30 40,60" fill="#E2E9D8" />
-      <path d="M10,70 Q-5,40 15,25 Q30,45 20,70" fill="#E2E9D8" />
-      <path d="M30,70 Q45,40 30,20 Q15,40 25,70" />
-      <path d="M20,60 L20,90 C20,95 25,95 25,90 L25,60" />
-    </g>
-
-    {/* Carrot */}
-    <g transform="translate(270, 40) rotate(15)" stroke="#D93A2B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
-      <path d="M15,15 L40,80 Q25,85 10,75 Z" fill="#F4CBB2" />
-      <path d="M15,15 Q10,0 0,-5 M20,15 Q25,-5 30,-8 M25,15 Q35,5 45,0" />
-      <path d="M18,35 Q25,37 20,40 M15,55 Q22,57 17,60" />
-    </g>
-
-    {/* Tomato */}
-    <g transform="translate(370, 80) rotate(-10)" stroke="#D93A2B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
-      <circle cx="30" cy="30" r="24" fill="#F8D7DA" />
-      <path d="M25,8 Q30,2 35,8 Q40,15 30,12 Q20,15 25,8 Z" fill="#D93A2B" />
-      <path d="M30,6 L30,0" />
-      <path d="M20,25 Q25,20 35,28" strokeDasharray="2 3" />
-    </g>
-
-    {/* Fish */}
-    <g transform="translate(130, 140) rotate(35)" stroke="#D93A2B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
-      <path d="M10,25 Q35,0 70,25 Q35,50 10,25 Z" fill="#CFF4FC" />
-      <path d="M10,25 L-10,10 L-5,25 L-10,40 Z" fill="#CFF4FC" />
-      <circle cx="55" cy="20" r="3" fill="#D93A2B" />
-      <path d="M40,12 Q30,25 40,38" />
-    </g>
-
-    {/* Flying Mushroom */}
-    <g transform="translate(420, 150) rotate(-25)" stroke="#D93A2B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
-      <path d="M10,25 Q10,0 35,0 Q60,0 60,25 Z" fill="#FFFDF7" />
-      <path d="M25,25 L25,45 Q35,50 45,45 L45,25" />
-    </g>
-
-    {/* Lid lifting off */}
-    <g transform="translate(230, 145) rotate(-12)" stroke="#D93A2B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none">
-      <path d="M20,40 Q120,-10 220,40 Z" fill="#FFFDF7" />
-      <ellipse cx="120" cy="8" rx="16" ry="8" fill="#D93A2B" />
-      <path d="M120,8 L120,16" />
-      {/* Steam lines */}
-      <path d="M40,-10 Q30,-25 50,-40" strokeDasharray="3 3" />
-      <path d="M120,-20 Q130,-35 110,-50" strokeDasharray="3 3" />
-      <path d="M190,-10 Q200,-25 180,-40" strokeDasharray="3 3" />
-    </g>
-
-    {/* Main Cooking Pot */}
-    <g transform="translate(180, 200)" stroke="#D93A2B" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
-      {/* Handles */}
-      <path d="M10,40 C-20,40 -20,80 10,80" fill="#FFFDF7" />
-      <path d="M230,40 C260,40 260,80 230,80" fill="#FFFDF7" />
-
-      {/* Pot body */}
-      <path d="M10,20 L230,20 L215,140 C210,160 180,170 120,170 C60,170 30,160 25,140 Z" fill="#FFFDF7" />
-      
-      {/* Decorative band on pot */}
-      <path d="M15,50 Q120,65 225,50" strokeWidth="2" strokeDasharray="4 4" />
-      
-      {/* Small cute heart on pot */}
-      <path d="M115,90 Q120,83 125,90 Q130,97 120,105 Q110,97 115,90 Z" fill="#D93A2B" />
-    </g>
-
-    {/* Little stars & sparkles */}
-    <g stroke="#D93A2B" strokeWidth="2" fill="none">
-      <path d="M100,100 L100,110 M95,105 L105,105" />
-      <path d="M490,90 L490,100 M485,95 L495,95" />
-      <path d="M520,230 L520,240 M515,235 L525,235" />
-      <circle cx="80" cy="220" r="3" fill="#D93A2B" />
-      <circle cx="500" cy="180" r="4" fill="#D93A2B" />
-    </g>
+/* Brand mark used in the header / footer */
+export const BookMark: React.FC<{ size?: number; className?: string }> = ({
+  size = 26,
+  className = 'brand__mark',
+}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...line} strokeWidth={1.4}>
+    <path d="M12 20C12 20 3.5 14.6 3.5 8.9C3.5 6.2 5.6 4.4 7.9 4.4C9.6 4.4 11.2 5.4 12 7C12.8 5.4 14.4 4.4 16.1 4.4C18.4 4.4 20.5 6.2 20.5 8.9C20.5 14.6 12 20 12 20Z" />
   </svg>
 );
 
-// 10 Category Monoline Icons
-export const CategoryIcon: React.FC<{ name: string; className?: string; size?: number }> = ({ name, className = "w-8 h-8", size = 32 }) => {
-  const strokeProps = {
-    stroke: "currentColor",
-    strokeWidth: 2,
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
-    fill: "none"
-  };
+/* Hero: cooking pot with the lid flying off and ingredients tumbling in */
+export const HeroPotIllustration: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <svg
+    viewBox="0 0 320 300"
+    className={className}
+    style={{ width: '100%', height: 'auto', display: 'block', color: '#D93A2B' }}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    {/* Pot */}
+    <path d="M68 158h184v66a26 26 0 0 1-26 26H94a26 26 0 0 1-26-26z" />
+    <path d="M68 176H48a15 15 0 0 1 0-30h20M252 176h20a15 15 0 0 0 0-30h-20" />
+    <path d="M80 190c20 8 44 8 64 0" strokeDasharray="2 6" opacity="0.7" />
+    <path d="M56 148h208" />
+
+    {/* Lid, tilted, lifting off */}
+    <g transform="rotate(-10 160 118)">
+      <path d="M96 118c0-12 28-20 64-20s64 8 64 20z" />
+      <path d="M92 118h136" />
+      <path d="M154 94a7 7 0 0 1 12 0" />
+    </g>
+
+    {/* Steam */}
+    <path d="M140 78c-4-8 4-12 0-20M180 74c4-8-4-12 0-20" opacity="0.65" />
+
+    {/* Carrot */}
+    <g transform="rotate(28 96 58)">
+      <path d="M88 44l16 4-28 34a3 3 0 0 1-4-4z" />
+      <path d="M92 40l4-10M100 42l8-8M104 48l10-2" />
+      <path d="M84 58l8 2M78 66l8 2" strokeWidth="1.6" />
+    </g>
+
+    {/* Onion */}
+    <path d="M210 42c-11 5-17 13-17 21a17 17 0 0 0 34 0c0-8-6-16-17-21z" />
+    <path d="M210 42c-4 6-6 14-6 21a25 25 0 0 0 6 17M210 42c4 6 6 14 6 21a25 25 0 0 1-6 17M210 42v-10M204 36l2-6M216 36l-2-6" />
+
+    {/* Lemon half */}
+    <g transform="rotate(-14 268 76)">
+      <path d="M250 76a18 18 0 0 1 36 0z" />
+      <path d="M268 76v-14M259 76l-5-11M277 76l5-11" strokeWidth="1.6" />
+      <path d="M246 76h44" />
+    </g>
+
+    {/* Mushroom */}
+    <g transform="rotate(12 150 30)">
+      <path d="M136 30c0-9 7-15 14-15s14 6 14 15z" />
+      <path d="M144 30l-2 12a8 8 0 0 0 16 0l-2-12" />
+      <circle cx="146" cy="23" r="1.4" fill="currentColor" stroke="none" />
+      <circle cx="155" cy="25" r="1.4" fill="currentColor" stroke="none" />
+    </g>
+
+    {/* Bay leaf sprig */}
+    <g transform="rotate(-30 52 100)">
+      <path d="M44 118c8-14 8-26 8-34" />
+      <path d="M52 96c-8-2-12-8-12-14 8 0 12 4 12 14zM52 106c8-2 12-8 12-14-8 0-12 4-12 14z" strokeWidth="1.6" />
+    </g>
+
+    {/* Heart + star */}
+    <path d="M282 118c3-5 9-5 11 0-2 6-9 7-11 0z" strokeWidth="1.6" />
+    <path d="M36 132l2 5 5 1-4 4 1 5-4-3-5 3 1-5-4-4 5-1z" strokeWidth="1.4" />
+
+    {/* Peppercorns falling in */}
+    <circle cx="120" cy="136" r="2" fill="currentColor" stroke="none" />
+    <circle cx="196" cy="130" r="2" fill="currentColor" stroke="none" />
+    <circle cx="162" cy="140" r="2" fill="currentColor" stroke="none" />
+  </svg>
+);
+
+/* 10 category monoline icons */
+export const CategoryIcon: React.FC<{ name: string; className?: string; size?: number }> = ({
+  name,
+  className = '',
+  size = 32,
+}) => {
+  const svg = (children: React.ReactNode) => (
+    <svg width={size} height={size} viewBox="0 0 48 48" className={className} {...line}>
+      {children}
+    </svg>
+  );
 
   switch (name) {
     case 'waffle':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <rect x="8" y="8" width="32" height="32" rx="6" {...strokeProps} fill="#FFFDF7" />
-          <line x1="18" y1="8" x2="18" y2="40" {...strokeProps} />
-          <line x1="30" y1="8" x2="30" y2="40" {...strokeProps} />
-          <line x1="8" y1="18" x2="40" y2="18" {...strokeProps} />
-          <line x1="8" y1="30" x2="40" y2="30" {...strokeProps} />
-        </svg>
+      return svg(
+        <>
+          <rect x="9" y="9" width="30" height="30" rx="4" />
+          <path d="M19 9v30M29 9v30M9 19h30M9 29h30" />
+        </>
       );
     case 'pancake':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <ellipse cx="24" cy="36" rx="18" ry="6" {...strokeProps} fill="#FFFDF7" />
-          <ellipse cx="24" cy="28" rx="18" ry="6" {...strokeProps} fill="#FFFDF7" />
-          <ellipse cx="24" cy="20" rx="18" ry="6" {...strokeProps} fill="#FFFDF7" />
-          {/* Butter melting */}
-          <rect x="20" y="10" width="8" height="6" rx="1" fill="#F7E7A9" stroke="currentColor" strokeWidth="2" />
-        </svg>
+      return svg(
+        <>
+          <ellipse cx="24" cy="35" rx="16" ry="5" />
+          <ellipse cx="24" cy="28" rx="14" ry="4.5" />
+          <ellipse cx="24" cy="21" rx="12" ry="4" />
+          <path d="M20 14h8v4h-8z" />
+          <path d="M24 14v-3" />
+        </>
       );
     case 'pirozhok':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <path d="M8,32 Q24,8 40,32 Q24,42 8,32 Z" {...strokeProps} fill="#FFFDF7" />
-          <path d="M12,28 Q24,20 36,28" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" />
-        </svg>
+      return svg(
+        <>
+          <path d="M9 31c5-15 25-15 30 0z" />
+          <path d="M7 31h34" />
+          <path d="M16 25c1-3 4-4 6-3M27 21c2-1 5 1 6 4" strokeWidth={1.3} />
+        </>
       );
     case 'rollingpin':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <rect x="12" y="18" width="24" height="12" rx="2" {...strokeProps} fill="#FFFDF7" />
-          <path d="M6,24 L12,24 M36,24 L42,24" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-        </svg>
+      return svg(
+        <>
+          <rect x="13" y="18" width="22" height="12" rx="6" />
+          <path d="M13 24H6M35 24h7" />
+          <path d="M19 18v12M29 18v12" strokeWidth={1.3} opacity="0.7" />
+        </>
       );
     case 'cake':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <path d="M10,20 L38,20 L38,38 L10,38 Z" {...strokeProps} fill="#FFFDF7" />
-          <path d="M10,20 Q24,10 38,20" {...strokeProps} />
-          {/* Cherry & Heart */}
-          <circle cx="24" cy="11" r="4" fill="#D93A2B" />
-          <path d="M24,15 L24,20" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
+      return svg(
+        <>
+          <path d="M11 22h26v14a3 3 0 0 1-3 3H14a3 3 0 0 1-3-3z" />
+          <path d="M11 27c4 3 8 3 13 0s9-3 13 0" strokeWidth={1.3} />
+          <path d="M24 22v-6" />
+          <circle cx="24" cy="13" r="3" />
+        </>
       );
     case 'salad':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <path d="M8,22 C8,36 40,36 40,22 Z" {...strokeProps} fill="#FFFDF7" />
-          <path d="M14,16 Q20,10 24,18 Q30,10 34,16" stroke="currentColor" strokeWidth="2" fill="none" />
-        </svg>
+      return svg(
+        <>
+          <path d="M9 23c2 12 28 12 30 0z" />
+          <path d="M7 23h34" />
+          <path d="M17 17c0-4 4-6 7-4M26 15c3-2 6 0 6 4" strokeWidth={1.3} />
+        </>
       );
     case 'soup':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <path d="M10,20 L38,20 L35,38 C35,42 13,42 13,38 Z" {...strokeProps} fill="#FFFDF7" />
-          <path d="M8,20 L40,20" stroke="currentColor" strokeWidth="2.5" />
-          <path d="M20,14 Q18,8 22,4 M28,14 Q26,8 30,4" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
-        </svg>
+      return svg(
+        <>
+          <path d="M11 21h26v13a5 5 0 0 1-5 5H16a5 5 0 0 1-5-5z" />
+          <path d="M9 21h30" />
+          <path d="M11 25h-4M37 25h4" strokeWidth={1.3} />
+          <path d="M20 15c-2-3 2-5 0-8M28 15c2-3-2-5 0-8" strokeWidth={1.3} opacity="0.7" />
+        </>
       );
     case 'meat':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <path d="M14,18 C14,10 34,10 34,18 C34,30 14,30 14,18 Z" {...strokeProps} fill="#FFFDF7" />
-          <circle cx="24" cy="20" r="4" stroke="currentColor" strokeWidth="2" />
-        </svg>
+      return svg(
+        <>
+          <path d="M15 20c0-7 18-7 18 0 0 11-18 11-18 0z" />
+          <path d="M33 20l6-5" />
+          <circle cx="24" cy="21" r="3.5" strokeWidth={1.3} />
+        </>
       );
     case 'fish':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <path d="M8,24 Q24,10 40,24 Q24,38 8,24 Z" {...strokeProps} fill="#FFFDF7" />
-          <path d="M8,24 L2,16 L4,24 L2,32 Z" {...strokeProps} />
-          <circle cx="34" cy="20" r="2" fill="currentColor" />
-        </svg>
+      return svg(
+        <>
+          <path d="M10 24c14-12 28-12 32 0-4 12-18 12-32 0z" />
+          <path d="M10 24L3 17l2 7-2 7z" />
+          <circle cx="34" cy="21" r="1.6" fill="currentColor" stroke="none" />
+          <path d="M24 17c-3 5-3 9 0 14" strokeWidth={1.3} opacity="0.7" />
+        </>
       );
     case 'casserole':
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <rect x="8" y="20" width="32" height="18" rx="4" {...strokeProps} fill="#FFFDF7" />
-          <path d="M12,14 L36,14 L34,20 L14,20 Z" {...strokeProps} />
-        </svg>
+      return svg(
+        <>
+          <path d="M10 21h28v13a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4z" />
+          <path d="M10 25H6M38 25h4" strokeWidth={1.3} />
+          <path d="M14 15h20l-2 6H16z" />
+          <path d="M24 15v-4" />
+        </>
       );
     default:
-      return (
-        <svg width={size} height={size} viewBox="0 0 48 48" className={className}>
-          <circle cx="24" cy="24" r="16" {...strokeProps} />
-        </svg>
-      );
+      return svg(<circle cx="24" cy="24" r="15" />);
   }
 };
 
-// Situational Tag Micro Icons
-export const TagMicroIcon: React.FC<{ name: string; className?: string }> = ({ name, className = "w-4 h-4" }) => {
+/* Situational tag micro icons */
+export const TagMicroIcon: React.FC<{ name: string; className?: string; size?: number }> = ({
+  name,
+  className = '',
+  size = 14,
+}) => {
+  const svg = (children: React.ReactNode) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...line} strokeWidth={1.7}>
+      {children}
+    </svg>
+  );
+
   switch (name) {
     case 'quick':
-      return (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className={className}>
+      return svg(
+        <>
           <circle cx="12" cy="13" r="8" />
-          <polyline points="12 9 12 13 15 15" />
+          <path d="M12 9v4l3 2" />
           <path d="M10 2h4" />
-        </svg>
+        </>
       );
     case 'pantry':
-      return (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className={className}>
+      return svg(
+        <>
           <rect x="4" y="3" width="16" height="18" rx="2" />
-          <line x1="4" y1="12" x2="20" y2="12" />
-          <line x1="10" y1="7" x2="10" y2="8" />
-          <line x1="10" y1="16" x2="10" y2="17" />
-        </svg>
+          <path d="M4 12h16M10 7v1M10 16v1" />
+        </>
       );
     case 'guests':
-      return (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className={className}>
+      return svg(
+        <>
           <path d="M8 22v-7a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v7" />
-          <path d="M7 10a4 4 0 1 0 10 0" />
-          <line x1="12" y1="2" x2="12" y2="6" />
-        </svg>
+          <path d="M7 10a5 5 0 0 0 10 0" />
+          <path d="M12 2v4" />
+        </>
       );
     case 'kids':
-      return (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className={className}>
+      return svg(
+        <>
           <path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z" />
           <path d="M7 13a6 6 0 0 0 10 0" />
-          <circle cx="9" cy="7" r="1" fill="currentColor" />
-          <circle cx="15" cy="7" r="1" fill="currentColor" />
-        </svg>
+          <circle cx="9.5" cy="7" r="0.9" fill="currentColor" stroke="none" />
+          <circle cx="14.5" cy="7" r="0.9" fill="currentColor" stroke="none" />
+        </>
       );
     case 'archive':
-      return (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className={className}>
-          <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z" />
-          <path d="M6 6h12" />
-          <path d="M6 10h12" />
-          <path d="M6 14h8" />
-        </svg>
+      return svg(
+        <>
+          <path d="M5 4l14-2v20L5 22z" />
+          <path d="M8 8h8M8 12h8M8 16h5" strokeDasharray="2 3" />
+        </>
       );
     default:
       return null;
   }
 };
 
-// Decorative Line Art Elements
-export const DecorativeDoodle: React.FC<{ type: 'lemon' | 'strawberry' | 'whisk' | 'baguette' | 'heart' | 'stars'; className?: string }> = ({ type, className = "w-6 h-6" }) => {
-  const strokeProps = { stroke: "#D93A2B", strokeWidth: "2", strokeLinecap: "round" as const, fill: "none" };
+/* Small decorative line-art elements */
+export const DecorativeDoodle: React.FC<{
+  type: 'lemon' | 'strawberry' | 'whisk' | 'baguette' | 'heart' | 'stars';
+  className?: string;
+  size?: number;
+}> = ({ type, className = '', size = 24 }) => {
+  const svg = (children: React.ReactNode) => (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      className={className}
+      style={{ color: '#D93A2B' }}
+      {...line}
+    >
+      {children}
+    </svg>
+  );
+
   switch (type) {
     case 'lemon':
-      return (
-        <svg viewBox="0 0 32 32" className={className}>
-          <ellipse cx="16" cy="16" rx="11" ry="8" transform="rotate(-30 16 16)" fill="#F7E7A9" stroke="#D93A2B" strokeWidth="2" />
-          <path d="M6,22 Q3,25 2,23 M26,9 Q29,6 30,8" stroke="#D93A2B" strokeWidth="2" />
-        </svg>
+      return svg(
+        <>
+          <path d="M6 18a10 10 0 0 1 20 0z" />
+          <path d="M4 18h24" />
+          <path d="M16 18v-8M11 18l-3-6M21 18l3-6" strokeWidth={1.3} />
+        </>
       );
     case 'strawberry':
-      return (
-        <svg viewBox="0 0 32 32" className={className}>
-          <path d="M16,28 Q6,18 8,10 Q16,6 24,10 Q26,18 16,28 Z" fill="#F8D7DA" stroke="#D93A2B" strokeWidth="2" />
-          <path d="M12,8 Q16,4 20,8" stroke="#D93A2B" strokeWidth="2" fill="#D93A2B" />
-        </svg>
+      return svg(
+        <>
+          <path d="M16 28c-6-5-9-11-7-15 4-3 10-3 14 0 2 4-1 10-7 15z" />
+          <path d="M12 9a5 5 0 0 1 8 0" />
+          <path d="M16 9V5" />
+        </>
       );
     case 'whisk':
-      return (
-        <svg viewBox="0 0 32 32" className={className}>
-          <path d="M8,8 C6,14 16,22 16,22 C16,22 26,14 24,8 C22,2 10,2 8,8 Z" {...strokeProps} />
-          <line x1="16" y1="22" x2="16" y2="30" stroke="#D93A2B" strokeWidth="3" />
-        </svg>
+      return svg(
+        <>
+          <path d="M9 9c-2 6 7 13 7 13s9-7 7-13c-2-6-12-6-14 0z" />
+          <path d="M16 6v16" strokeWidth={1.3} />
+          <path d="M16 22v8" strokeWidth={2.2} />
+        </>
       );
     case 'baguette':
-      return (
-        <svg viewBox="0 0 32 32" className={className}>
-          <rect x="4" y="12" width="24" height="8" rx="4" transform="rotate(-25 16 16)" fill="#F4CBB2" stroke="#D93A2B" strokeWidth="2" />
-          <line x1="10" y1="12" x2="14" y2="18" stroke="#D93A2B" strokeWidth="1.5" />
-          <line x1="16" y1="9" x2="20" y2="15" stroke="#D93A2B" strokeWidth="1.5" />
-        </svg>
+      return svg(
+        <>
+          <rect x="4" y="12" width="24" height="8" rx="4" transform="rotate(-25 16 16)" />
+          <path d="M11 13l3 5M16 10l3 5M21 7l3 5" strokeWidth={1.3} />
+        </>
       );
     case 'heart':
-      return (
-        <svg viewBox="0 0 24 24" className={className}>
-          <path d="M12,21 Q3,13 3,7.5 A5,5 0 0,1 12,5 A5,5 0 0,1 21,7.5 Q21,13 12,21 Z" fill="#D93A2B" />
-        </svg>
+      return svg(
+        <path d="M16 27C16 27 4 19 4 11.5A5.5 5.5 0 0 1 16 8a5.5 5.5 0 0 1 12 3.5C28 19 16 27 16 27z" />
       );
     case 'stars':
-      return (
-        <svg viewBox="0 0 32 32" className={className}>
-          <path d="M16,4 L18,12 L26,14 L18,16 L16,24 L14,16 L6,14 L14,12 Z" fill="#D93A2B" />
-        </svg>
+      return svg(
+        <>
+          <path d="M16 5l2.5 7.5L26 15l-7.5 2.5L16 25l-2.5-7.5L6 15l7.5-2.5z" />
+        </>
       );
     default:
       return null;

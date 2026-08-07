@@ -72,14 +72,14 @@ export function App() {
       : null;
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#FAF6EE] text-[#221F1F]">
+    <div className="app">
       <Header
         currentView={currentView}
         onNavigate={handleNavigate}
         favoritesCount={favoriteIds.length}
       />
 
-      <main className="flex-1">
+      <main className="app__main">
         {currentView === 'home' && (
           <HomeView
             onNavigate={handleNavigate}

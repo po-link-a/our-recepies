@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { Filter, SlidersHorizontal, Search, Sparkles } from 'lucide-react';
-import { RECIPES, CATEGORIES, Recipe, DishCategory, SituationalTag } from '../data/recipes';
+import { Search } from 'lucide-react';
+import { RECIPES, CATEGORIES, DishCategory, SituationalTag } from '../data/recipes';
 import { RecipeCard } from '../components/RecipeCard';
 import { CategoryIcon, TagMicroIcon } from '../components/Illustrations';
 import { AdPlaceholder } from '../components/AdPlaceholder';
@@ -71,76 +71,57 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
   }, [activeCategory, activeTags, sortBy, localSearch]);
 
   const toggleTag = (tag: SituationalTag) => {
-    setActiveTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
+    setActiveTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]));
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 space-y-8">
-      {/* Category Header Banner */}
-      <div className="paper-card p-6 sm:p-8 bg-[#FFFDF7] border-b-4 border-[#D93A2B] space-y-4">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            {categoryInfo ? (
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center shadow-xs"
-                style={{ backgroundColor: categoryInfo.bgColor }}
-              >
-                <CategoryIcon name={categoryInfo.iconName} size={32} />
-              </div>
-            ) : (
-              <div className="w-14 h-14 rounded-full bg-[#F7E7A9] flex items-center justify-center text-stone-900 font-bold text-xl">
-                72
-              </div>
-            )}
-            <div>
-              <h1 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
-                {categoryInfo ? categoryInfo.name : 'Все рецепты коллекции'}
-              </h1>
-              <p className="text-stone-600 text-sm mt-1">
-                {categoryInfo ? categoryInfo.description : 'Полный архив 72 рецептов нашей семьи'}
-              </p>
-            </div>
-          </div>
-
-          <div className="text-right text-xs font-mono text-stone-500">
-            Найдено: <strong className="text-[#D93A2B] text-base">{filteredRecipes.length}</strong> рецептов
-          </div>
+    <div className="container page">
+      {/* Header */}
+      <div className="row" style={{ alignItems: 'flex-start', gap: 18, marginBottom: 18 }}>
+        {categoryInfo && (
+          <span className="cat-tile__icon" style={{ backgroundColor: categoryInfo.bgColor }}>
+            <CategoryIcon name={categoryInfo.iconName} size={30} />
+          </span>
+        )}
+        <div>
+          <span className="kicker">
+            {categoryInfo ? categoryInfo.description : 'Полный архив 72 рецептов нашей семьи'}
+          </span>
+          <h1 className="hero__title" style={{ fontSize: 52, margin: '4px 0 0' }}>
+            {categoryInfo ? categoryInfo.name : 'Все рецепты коллекции'}
+          </h1>
         </div>
+        <span className="count push">
+          Найдено: <strong>{filteredRecipes.length}</strong> рецептов
+        </span>
+      </div>
 
-        {/* Local Search inside list */}
-        <div className="pt-2">
-          <div className="relative max-w-md">
-            <input
-              type="text"
-              placeholder="Фильтр по названию или ингредиенту..."
-              value={localSearch}
-              onChange={(e) => setLocalSearch(e.target.value)}
-              className="w-full bg-[#FAF6EE] border border-stone-300 rounded-full py-2 pl-10 pr-4 text-sm text-stone-900 focus:outline-none focus:border-[#D93A2B]"
-            />
-            <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-3" />
-          </div>
+      {/* Local search */}
+      <div className="search" style={{ maxWidth: 420, marginBottom: 26 }}>
+        <div className="search__form">
+          <Search size={16} className="search__icon" />
+          <input
+            type="text"
+            placeholder="Фильтр по названию или ингредиенту..."
+            value={localSearch}
+            onChange={(e) => setLocalSearch(e.target.value)}
+            className="search__input"
+          />
         </div>
       </div>
 
-      {/* Situational Tags Filter Bar */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-stone-500">
-          <span className="flex items-center gap-1.5">
-            <Filter className="w-4 h-4 text-[#D93A2B]" /> Ситуативные ярлыки-фильтры:
-          </span>
+      {/* Situational tag filters */}
+      <div className="filters">
+        <div className="filters__label">
+          <span>Ситуативные ярлыки-фильтры</span>
           {activeTags.length > 0 && (
-            <button
-              onClick={() => setActiveTags([])}
-              className="text-[#D93A2B] hover:underline"
-            >
+            <button onClick={() => setActiveTags([])} className="filters__reset push">
               Сбросить ({activeTags.length})
             </button>
           )}
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="row-wrap">
           {(Object.keys(TAG_LABELS) as SituationalTag[]).map((tagKey) => {
             const isSelected = activeTags.includes(tagKey);
             const tagData = TAG_LABELS[tagKey];
@@ -148,30 +129,23 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
               <button
                 key={tagKey}
                 onClick={() => toggleTag(tagKey)}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${
-                  isSelected
-                    ? 'bg-[#D93A2B] text-white border-[#D93A2B] shadow-xs'
-                    : 'bg-[#FFFDF7] text-stone-700 border-stone-300 hover:border-stone-400'
-                }`}
+                className={`pill ${isSelected ? 'pill--active' : ''}`}
               >
-                {tagData.icon && <TagMicroIcon name={tagData.icon} className="w-3.5 h-3.5" />}
-                <span>{tagData.label}</span>
+                {tagData.icon && <TagMicroIcon name={tagData.icon} />}
+                {tagData.label}
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* Sorting & Category Filter Tabs */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-stone-200 pb-3">
-        <div className="flex items-center gap-2 overflow-x-auto max-w-full pb-1">
+      {/* Category tabs + sorting */}
+      <div className="sortbar">
+        <div className="sortbar__tabs">
           <button
             onClick={() => setActiveCategory('all')}
-            className={`px-3 py-1 rounded-full text-xs font-bold transition-colors ${
-              activeCategory === 'all'
-                ? 'bg-stone-900 text-white'
-                : 'bg-stone-200 text-stone-700 hover:bg-stone-300'
-            }`}
+            className={`pill ${activeCategory === 'all' ? 'pill--active' : ''}`}
+            style={{ whiteSpace: 'nowrap' }}
           >
             Все
           </button>
@@ -179,24 +153,22 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap transition-colors ${
-                activeCategory === cat.id
-                  ? 'bg-stone-900 text-white'
-                  : 'bg-stone-200 text-stone-700 hover:bg-stone-300'
-              }`}
+              className={`pill ${activeCategory === cat.id ? 'pill--active' : ''}`}
+              style={{ whiteSpace: 'nowrap' }}
             >
               {cat.name}
             </button>
           ))}
         </div>
 
-        {/* Sort Selector */}
-        <div className="flex items-center gap-2 text-xs text-stone-600 font-semibold self-end">
-          <SlidersHorizontal className="w-4 h-4 text-stone-400" /> Сортировка:
+        <div className="sortbar__sort">
+          <span className="filters__label" style={{ margin: 0 }}>
+            Сортировка
+          </span>
           <select
             value={sortBy}
             onChange={(e: any) => setSortBy(e.target.value)}
-            className="bg-[#FFFDF7] border border-stone-300 rounded-lg px-2 py-1 text-xs text-stone-900 font-medium focus:outline-none"
+            className="sortbar__select"
           >
             <option value="popular">Сначала популярные</option>
             <option value="newest">Сначала новые</option>
@@ -205,9 +177,9 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
         </div>
       </div>
 
-      {/* Recipe Grid with In-Grid Ad Placement */}
+      {/* Grid */}
       {filteredRecipes.length > 0 ? (
-        <div className="recipe-grid">
+        <div className="grid-3">
           {filteredRecipes.map((recipe, index) => (
             <React.Fragment key={recipe.id}>
               <RecipeCard
@@ -219,30 +191,24 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
                 isFavorite={favoriteRecipeIds.includes(recipe.id)}
               />
               {/* Insert Ad every 8 cards */}
-              {(index + 1) % 8 === 0 && (
-                <div className="col-span-full">
-                  <AdPlaceholder type="in_grid" />
-                </div>
-              )}
+              {(index + 1) % 8 === 0 && <AdPlaceholder type="in_grid" />}
             </React.Fragment>
           ))}
         </div>
       ) : (
-        <div className="paper-card p-12 text-center space-y-4 max-w-lg mx-auto">
-          <div className="w-16 h-16 rounded-full bg-[#FAF6EE] border-2 border-stone-300 flex items-center justify-center mx-auto text-stone-400">
-            <Search className="w-8 h-8" />
-          </div>
-          <h3 className="font-serif text-xl font-bold text-stone-900">Рецепты не найдены</h3>
-          <p className="text-sm text-stone-600">
-            Попробуйте сбросить фильтры или изменить поисковый запрос.
-          </p>
+        <div className="empty">
+          <span className="empty__icon">
+            <Search size={24} />
+          </span>
+          <h3 className="empty__title">Рецепты не найдены</h3>
+          <p className="empty__text">Попробуйте сбросить фильтры или изменить поисковый запрос.</p>
           <button
             onClick={() => {
               setActiveTags([]);
               setActiveCategory('all');
               setLocalSearch('');
             }}
-            className="btn-primary"
+            className="btn btn--primary"
           >
             Сбросить все фильтры
           </button>

@@ -61,15 +61,15 @@ export const AdPlaceholder: React.FC<AdPlaceholderProps> = ({ type, className = 
 
   return (
     <div
-      className={`ad-slot ${isSticky ? 'sticky top-24' : ''} ${className}`}
+      className={`ad-slot no-print ${isSticky ? 'ad-slot--sticky' : ''} ${className}`}
       style={{ minHeight: height, maxWidth }}
       aria-label="Рекламный блок"
     >
-      <div className="flex items-center gap-2 mb-1">
+      <div className="ad-slot__row">
         <span className="ad-badge">Реклама</span>
-        <span className="text-xs text-stone-500 font-mono">{sizeLabel}</span>
+        <span className="ad-size">{sizeLabel}</span>
       </div>
-      <p className="text-xs text-stone-400 font-sans">Google AdSense Reserved Banner Space</p>
+      <p className="ad-hint">Google AdSense Reserved Banner Space</p>
     </div>
   );
 };

@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
 import {
-  Clock,
-  Users,
   Heart,
   Bookmark,
   Share2,
   Printer,
   Download,
-  FileText,
-  AlertCircle,
   Play,
   ChevronRight,
-  CheckSquare,
-  Square,
-  Copy,
-  Check
+  Check,
 } from 'lucide-react';
 import { Document, Packer, Paragraph, TextRun, HeadingLevel } from 'docx';
 import { Recipe, RECIPES, CATEGORIES } from '../data/recipes';
@@ -50,6 +43,8 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
   const [copiedLink, setCopiedLink] = useState(false);
 
   const categoryInfo = CATEGORIES[recipe.category];
+  const totalTime = (recipe.prepTimeMinutes || 0) + (recipe.cookTimeMinutes || 0);
+  const hasAmounts = recipe.ingredients.some((i) => i.amount);
 
   // Related recipes from same category
   const relatedRecipes = RECIPES.filter(
@@ -141,260 +136,212 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 space-y-8">
+    <div className="container page">
       {/* Breadcrumbs */}
-      <nav className="flex items-center gap-2 text-xs text-stone-500 font-sans">
-        <button onClick={() => onNavigate('home')} className="hover:text-[#D93A2B]">
-          Главная
-        </button>
-        <ChevronRight className="w-3 h-3 text-stone-400" />
-        <button onClick={() => onNavigate('category', recipe.category)} className="hover:text-[#D93A2B]">
+      <nav className="crumbs no-print">
+        <button onClick={() => onNavigate('home')}>Главная</button>
+        <ChevronRight size={12} />
+        <button onClick={() => onNavigate('category', recipe.category)}>
           {recipe.categoryName}
         </button>
-        <ChevronRight className="w-3 h-3 text-stone-400" />
-        <span className="text-stone-800 font-semibold truncate max-w-xs">{recipe.title}</span>
+        <ChevronRight size={12} />
+        <span className="crumbs__current">{recipe.title}</span>
       </nav>
 
-      {/* Main Grid: Content + Sidebar Ad */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <div className="lg:col-span-8 space-y-8">
-          {/* Main Recipe Card */}
-          <article className="paper-card p-6 sm:p-10 bg-[#FFFDF7] space-y-6">
-            {/* Header badges */}
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200 pb-4">
-              <div className="flex items-center gap-2">
-                <span
-                  className="category-chip"
-                  style={{ backgroundColor: categoryInfo?.bgColor || '#FAF6EE' }}
-                >
-                  <CategoryIcon name={categoryInfo?.iconName || 'waffle'} size={18} />
-                  <span className="text-stone-900 font-bold">{recipe.categoryName}</span>
-                </span>
-                <span className="text-xs font-mono font-bold bg-[#FAF6EE] text-stone-700 border border-stone-300 px-2 py-0.5 rounded">
-                  {recipe.language}
-                </span>
-              </div>
+      <article className="detail" style={{ marginTop: 28 }}>
+        {/* Head */}
+        <header className="detail__head">
+          <span className="kicker">{recipe.sourceNote}</span>
+          <h1 className="detail__title">{recipe.title}</h1>
 
-              {/* Action buttons (Like, Favorite, Share, Print) */}
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={(e) => onToggleLike(recipe.id, e)}
-                  className={`btn-secondary text-xs py-1 px-3 ${
-                    isLiked ? 'bg-[#F8D7DA] border-[#D93A2B] text-[#D93A2B]' : ''
-                  }`}
-                >
-                  <Heart className={`w-4 h-4 ${isLiked ? 'fill-[#D93A2B]' : ''}`} /> {recipe.likes}
-                </button>
-
-                <button
-                  onClick={(e) => onToggleFavorite(recipe.id, e)}
-                  className="btn-icon w-9 h-9"
-                  title="В избранное"
-                >
-                  <Bookmark className={`w-4 h-4 ${isFavorite ? 'fill-[#D93A2B] text-[#D93A2B]' : ''}`} />
-                </button>
-
-                <button onClick={handleCopyLink} className="btn-icon w-9 h-9" title="Поделиться">
-                  {copiedLink ? <Check className="w-4 h-4 text-emerald-600" /> : <Share2 className="w-4 h-4" />}
-                </button>
-
-                <button onClick={handlePrint} className="btn-icon w-9 h-9 no-print" title="Распечатать">
-                  <Printer className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
-            {/* Grandma Clipping Ribbon & Incomplete Alert */}
-            {recipe.isArchive && (
-              <div>
-                <span className="clipping-ribbon">
-                  <FileText className="w-4 h-4" /> {recipe.sourceNote}
-                </span>
-              </div>
+          <div className="detail__pills">
+            {totalTime > 0 && <span className="detail__pill">{totalTime} мин</span>}
+            {recipe.servings && (
+              <span className="detail__pill">
+                {Math.round(recipe.servings * portionMultiplier)} порций
+              </span>
             )}
-
-            {recipe.isIncomplete && (
-              <div className="p-3 bg-[#FFF0F0] border border-[#E0B4B4] rounded-xl flex items-start gap-3 text-xs text-[#D93A2B]">
-                <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                <div>
-                  <strong>Неполный архивный скан:</strong> {recipe.incompleteNote || 'Фрагмент рецепта обрезается на скане.'}
-                </div>
-              </div>
-            )}
-
-            {/* Title */}
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-900 leading-tight">
-              {recipe.title}
-            </h1>
-
-            {/* Meta Stats Row */}
-            <div className="flex flex-wrap items-center gap-6 py-3 px-4 bg-[#FAF6EE] rounded-xl border border-stone-200 text-sm text-stone-700 font-medium">
-              {(recipe.prepTimeMinutes || recipe.cookTimeMinutes) && (
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#D93A2B]" />
-                  <span>
-                    Время: <strong>{(recipe.prepTimeMinutes || 0) + (recipe.cookTimeMinutes || 0)} мин</strong>
-                  </span>
-                </div>
-              )}
-
-              {recipe.servings && (
-                <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-[#D93A2B]" />
-                  <span>
-                    Порций: <strong>{Math.round(recipe.servings * portionMultiplier)}</strong>
-                  </span>
-                </div>
-              )}
-
-              {/* Cooking Mode Launch Button */}
-              <button
-                onClick={() => setIsCookingModeOpen(true)}
-                className="btn-primary text-xs ml-auto py-1.5 px-3.5 shadow-xs"
-              >
-                <Play className="w-3.5 h-3.5 fill-current" /> Режим готовки
-              </button>
-            </div>
-
-            {/* Downloads Row */}
-            <div className="flex flex-wrap items-center gap-3 pt-2 no-print">
-              <button onClick={handleDownloadDocx} className="btn-secondary text-xs py-1.5 px-3">
-                <Download className="w-3.5 h-3.5 text-[#2B4BD9]" /> Скачать Word (.docx)
-              </button>
-              <button onClick={handlePrint} className="btn-secondary text-xs py-1.5 px-3">
-                <Download className="w-3.5 h-3.5 text-[#D93A2B]" /> Сохранить в PDF / Друк
-              </button>
-            </div>
-
-            <hr className="dotted-divider" />
-
-            {/* Recipe Anatomy: INGREDIENTS */}
-            <section className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h2 className="font-serif text-2xl font-bold text-stone-900 flex items-center gap-2">
-                  <span className="swash-green">Ингредиенты</span>
-                </h2>
-
-                {/* Portion Scaler */}
-                {recipe.ingredients.some((i) => i.amount) && (
-                  <div className="flex items-center gap-1 bg-[#FAF6EE] p-1 rounded-lg border border-stone-300 text-xs font-bold">
-                    <span className="text-stone-500 px-1">Порции:</span>
-                    {[0.5, 1, 2].map((m) => (
-                      <button
-                        key={m}
-                        onClick={() => setPortionMultiplier(m)}
-                        className={`px-2 py-0.5 rounded ${
-                          portionMultiplier === m ? 'bg-[#D93A2B] text-white' : 'text-stone-700 hover:bg-stone-200'
-                        }`}
-                      >
-                        ×{m}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Ingredients Checklist */}
-              <div className="bg-[#FAF6EE]/70 rounded-xl p-5 border border-stone-200 space-y-2.5">
-                {recipe.ingredients.map((ing, idx) => {
-                  const isChecked = !!checkedIngredients[idx];
-                  const calculatedAmount = ing.amount
-                    ? Math.round(ing.amount * portionMultiplier * 100) / 100
-                    : null;
-
-                  return (
-                    <div
-                      key={idx}
-                      onClick={() => toggleIngredientCheck(idx)}
-                      className={`flex items-start gap-3 p-2 rounded-lg cursor-pointer transition-colors ${
-                        isChecked ? 'line-through text-stone-400 bg-stone-100' : 'hover:bg-[#FFFDF7] text-stone-900'
-                      }`}
-                    >
-                      {isChecked ? (
-                        <CheckSquare className="w-5 h-5 text-[#D93A2B] flex-shrink-0 mt-0.5" />
-                      ) : (
-                        <Square className="w-5 h-5 text-stone-400 flex-shrink-0 mt-0.5" />
-                      )}
-                      <div className="text-sm font-medium flex-1">
-                        <span>{ing.name}</span>
-                        {calculatedAmount && (
-                          <strong className="text-[#D93A2B] font-semibold ml-1">
-                            — {calculatedAmount} {ing.unit || ''}
-                          </strong>
-                        )}
-                        {ing.note && <span className="text-xs text-stone-500 italic ml-1">({ing.note})</span>}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </section>
-
-            {/* Ad Placeholder inside Content */}
-            <AdPlaceholder type="recipe_in_content" />
-
-            {/* Recipe Anatomy: DIRECTIONS */}
-            <section className="space-y-4 pt-4">
-              <h2 className="font-serif text-2xl font-bold text-stone-900">
-                <span className="swash-yellow">Приготовление</span>
-              </h2>
-
-              <div className="space-y-4">
-                {recipe.directions.map((step, idx) => (
-                  <div key={idx} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-[#D93A2B] text-white font-serif font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
-                      {idx + 1}
-                    </div>
-                    <p className="text-base text-stone-800 leading-relaxed pt-1">
-                      {step}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
-          </article>
-
-          {/* Ad Placeholder below content */}
-          <AdPlaceholder type="recipe_below" />
-
-          {/* Related Recipes from Category */}
-          {relatedRecipes.length > 0 && (
-            <section className="space-y-4 pt-6">
-              <h3 className="font-serif text-2xl font-bold text-stone-900">
-                Ещё из категории «{recipe.categoryName}»
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {relatedRecipes.map((rel) => (
-                  <RecipeCard
-                    key={rel.id}
-                    recipe={rel}
-                    onSelect={(slug) => onNavigate('recipe', slug)}
-                    onToggleLike={onToggleLike}
-                    onToggleFavorite={onToggleFavorite}
-                    isLiked={likedRecipeIds.includes(rel.id)}
-                    isFavorite={favoriteRecipeIds.includes(rel.id)}
-                  />
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
-
-        {/* Sidebar Sticky Ad Column (Desktop) */}
-        <div className="hidden lg:block lg:col-span-4 space-y-6">
-          <div className="paper-card p-6 bg-[#FFFDF7] space-y-4 sticky top-24">
-            <div className="flex items-center gap-2 border-b border-stone-200 pb-3">
-              <DecorativeDoodle type="lemon" className="w-6 h-6" />
-              <h4 className="font-serif font-bold text-stone-900">О коллекции</h4>
-            </div>
-            <p className="text-xs text-stone-600 leading-relaxed">
-              Все рецепты собраны из семейного архива (15 оригинальных сканов). Сохранен оригинальный текст и язык (RU / UK / FR).
-            </p>
-
-            <AdPlaceholder type="recipe_sidebar" />
+            <span className="chip chip--lg" style={{ backgroundColor: categoryInfo?.bgColor }}>
+              <CategoryIcon name={categoryInfo?.iconName || 'waffle'} size={16} />
+              {recipe.categoryName}
+            </span>
+            <span className="lang-tag" style={{ alignSelf: 'center' }}>
+              {recipe.language}
+            </span>
           </div>
+
+          {/* Actions */}
+          <div className="detail__tools no-print" style={{ marginTop: 22 }}>
+            <button onClick={() => setIsCookingModeOpen(true)} className="btn btn--primary btn--sm">
+              <Play size={14} fill="currentColor" /> Режим готовки
+            </button>
+
+            <button onClick={(e) => onToggleLike(recipe.id, e)} className="btn btn--ghost btn--sm">
+              <Heart size={14} fill={isLiked ? '#D93A2B' : 'none'} color={isLiked ? '#D93A2B' : 'currentColor'} />
+              {recipe.likes}
+            </button>
+
+            <button
+              onClick={(e) => onToggleFavorite(recipe.id, e)}
+              className="icon-btn icon-btn--sm"
+              title="В избранное"
+            >
+              <Bookmark size={16} fill={isFavorite ? '#D93A2B' : 'none'} color={isFavorite ? '#D93A2B' : 'currentColor'} />
+            </button>
+
+            <button onClick={handleCopyLink} className="icon-btn icon-btn--sm" title="Поделиться">
+              {copiedLink ? <Check size={16} /> : <Share2 size={16} />}
+            </button>
+
+            <button onClick={handlePrint} className="icon-btn icon-btn--sm" title="Распечатать">
+              <Printer size={16} />
+            </button>
+          </div>
+
+          <div className="detail__tools no-print" style={{ marginTop: 12 }}>
+            <button onClick={handleDownloadDocx} className="btn btn--ghost btn--xs">
+              <Download size={13} /> Скачать Word (.docx)
+            </button>
+            <button onClick={handlePrint} className="btn btn--ghost btn--xs">
+              <Download size={13} /> Сохранить в PDF / Друк
+            </button>
+          </div>
+        </header>
+
+        {/* Incomplete scan warning */}
+        {recipe.isIncomplete && (
+          <div className="warn" style={{ marginTop: 28 }}>
+            <span>
+              <strong>Неполный архивный скан:</strong>{' '}
+              {recipe.incompleteNote || 'Фрагмент рецепта обрезается на скане.'}
+            </span>
+          </div>
+        )}
+
+        <div className="rule-dashy" style={{ margin: '40px 0' }} />
+
+        {/* Body */}
+        <div className="detail__body">
+          {/* Ingredients */}
+          <aside className="detail__aside">
+            <h2 className="block-title">
+              <span className="mark mark--sage">Ингредиенты</span>
+            </h2>
+
+            {hasAmounts && (
+              <div className="portions" style={{ marginBottom: 14 }}>
+                <span className="portions__label">Порции</span>
+                {[0.5, 1, 2].map((m) => (
+                  <button
+                    key={m}
+                    onClick={() => setPortionMultiplier(m)}
+                    className={`portions__btn ${portionMultiplier === m ? 'portions__btn--on' : ''}`}
+                  >
+                    ×{m}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            <ul className="ing-list">
+              {recipe.ingredients.map((ing, idx) => {
+                const isChecked = !!checkedIngredients[idx];
+                const calculatedAmount = ing.amount
+                  ? Math.round(ing.amount * portionMultiplier * 100) / 100
+                  : null;
+
+                return (
+                  <li key={idx}>
+                    <button
+                      onClick={() => toggleIngredientCheck(idx)}
+                      className={`ing-item ${isChecked ? 'ing-item--on' : ''}`}
+                    >
+                      <span className={`ing-box ${isChecked ? 'ing-box--on' : ''}`} />
+                      <span className="ing-name">
+                        {ing.name}
+                        {ing.note && <span className="ing-note"> ({ing.note})</span>}
+                      </span>
+                      <span className="ing-lead" />
+                      {calculatedAmount && (
+                        <span className="ing-qty">
+                          {calculatedAmount} {ing.unit || ''}
+                        </span>
+                      )}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* About the collection */}
+            <div className="note-card" style={{ marginTop: 26 }}>
+              <div className="note-card__label">
+                <DecorativeDoodle type="lemon" size={18} />
+                <span>О коллекции</span>
+              </div>
+              <p className="note-card__text" style={{ fontSize: 14.5 }}>
+                Все рецепты собраны из семейного архива (15 оригинальных сканов). Сохранен
+                оригинальный текст и язык (RU / UK / FR).
+              </p>
+            </div>
+
+            <div className="no-print only-wide" style={{ marginTop: 22 }}>
+              <AdPlaceholder type="recipe_sidebar" />
+            </div>
+          </aside>
+
+          {/* Directions */}
+          <section>
+            <h2 className="block-title">
+              <span className="mark">Приготовление</span>
+            </h2>
+
+            <ol className="steps">
+              {recipe.directions.map((step, idx) => (
+                <li key={idx} className="step">
+                  <span className="step__num">{idx + 1}</span>
+                  <p className="step__text">{step}</p>
+                </li>
+              ))}
+            </ol>
+
+            <div style={{ marginTop: 36 }}>
+              <AdPlaceholder type="recipe_in_content" />
+            </div>
+          </section>
         </div>
+      </article>
+
+      <div className="no-print" style={{ marginTop: 48 }}>
+        <AdPlaceholder type="recipe_below" />
       </div>
+
+      {/* Related recipes */}
+      {relatedRecipes.length > 0 && (
+        <section className="no-print" style={{ marginTop: 56 }}>
+          <div className="section-head">
+            <h2 className="section-title section-title--sm">
+              Ещё из категории «{recipe.categoryName}»
+            </h2>
+            <button onClick={() => onNavigate('category', recipe.category)} className="section-link">
+              Вся категория →
+            </button>
+          </div>
+          <div className="grid-2">
+            {relatedRecipes.map((rel) => (
+              <RecipeCard
+                key={rel.id}
+                recipe={rel}
+                onSelect={(slug) => onNavigate('recipe', slug)}
+                onToggleLike={onToggleLike}
+                onToggleFavorite={onToggleFavorite}
+                isLiked={likedRecipeIds.includes(rel.id)}
+                isFavorite={favoriteRecipeIds.includes(rel.id)}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Kitchen Cooking Mode Modal */}
       {isCookingModeOpen && (

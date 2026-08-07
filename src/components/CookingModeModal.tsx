@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, Sun, CheckCircle, Sparkles } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, CheckCircle } from 'lucide-react';
 import { Recipe } from '../data/recipes';
 
 interface CookingModeModalProps {
@@ -36,82 +36,65 @@ export const CookingModeModal: React.FC<CookingModeModalProps> = ({ recipe, onCl
   const totalSteps = recipe.directions.length;
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#FAF6EE] flex flex-col justify-between p-4 sm:p-8 overflow-y-auto">
+    <div className="cook">
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-stone-300 pb-4">
+      <div className="cook__head">
         <div>
-          <span className="font-hand text-lg text-[#D93A2B] font-bold block">
-            Режим готовки на кухне
-          </span>
-          <h2 className="font-serif text-xl sm:text-2xl font-bold text-stone-900 truncate max-w-xl">
-            {recipe.title}
-          </h2>
+          <span className="kicker">Режим готовки на кухне</span>
+          <h2 className="cook__title">{recipe.title}</h2>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="row">
           {isWakeLockActive && (
-            <span className="hidden sm:flex items-center gap-1 text-xs bg-[#E2E9D8] text-emerald-800 px-3 py-1 rounded-full font-medium">
-              <Sun className="w-3.5 h-3.5" /> Экран не гаснет
+            <span className="chip" style={{ backgroundColor: 'var(--sage)' }}>
+              Экран не гаснет
             </span>
           )}
-          <button
-            onClick={onClose}
-            className="p-2 rounded-full bg-stone-200 hover:bg-stone-300 text-stone-800 transition-colors"
-            title="Закрыть"
-          >
-            <X className="w-6 h-6" />
+          <button onClick={onClose} className="icon-btn" title="Закрыть">
+            <X size={20} />
           </button>
         </div>
       </div>
 
-      {/* Main Step Display */}
-      <div className="my-auto py-8 max-w-3xl mx-auto w-full text-center">
-        <div className="inline-block bg-[#F4CBB2] text-stone-900 font-serif font-bold text-sm px-4 py-1 rounded-full mb-6 shadow-xs">
+      {/* Main step */}
+      <div className="cook__body">
+        <span className="cook__badge">
           Шаг {currentStep + 1} из {totalSteps}
+        </span>
+
+        <div className="cook__card">
+          <p className="cook__step">{recipe.directions[currentStep]}</p>
         </div>
 
-        <div className="paper-card p-8 sm:p-12 shadow-xl border-2 border-stone-800/10 min-h-[250px] flex items-center justify-center">
-          <p className="font-serif text-2xl sm:text-3xl sm:leading-relaxed text-stone-900 font-medium">
-            {recipe.directions[currentStep]}
-          </p>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="w-full bg-stone-200 h-3 rounded-full mt-8 overflow-hidden">
-          <div
-            className="bg-[#D93A2B] h-full transition-all duration-300"
-            style={{ width: `${((currentStep + 1) / totalSteps) * 100}%` }}
-          />
+        <div className="cook__bar">
+          <span style={{ width: `${((currentStep + 1) / totalSteps) * 100}%` }} />
         </div>
       </div>
 
-      {/* Bottom Controls */}
-      <div className="border-t border-stone-300 pt-4 flex items-center justify-between max-w-3xl mx-auto w-full gap-4">
+      {/* Controls */}
+      <div className="cook__foot">
         <button
           onClick={() => setCurrentStep((prev) => Math.max(0, prev - 1))}
           disabled={currentStep === 0}
-          className="btn-secondary disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2"
+          className="btn btn--ghost btn--sm"
         >
-          <ChevronLeft className="w-5 h-5" /> Назад
+          <ChevronLeft size={16} /> Назад
         </button>
 
-        <span className="text-sm font-bold text-stone-500 font-mono">
+        <span className="cook__count">
           {currentStep + 1} / {totalSteps}
         </span>
 
         {currentStep < totalSteps - 1 ? (
           <button
             onClick={() => setCurrentStep((prev) => Math.min(totalSteps - 1, prev + 1))}
-            className="btn-primary flex items-center gap-2"
+            className="btn btn--primary btn--sm"
           >
-            Следующий шаг <ChevronRight className="w-5 h-5" />
+            Следующий шаг <ChevronRight size={16} />
           </button>
         ) : (
-          <button
-            onClick={onClose}
-            className="btn-primary bg-emerald-700 hover:bg-emerald-800 flex items-center gap-2"
-          >
-            <CheckCircle className="w-5 h-5" /> Завершить готовку
+          <button onClick={onClose} className="btn btn--green btn--sm">
+            <CheckCircle size={16} /> Завершить готовку
           </button>
         )}
       </div>
