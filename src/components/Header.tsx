@@ -111,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, favorit
             onClick={() => onNavigate('all')}
             className={`nav__link ${currentView === 'all' ? 'nav__link--active' : ''}`}
           >
-            Все рецепты (72)
+            Все рецепты ({RECIPES.length})
           </button>
         </nav>
 
@@ -209,7 +209,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, favorit
                 }}
                 className="drawer__link"
               >
-                Все рецепты (72)
+                Все рецепты ({RECIPES.length})
               </button>
               <button
                 onClick={() => {

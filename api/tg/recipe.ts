@@ -208,7 +208,7 @@ const GEMINI_PROMPT = `Ты расшифровываешь фотографии 
 2. Не добавляй никаких приписок об источнике («записано со слов бабушки», «семейный рецепт» и т.п.), если этого нет на фото.
 3. Сохраняй язык оригинала. language: RU — русский, UK — украинский, FR — французский.
 4. Не переводи и не переписывай текст «красивее». Сохраняй оригинальные формулировки и меры («ст. ложка», «стакан», «щепотка»).
-5. ingredients: name — название, amount — число, unit — единица («г», «мл», «шт», «ст. ложка», «ч. ложка», «стакан»). Если количество не указано («по вкусу»), amount и unit не заполняй, а напиши это в note.
+5. ingredients: name — название, amount — число, unit — ТОЛЬКО короткая единица измерения («г», «мл», «шт», «ст. ложка», «ч. ложка», «стакан»). В unit не должно быть цифр, пояснений и второй меры. Если в оригинале указано две меры («30 г / 2 ст. ложки»), поставь первую в amount + unit, а вторую целиком в note. Если количество не указано («по вкусу»), amount и unit не заполняй, а напиши это в note.
 6. directions: массив шагов. Если в оригинале сплошной текст — раздели на логические шаги, не меняя слов.
 7. sourceNote: заполняй, только если на фото видно название издания, рубрики или подпись. Иначе оставь пустым.
 8. category — ближайшая из списка. title — название с фото; если названия нет, коротко опиши блюдо по его составу.
@@ -349,17 +349,53 @@ async function geminiExtract(images: Buffer[]): Promise<DraftRecipe> {
   throw new Error(lastError);
 }
 
+/**
+ * A unit is a short word with no digits — "г", "мл", "ст. ложка". Models
+ * sometimes cram a second measure in there ("г prescription: 1 ч. ложка"),
+ * which then renders as garbage next to the amount. Keep the unit, demote
+ * the rest to a note.
+ */
+function splitUnit(raw: string): { unit?: string; note?: string } {
+  const value = raw.trim().replace(/\s+/g, ' ');
+  if (!value) return {};
+  // No digits and no separators — an ordinary unit, however wordy
+  // ("г", "ч. ложка", "маленькая банка").
+  if (!/[\d(\/,;]/.test(value) && value.length <= 30) return { unit: value };
+
+  // Cut at the first bracket, digit, or "or"-style word introducing a second
+  // measure. Note \b is ASCII-only in JS, so Cyrillic needs explicit spacing.
+  const cut = value.search(/[(\/,;]|\s(?:prescription|или|ou|or)[\s:]|\d/i);
+  if (cut <= 0) return { note: value };
+
+  const unit = value.slice(0, cut).trim().replace(/[\s:—–-]+$/, '');
+  // Too long to be a unit — it's a sentence, so keep all of it as the note.
+  if (unit.length > 20) return { note: value };
+
+  const note = value
+    .slice(cut)
+    .replace(/^[(\/,;:\s—–-]+/, '')
+    .replace(/^(?:prescription|или|ou|or)[\s:]+/i, '')
+    .replace(/[)\s]+$/, '')
+    .trim();
+
+  return { ...(unit && unit.length <= 12 ? { unit } : {}), ...(note ? { note } : {}) };
+}
+
 /** Gemini follows the schema but can still return blanks or an unknown category. */
 function normalize(raw: any): DraftRecipe {
   const category = CATEGORY_IDS.includes(raw?.category) ? raw.category : 'desserts';
   const ingredients: Ingredient[] = (Array.isArray(raw?.ingredients) ? raw.ingredients : [])
     .filter((i: any) => i?.name?.trim())
-    .map((i: any) => ({
-      name: String(i.name).trim(),
-      ...(typeof i.amount === 'number' && i.amount > 0 ? { amount: i.amount } : {}),
-      ...(i.unit?.trim() ? { unit: String(i.unit).trim() } : {}),
-      ...(i.note?.trim() ? { note: String(i.note).trim() } : {}),
-    }));
+    .map((i: any) => {
+      const { unit, note } = splitUnit(String(i.unit || ''));
+      const notes = [note, String(i.note || '').trim()].filter(Boolean).join('; ');
+      return {
+        name: String(i.name).trim(),
+        ...(typeof i.amount === 'number' && i.amount > 0 ? { amount: i.amount } : {}),
+        ...(unit ? { unit } : {}),
+        ...(notes ? { note: notes } : {}),
+      };
+    });
 
   return {
     title: String(raw?.title || '').trim() || 'Без названия',

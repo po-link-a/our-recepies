@@ -56,12 +56,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <span className="kicker">Душевные семейные рецепты</span>
             <h1 className="hero__title">Бабушкина шкатулка рецептов в цифре</h1>
             <p className="hero__lede">
-              72 драгоценных рецепта из семейных архивных выписок, старых газетных вырезок и тетрадей
+              {RECIPES.length} драгоценных рецепта из семейных архивных выписок, старых газетных вырезок и тетрадей
               на русском, украинском и французском языках.
             </p>
             <div className="hero__actions">
               <button onClick={() => onNavigate('all')} className="btn btn--primary">
-                Смотреть все 72 рецепта
+                Смотреть все {RECIPES.length} рецепта
               </button>
               <button onClick={() => onNavigate('category', 'waffles')} className="btn btn--ghost">
                 Вафли и выпечка

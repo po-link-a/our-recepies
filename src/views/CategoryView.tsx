@@ -85,7 +85,7 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
         )}
         <div>
           <span className="kicker">
-            {categoryInfo ? categoryInfo.description : 'Полный архив 72 рецептов нашей семьи'}
+            {categoryInfo ? categoryInfo.description : `Полный архив ${RECIPES.length} рецептов нашей семьи`}
           </span>
           <h1 className="hero__title" style={{ fontSize: 52, margin: '4px 0 0' }}>
             {categoryInfo ? categoryInfo.name : 'Все рецепты коллекции'}

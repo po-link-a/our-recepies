@@ -1,5 +1,5 @@
 import React from 'react';
-import { CATEGORIES } from '../data/recipes';
+import { CATEGORIES, RECIPES } from '../data/recipes';
 import { AdPlaceholder } from './AdPlaceholder';
 import { BookMark } from './Illustrations';
 
@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <span className="brand__name">Семейные Рецепты</span>
             </div>
             <p className="footer__text">
-              Оцифрованная коллекция из 72 домашних рецептов, собранных из газетных вырезок, старых
+              Оцифрованная коллекция из {RECIPES.length} домашних рецептов, собранных из газетных вырезок, старых
               кулинарных купонов и брошюр на русском, украинском и французском языках.
             </p>
           </div>

@@ -30,17 +30,20 @@
       {
         "name": "Разрыхлитель",
         "amount": 5,
-        "unit": "г prescription: 1 ч. ложка"
+        "unit": "г",
+        "note": "1 ч. ложка"
       },
       {
         "name": "Масло растительное",
         "amount": 25,
-        "unit": "г prescription: 2 ст. ложки"
+        "unit": "г",
+        "note": "2 ст. ложки"
       },
       {
         "name": "Сахар",
         "amount": 30,
-        "unit": "г prescription: 2 ст. ложки"
+        "unit": "г",
+        "note": "2 ст. ложки"
       },
       {
         "name": "Соль",
