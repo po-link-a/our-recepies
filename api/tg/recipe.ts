@@ -11,6 +11,14 @@ import { Redis } from '@upstash/redis';
 
 export const config = { maxDuration: 60 };
 
+/**
+ * Vercel kills the function at maxDuration, and a killed function never
+ * replies — the chat just goes silent. Stop short of that and say something.
+ */
+const TIME_BUDGET_MS = 50_000;
+let deadline = 0;
+const msLeft = () => deadline - Date.now();
+
 // ---------------------------------------------------------------- environment
 
 const TG_TOKEN = process.env.TG_BOT_TOKEN || '';
@@ -256,8 +264,11 @@ const RETRYABLE = new Set([408, 429, 500, 502, 503, 504]);
 /** A 404 means the model name is retired, not that the request was bad. */
 class ModelGoneError extends Error {}
 
+/** Ran out of function time — report it rather than let Vercel kill us. */
+class OutOfTimeError extends Error {}
+
 async function callGemini(model: string, images: Buffer[]): Promise<DraftRecipe> {
-  const body = {
+  const body: { contents: unknown; systemInstruction: unknown; generationConfig: any } = {
     contents: [
       {
         role: 'user',
@@ -275,6 +286,9 @@ async function callGemini(model: string, images: Buffer[]): Promise<DraftRecipe>
       // full — the default output cap is what makes models start summarising.
       temperature: 0,
       maxOutputTokens: 16384,
+      // Copying text needs no deliberation, and thinking is most of the
+      // latency that was pushing us past Vercel's 60s ceiling.
+      thinkingConfig: { thinkingBudget: 0 },
       responseMimeType: 'application/json',
       responseSchema: GEMINI_SCHEMA,
     },
@@ -283,19 +297,40 @@ async function callGemini(model: string, images: Buffer[]): Promise<DraftRecipe>
   let lastError = 'неизвестная ошибка';
   for (let attempt = 0; attempt < 3; attempt++) {
     if (attempt > 0) await new Promise((r) => setTimeout(r, 1500 * attempt));
+    // Don't start a call we can't finish — better a clear message than silence.
+    if (msLeft() < 12_000) throw new OutOfTimeError(lastError);
 
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
-      {
-        method: 'POST',
-        headers: { 'content-type': 'application/json', 'x-goog-api-key': GEMINI_KEY },
-        body: JSON.stringify(body),
+    let res: Response;
+    try {
+      res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', 'x-goog-api-key': GEMINI_KEY },
+          body: JSON.stringify(body),
+          signal: AbortSignal.timeout(Math.max(5_000, msLeft() - 4_000)),
+        }
+      );
+    } catch (err: any) {
+      // The abort signal fired: Gemini is still generating but we're out of time.
+      if (err?.name === 'TimeoutError' || err?.name === 'AbortError') {
+        throw new OutOfTimeError(`${model}: превышено время ожидания`);
       }
-    );
+      throw err;
+    }
 
     if (!res.ok) {
       const detail = (await res.text()).slice(0, 200);
       if (res.status === 404) throw new ModelGoneError(`${model}: ${detail}`);
+
+      // Older models reject thinkingConfig outright — drop it and try again.
+      if (res.status === 400 && /thinking/i.test(detail) && body.generationConfig.thinkingConfig) {
+        delete body.generationConfig.thinkingConfig;
+        console.warn(`gemini: "${model}" rejects thinkingConfig, retrying without`);
+        attempt--;
+        continue;
+      }
+
       lastError = `Gemini ${res.status}: ${detail}`;
       if (RETRYABLE.has(res.status)) continue;
       throw new Error(lastError);
@@ -789,7 +824,10 @@ async function handlePhotos(chatId: number, fileIds: string[], append: boolean) 
   const existing = append ? await getDraft(chatId) : null;
   const allFileIds = existing ? [...existing.fileIds, ...fileIds].slice(0, 5) : fileIds;
 
-  await say(chatId, '📖 Читаю фото, это займёт несколько секунд…');
+  await say(
+    chatId,
+    '📖 Читаю фото. Это займёт около минуты — я переписываю весь текст с фотографии целиком.'
+  );
 
   const images = await Promise.all(allFileIds.map(downloadTelegramFile));
   const recipe = await geminiExtract(images);
@@ -946,6 +984,7 @@ async function handleCallback(cb: any) {
 // ----------------------------------------------------------------------- handler
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  deadline = Date.now() + TIME_BUDGET_MS;
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
   if (TG_SECRET && req.headers['x-telegram-bot-api-secret-token'] !== TG_SECRET) {
@@ -970,9 +1009,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     else if (update.message) await handleMessage(update.message);
   } catch (err: any) {
     console.error('handler error', err);
-    await say(chatId, `⚠️ Что-то пошло не так: ${esc(String(err?.message || err))}\n\nПопробуйте ещё раз.`).catch(
-      () => {}
-    );
+    const message =
+      err instanceof OutOfTimeError
+        ? '⏱ Не успел прочитать это фото — на нём слишком много текста.\n\nПопробуйте снять рецепт в две части: отдельно ингредиенты, отдельно приготовление. Второе фото добавьте кнопкой «📷 Добавить фото».'
+        : `⚠️ Что-то пошло не так: ${esc(String(err?.message || err))}\n\nПопробуйте ещё раз.`;
+    await say(chatId, message).catch(() => {});
   }
 
   // Always 200 — a non-200 makes Telegram retry the same update.
