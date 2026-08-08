@@ -261,6 +261,30 @@ isIncomplete — true, если часть текста обрезана, неч
 
 const RETRYABLE = new Set([408, 429, 500, 502, 503, 504]);
 
+/**
+ * Optional generationConfig settings, in the order we give them up on a 400.
+ * Each returns true if it changed something, so the caller can retry once per
+ * rung. Ordered by what we can most afford to lose.
+ */
+const CONFIG_FALLBACKS: { name: string; apply: (c: any) => boolean }[] = [
+  {
+    name: 'thinkingConfig',
+    apply: (c) => 'thinkingConfig' in c && (delete c.thinkingConfig, true),
+  },
+  {
+    name: 'maxOutputTokens=8192',
+    apply: (c) => c.maxOutputTokens > 8192 && ((c.maxOutputTokens = 8192), true),
+  },
+  {
+    name: 'maxOutputTokens',
+    apply: (c) => 'maxOutputTokens' in c && (delete c.maxOutputTokens, true),
+  },
+  {
+    name: 'temperature',
+    apply: (c) => 'temperature' in c && (delete c.temperature, true),
+  },
+];
+
 /** A 404 means the model name is retired, not that the request was bad. */
 class ModelGoneError extends Error {}
 
@@ -323,12 +347,16 @@ async function callGemini(model: string, images: Buffer[]): Promise<DraftRecipe>
       const detail = (await res.text()).slice(0, 200);
       if (res.status === 404) throw new ModelGoneError(`${model}: ${detail}`);
 
-      // Older models reject thinkingConfig outright — drop it and try again.
-      if (res.status === 400 && /thinking/i.test(detail) && body.generationConfig.thinkingConfig) {
-        delete body.generationConfig.thinkingConfig;
-        console.warn(`gemini: "${model}" rejects thinkingConfig, retrying without`);
-        attempt--;
-        continue;
+      // Models disagree about the optional knobs — and Google reports it as a
+      // bare "invalid argument" without naming the field. Shed them one by one
+      // rather than guess which one this model dislikes.
+      if (res.status === 400) {
+        const shed = CONFIG_FALLBACKS.find((f) => f.apply(body.generationConfig));
+        if (shed) {
+          console.warn(`gemini: "${model}" 400 — dropping ${shed.name}. Detail: ${detail}`);
+          attempt--;
+          continue;
+        }
       }
 
       lastError = `Gemini ${res.status}: ${detail}`;
