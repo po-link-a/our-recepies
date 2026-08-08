@@ -1,0 +1,809 @@
+/**
+ * Telegram bot that turns a photo of a recipe clipping into a page on the site.
+ *
+ * Flow: photo -> Gemini transcribes it -> preview in Telegram -> edit or approve
+ * -> commit to src/data/recipes.json + public/scans/ -> Vercel redeploys the site.
+ *
+ * Webhook URL: https://<your-vercel-domain>/api/tg/recipe
+ */
+import type { VercelRequest, VercelResponse } from '@vercel/node';
+import { Redis } from '@upstash/redis';
+
+export const config = { maxDuration: 60 };
+
+// ---------------------------------------------------------------- environment
+
+const TG_TOKEN = process.env.TG_BOT_TOKEN || '';
+const TG_SECRET = process.env.TG_WEBHOOK_SECRET || '';
+const GEMINI_KEY = process.env.GEMINI_API_KEY || '';
+const GH_REPO = process.env.GITHUB_REPO || '';
+const GH_BRANCH = process.env.GITHUB_BRANCH || 'main';
+const GH_TOKEN = process.env.GITHUB_TOKEN || '';
+const SITE_ORIGIN = (process.env.SITE_ORIGIN || '').replace(/\/$/, '');
+
+/** Only these chat ids may talk to the bot. No fallback: empty means nobody. */
+const ALLOWED = (process.env.TG_CHAT_ID || '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+const RECIPES_PATH = 'src/data/recipes.json';
+const SCANS_DIR = 'public/scans';
+const GEMINI_MODEL = 'gemini-2.5-flash';
+
+/**
+ * Built on first use, not at import: a missing Upstash variable would otherwise
+ * throw during module load and crash the function before it can report anything.
+ */
+let _redis: Redis | null = null;
+const redis = () => (_redis ??= Redis.fromEnv());
+
+// ------------------------------------------------------------------ constants
+
+/** Mirrors CATEGORIES in src/data/recipes.ts — keep the two in sync. */
+const CATEGORY_NAMES: Record<string, string> = {
+  waffles: 'Вафли',
+  pancakes: 'Блины и блинчики',
+  pies_baking: 'Пирожки, булки и выпечка',
+  dough: 'Базовое тесто',
+  desserts: 'Сладкое и десерты',
+  salads: 'Салаты и закуски',
+  soups: 'Супы и холодники',
+  meat: 'Мясо и птица',
+  fish: 'Рыба и морепродукты',
+  vegetables: 'Овощные блюда',
+};
+const CATEGORY_IDS = Object.keys(CATEGORY_NAMES);
+
+const FIELD_LABELS: Record<string, string> = {
+  title: 'Название',
+  source: 'Источник',
+  category: 'Категория',
+  servings: 'Порции',
+  time: 'Время',
+  ingredients: 'Ингредиенты',
+  directions: 'Приготовление',
+};
+
+// ---------------------------------------------------------------------- types
+
+interface Ingredient {
+  name: string;
+  amount?: number;
+  unit?: string;
+  note?: string;
+}
+
+interface DraftRecipe {
+  title: string;
+  language: 'RU' | 'UK' | 'FR';
+  category: string;
+  sourceNote: string;
+  prepTimeMinutes?: number;
+  cookTimeMinutes?: number;
+  servings?: number;
+  ingredients: Ingredient[];
+  directions: string[];
+  isIncomplete?: boolean;
+  incompleteNote?: string;
+}
+
+interface Draft {
+  step: 'review' | 'editing' | 'awaiting_photo';
+  fileIds: string[];
+  recipe: DraftRecipe;
+  editField?: string;
+}
+
+// ------------------------------------------------------------ telegram helpers
+
+async function tg(method: string, body: unknown): Promise<any> {
+  const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/${method}`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  const json: any = await res.json().catch(() => ({}));
+  if (!json?.ok) console.error(`tg.${method} failed`, JSON.stringify(json).slice(0, 400));
+  return json;
+}
+
+/** Telegram caps messages at 4096 characters. */
+function clip(text: string, max = 3900): string {
+  return text.length <= max ? text : `${text.slice(0, max)}\n…(текст обрезан)`;
+}
+
+function esc(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+async function say(chatId: number | string, text: string, keyboard?: unknown) {
+  return tg('sendMessage', {
+    chat_id: chatId,
+    text: clip(text),
+    parse_mode: 'HTML',
+    disable_web_page_preview: true,
+    ...(keyboard ? { reply_markup: keyboard } : {}),
+  });
+}
+
+async function downloadTelegramFile(fileId: string): Promise<Buffer> {
+  const info = await tg('getFile', { file_id: fileId });
+  const path = info?.result?.file_path;
+  if (!path) throw new Error('Не удалось получить файл из Telegram');
+  const res = await fetch(`https://api.telegram.org/file/bot${TG_TOKEN}/${path}`);
+  if (!res.ok) throw new Error(`Не удалось скачать файл: ${res.status}`);
+  return Buffer.from(await res.arrayBuffer());
+}
+
+// ------------------------------------------------------------------ draft state
+
+const draftKey = (chatId: number | string) => `recipe:draft:${chatId}`;
+
+const getDraft = (chatId: number | string) =>
+  redis().get<Draft>(draftKey(chatId)).catch(() => null);
+
+const setDraft = (chatId: number | string, draft: Draft) =>
+  redis().set(draftKey(chatId), draft, { ex: 60 * 60 * 24 });
+
+const clearDraft = (chatId: number | string) => redis().del(draftKey(chatId));
+
+/** Telegram re-sends updates it thinks failed; process each one only once. */
+async function alreadyHandled(updateId: number): Promise<boolean> {
+  const fresh = await redis().set(`recipe:seen:${updateId}`, 1, { nx: true, ex: 3600 });
+  return fresh === null;
+}
+
+// ---------------------------------------------------------------------- Gemini
+
+const GEMINI_SCHEMA = {
+  type: 'object',
+  properties: {
+    title: { type: 'string' },
+    language: { type: 'string', enum: ['RU', 'UK', 'FR'] },
+    category: { type: 'string', enum: CATEGORY_IDS },
+    sourceNote: { type: 'string' },
+    servings: { type: 'integer' },
+    prepTimeMinutes: { type: 'integer' },
+    cookTimeMinutes: { type: 'integer' },
+    ingredients: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          name: { type: 'string' },
+          amount: { type: 'number' },
+          unit: { type: 'string' },
+          note: { type: 'string' },
+        },
+        required: ['name'],
+      },
+    },
+    directions: { type: 'array', items: { type: 'string' } },
+    isIncomplete: { type: 'boolean' },
+    incompleteNote: { type: 'string' },
+  },
+  required: ['title', 'language', 'category', 'ingredients', 'directions'],
+};
+
+const GEMINI_PROMPT = `Ты расшифровываешь фотографии рецептов из семейного архива (газетные вырезки, страницы тетрадей, рукописные записи).
+
+Строгие правила:
+1. Переписывай ТОЛЬКО то, что реально написано на фото. Ничего не выдумывай и не дополняй.
+2. Не добавляй никаких приписок об источнике («записано со слов бабушки», «семейный рецепт» и т.п.), если этого нет на фото.
+3. Сохраняй язык оригинала. language: RU — русский, UK — украинский, FR — французский.
+4. Не переводи и не переписывай текст «красивее». Сохраняй оригинальные формулировки и меры («ст. ложка», «стакан», «щепотка»).
+5. ingredients: name — название, amount — число, unit — единица («г», «мл», «шт», «ст. ложка», «ч. ложка», «стакан»). Если количество не указано («по вкусу»), amount и unit не заполняй, а напиши это в note.
+6. directions: массив шагов. Если в оригинале сплошной текст — раздели на логические шаги, не меняя слов.
+7. sourceNote: заполняй, только если на фото видно название издания, рубрики или подпись. Иначе оставь пустым.
+8. category — ближайшая из списка. title — название с фото; если названия нет, коротко опиши блюдо по его составу.
+9. Время указывай, только если оно есть на фото.
+10. Если часть текста обрезана, нечитаема или явно продолжается за краем фото — поставь isIncomplete: true и опиши проблему в incompleteNote.
+
+Если на фото несколько страниц одного рецепта — объедини их в один рецепт.`;
+
+const RETRYABLE = new Set([408, 429, 500, 502, 503, 504]);
+
+async function geminiExtract(images: Buffer[]): Promise<DraftRecipe> {
+  const body = {
+    contents: [
+      {
+        role: 'user',
+        parts: [
+          ...images.map((img) => ({
+            inline_data: { mime_type: 'image/jpeg', data: img.toString('base64') },
+          })),
+          { text: 'Расшифруй рецепт с этих фотографий.' },
+        ],
+      },
+    ],
+    systemInstruction: { parts: [{ text: GEMINI_PROMPT }] },
+    generationConfig: {
+      temperature: 0.1,
+      responseMimeType: 'application/json',
+      responseSchema: GEMINI_SCHEMA,
+    },
+  };
+
+  let lastError = 'неизвестная ошибка';
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (attempt > 0) await new Promise((r) => setTimeout(r, 1500 * attempt));
+
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-goog-api-key': GEMINI_KEY },
+        body: JSON.stringify(body),
+      }
+    );
+
+    if (!res.ok) {
+      lastError = `Gemini ${res.status}: ${(await res.text()).slice(0, 200)}`;
+      if (RETRYABLE.has(res.status)) continue;
+      throw new Error(lastError);
+    }
+
+    const json: any = await res.json();
+    const text = json?.candidates?.[0]?.content?.parts?.map((p: any) => p.text).join('') || '';
+    if (!text) {
+      lastError = 'Gemini вернул пустой ответ';
+      continue;
+    }
+    try {
+      return normalize(JSON.parse(text));
+    } catch {
+      lastError = 'Не удалось разобрать ответ Gemini';
+    }
+  }
+  throw new Error(lastError);
+}
+
+/** Gemini follows the schema but can still return blanks or an unknown category. */
+function normalize(raw: any): DraftRecipe {
+  const category = CATEGORY_IDS.includes(raw?.category) ? raw.category : 'desserts';
+  const ingredients: Ingredient[] = (Array.isArray(raw?.ingredients) ? raw.ingredients : [])
+    .filter((i: any) => i?.name?.trim())
+    .map((i: any) => ({
+      name: String(i.name).trim(),
+      ...(typeof i.amount === 'number' && i.amount > 0 ? { amount: i.amount } : {}),
+      ...(i.unit?.trim() ? { unit: String(i.unit).trim() } : {}),
+      ...(i.note?.trim() ? { note: String(i.note).trim() } : {}),
+    }));
+
+  return {
+    title: String(raw?.title || '').trim() || 'Без названия',
+    language: ['RU', 'UK', 'FR'].includes(raw?.language) ? raw.language : 'RU',
+    category,
+    sourceNote: String(raw?.sourceNote || '').trim(),
+    ...(raw?.prepTimeMinutes > 0 ? { prepTimeMinutes: raw.prepTimeMinutes } : {}),
+    ...(raw?.cookTimeMinutes > 0 ? { cookTimeMinutes: raw.cookTimeMinutes } : {}),
+    ...(raw?.servings > 0 ? { servings: raw.servings } : {}),
+    ingredients,
+    directions: (Array.isArray(raw?.directions) ? raw.directions : [])
+      .map((d: any) => String(d).trim())
+      .filter(Boolean),
+    ...(raw?.isIncomplete ? { isIncomplete: true } : {}),
+    ...(raw?.incompleteNote?.trim() ? { incompleteNote: String(raw.incompleteNote).trim() } : {}),
+  };
+}
+
+// ----------------------------------------------------------------------- slugs
+
+const TRANSLIT: Record<string, string> = {
+  а: 'a', б: 'b', в: 'v', г: 'g', ґ: 'g', д: 'd', е: 'e', ё: 'e', є: 'ie', ж: 'zh',
+  з: 'z', и: 'i', і: 'i', ї: 'i', й: 'y', к: 'k', л: 'l', м: 'm', н: 'n', о: 'o',
+  п: 'p', р: 'r', с: 's', т: 't', у: 'u', ф: 'f', х: 'h', ц: 'ts', ч: 'ch', ш: 'sh',
+  щ: 'shch', ъ: '', ы: 'y', ь: '', э: 'e', ю: 'yu', я: 'ya',
+};
+
+function slugify(title: string): string {
+  const base = title
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '') // strip French accents
+    .split('')
+    .map((ch) => (ch in TRANSLIT ? TRANSLIT[ch] : ch))
+    .join('')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 60)
+    .replace(/-+$/g, '');
+  return base || `recipe-${Date.now()}`;
+}
+
+function uniqueSlug(title: string, taken: Set<string>): string {
+  const base = slugify(title);
+  if (!taken.has(base)) return base;
+  for (let n = 2; n < 500; n++) {
+    if (!taken.has(`${base}-${n}`)) return `${base}-${n}`;
+  }
+  return `${base}-${Date.now()}`;
+}
+
+// ---------------------------------------------------------------------- GitHub
+
+async function gh(path: string, init: RequestInit = {}): Promise<any> {
+  const res = await fetch(`https://api.github.com/repos/${GH_REPO}${path}`, {
+    ...init,
+    headers: {
+      authorization: `Bearer ${GH_TOKEN}`,
+      accept: 'application/vnd.github+json',
+      'content-type': 'application/json',
+      'user-agent': 'our-recepies-bot',
+      ...(init.headers || {}),
+    },
+  });
+  if (!res.ok) throw new Error(`GitHub ${init.method || 'GET'} ${path} → ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  return res.json();
+}
+
+async function readRecipes(): Promise<any[]> {
+  const file = await gh(`/contents/${RECIPES_PATH}?ref=${GH_BRANCH}`);
+  return JSON.parse(Buffer.from(file.content, 'base64').toString('utf8'));
+}
+
+/**
+ * Commits the updated recipes.json and every scan in a single commit, so the
+ * site is never deployed with a recipe whose photos are missing.
+ */
+async function commitRecipe(
+  recipesJson: string,
+  scans: { path: string; bytes: Buffer }[],
+  message: string
+): Promise<void> {
+  const ref = await gh(`/git/ref/heads/${GH_BRANCH}`);
+  const headSha: string = ref.object.sha;
+  const headCommit = await gh(`/git/commits/${headSha}`);
+
+  // Binary files can't go inline in a tree — they need a base64 blob first.
+  const blobs = await Promise.all(
+    scans.map((s) =>
+      gh('/git/blobs', {
+        method: 'POST',
+        body: JSON.stringify({ content: s.bytes.toString('base64'), encoding: 'base64' }),
+      })
+    )
+  );
+
+  const tree = await gh('/git/trees', {
+    method: 'POST',
+    body: JSON.stringify({
+      base_tree: headCommit.tree.sha,
+      tree: [
+        { path: RECIPES_PATH, mode: '100644', type: 'blob', content: recipesJson },
+        ...scans.map((s, i) => ({
+          path: s.path,
+          mode: '100644',
+          type: 'blob',
+          sha: blobs[i].sha,
+        })),
+      ],
+    }),
+  });
+
+  const commit = await gh('/git/commits', {
+    method: 'POST',
+    body: JSON.stringify({ message, tree: tree.sha, parents: [headSha] }),
+  });
+
+  await gh(`/git/refs/heads/${GH_BRANCH}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ sha: commit.sha }),
+  });
+}
+
+// -------------------------------------------------------------------- keyboards
+
+const reviewKeyboard = {
+  inline_keyboard: [
+    [{ text: '✅ Опубликовать', callback_data: 'pub' }],
+    [
+      { text: '✏️ Исправить', callback_data: 'edit' },
+      { text: '📷 Добавить фото', callback_data: 'addph' },
+    ],
+    [
+      { text: '🔄 Распознать заново', callback_data: 'redo' },
+      { text: '✖️ Отмена', callback_data: 'cancel' },
+    ],
+  ],
+};
+
+const editKeyboard = {
+  inline_keyboard: [
+    [
+      { text: 'Название', callback_data: 'ed:title' },
+      { text: 'Категория', callback_data: 'ed:category' },
+    ],
+    [
+      { text: 'Ингредиенты', callback_data: 'ed:ingredients' },
+      { text: 'Приготовление', callback_data: 'ed:directions' },
+    ],
+    [
+      { text: 'Время', callback_data: 'ed:time' },
+      { text: 'Порции', callback_data: 'ed:servings' },
+      { text: 'Источник', callback_data: 'ed:source' },
+    ],
+    [{ text: '‹ Назад', callback_data: 'back' }],
+  ],
+};
+
+const categoryKeyboard = {
+  inline_keyboard: [
+    ...chunk(
+      CATEGORY_IDS.map((id) => ({ text: CATEGORY_NAMES[id], callback_data: `cat:${id}` })),
+      2
+    ),
+    [{ text: '‹ Назад', callback_data: 'back' }],
+  ],
+};
+
+function chunk<T>(arr: T[], size: number): T[][] {
+  const out: T[][] = [];
+  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+  return out;
+}
+
+// ---------------------------------------------------------------------- preview
+
+function formatIngredient(i: Ingredient): string {
+  const qty = [i.amount, i.unit].filter(Boolean).join(' ');
+  const note = i.note ? ` (${i.note})` : '';
+  return qty ? `• ${i.name} — ${qty}${note}` : `• ${i.name}${note}`;
+}
+
+function renderPreview(r: DraftRecipe, photoCount: number): string {
+  const time = (r.prepTimeMinutes || 0) + (r.cookTimeMinutes || 0);
+  const meta = [
+    CATEGORY_NAMES[r.category],
+    r.language,
+    time > 0 ? `${time} мин` : null,
+    r.servings ? `${r.servings} порц.` : null,
+    photoCount > 1 ? `${photoCount} фото` : null,
+  ]
+    .filter(Boolean)
+    .join(' · ');
+
+  return [
+    `<b>${esc(r.title)}</b>`,
+    r.sourceNote ? `<i>${esc(r.sourceNote)}</i>` : null,
+    meta,
+    r.isIncomplete ? `\n⚠️ <i>${esc(r.incompleteNote || 'Часть текста не распозналась.')}</i>` : null,
+    `\n<b>Ингредиенты</b>`,
+    r.ingredients.length ? esc(r.ingredients.map(formatIngredient).join('\n')) : '—',
+    `\n<b>Приготовление</b>`,
+    r.directions.length
+      ? esc(r.directions.map((d, i) => `${i + 1}. ${d}`).join('\n\n'))
+      : '—',
+  ]
+    .filter(Boolean)
+    .join('\n');
+}
+
+// ------------------------------------------------------------------ edit parsing
+
+/** Parses "Мука — 200 г" / "Соль по вкусу" into an ingredient. */
+function parseIngredientLine(line: string): Ingredient | null {
+  const clean = line.replace(/^[•\-*\s]+/, '').trim();
+  if (!clean) return null;
+
+  const split = clean.split(/\s+[—–]\s+|\s+-\s+/);
+  if (split.length < 2) return { name: clean };
+
+  const name = split[0].trim();
+  const qty = split.slice(1).join(' — ').trim();
+  const match = qty.match(/^([\d]+(?:[.,]\d+)?)\s*(.*)$/);
+  if (!match) return { name, note: qty };
+
+  const amount = parseFloat(match[1].replace(',', '.'));
+  const unit = match[2].trim();
+  return { name, amount, ...(unit ? { unit } : {}) };
+}
+
+function applyEdit(recipe: DraftRecipe, field: string, text: string): string | null {
+  const value = text.trim();
+  switch (field) {
+    case 'title':
+      recipe.title = value;
+      return null;
+    case 'source':
+      recipe.sourceNote = value === '-' ? '' : value;
+      return null;
+    case 'servings': {
+      const n = parseInt(value, 10);
+      if (!n || n < 1) return 'Нужно число, например: 6';
+      recipe.servings = n;
+      return null;
+    }
+    case 'time': {
+      const n = parseInt(value, 10);
+      if (!n || n < 1) return 'Нужно число минут, например: 45';
+      recipe.prepTimeMinutes = undefined;
+      recipe.cookTimeMinutes = n;
+      return null;
+    }
+    case 'ingredients': {
+      const list = value.split('\n').map(parseIngredientLine).filter(Boolean) as Ingredient[];
+      if (!list.length) return 'Не вижу ни одного ингредиента.';
+      recipe.ingredients = list;
+      return null;
+    }
+    case 'directions': {
+      const steps = value
+        .split(/\n{2,}|\n/)
+        .map((s) => s.replace(/^\s*\d+[.)]\s*/, '').trim())
+        .filter(Boolean);
+      if (!steps.length) return 'Не вижу ни одного шага.';
+      recipe.directions = steps;
+      return null;
+    }
+    default:
+      return 'Неизвестное поле.';
+  }
+}
+
+const EDIT_HINTS: Record<string, string> = {
+  title: 'Пришлите новое название одним сообщением.',
+  source: 'Пришлите источник (например: Газетная вырезка «Летний обед»).\nЧтобы убрать источник, отправьте <code>-</code>',
+  servings: 'Сколько порций? Пришлите число.',
+  time: 'Сколько минут готовится? Пришлите число.',
+  ingredients:
+    'Пришлите список ингредиентов, по одному в строке:\n\n<code>Мука — 200 г\nЯйцо — 2 шт\nСоль — по вкусу</code>',
+  directions: 'Пришлите шаги приготовления, каждый с новой строки.',
+};
+
+// ------------------------------------------------------------------- publishing
+
+async function publish(chatId: number, draft: Draft): Promise<void> {
+  const r = draft.recipe;
+  const recipes = await readRecipes();
+  const taken = new Set<string>(recipes.map((x: any) => x.slug));
+  const slug = uniqueSlug(r.title, taken);
+
+  const images = await Promise.all(draft.fileIds.map(downloadTelegramFile));
+  const scans = images.map((bytes, i) => ({
+    bytes,
+    path: `${SCANS_DIR}/${slug}${i === 0 ? '' : `-${i + 1}`}.jpg`,
+  }));
+
+  const totalTime = (r.prepTimeMinutes || 0) + (r.cookTimeMinutes || 0);
+  const tags = [
+    'archive',
+    `lang_${r.language.toLowerCase()}`,
+    ...(totalTime > 0 && totalTime <= 30 ? ['quick'] : []),
+  ];
+
+  const record = {
+    id: `tg-${slug}`,
+    title: r.title,
+    slug,
+    category: r.category,
+    categoryName: CATEGORY_NAMES[r.category],
+    tags,
+    language: r.language,
+    sourceNote: r.sourceNote || 'Из семейного архива',
+    ...(r.prepTimeMinutes ? { prepTimeMinutes: r.prepTimeMinutes } : {}),
+    ...(r.cookTimeMinutes ? { cookTimeMinutes: r.cookTimeMinutes } : {}),
+    ...(r.servings ? { servings: r.servings } : {}),
+    ingredients: r.ingredients,
+    directions: r.directions,
+    isArchive: true,
+    ...(r.isIncomplete ? { isIncomplete: true, incompleteNote: r.incompleteNote } : {}),
+    likes: 0,
+    createdAt: new Date().toISOString().slice(0, 10),
+    scans: scans.map((s) => `/${s.path.replace(/^public\//, '')}`),
+  };
+
+  // Newest first — the site's "Недавно добавленные" section reads from the top.
+  recipes.unshift(record);
+
+  await commitRecipe(
+    `${JSON.stringify(recipes, null, 2)}\n`,
+    scans,
+    `recipe: добавлен «${r.title}»`
+  );
+
+  await clearDraft(chatId);
+
+  const link = SITE_ORIGIN ? `\n\n${SITE_ORIGIN}/#/recipe/${slug}` : '';
+  await say(
+    chatId,
+    `✅ Готово! «${esc(r.title)}» добавлен на сайт.\n\nСтраница появится через 1–2 минуты, пока сайт пересобирается.${link}\n\nМожно присылать следующее фото.`
+  );
+}
+
+// --------------------------------------------------------------------- handlers
+
+async function handlePhotos(chatId: number, fileIds: string[], append: boolean) {
+  const existing = append ? await getDraft(chatId) : null;
+  const allFileIds = existing ? [...existing.fileIds, ...fileIds].slice(0, 5) : fileIds;
+
+  await say(chatId, '📖 Читаю фото, это займёт несколько секунд…');
+
+  const images = await Promise.all(allFileIds.map(downloadTelegramFile));
+  const recipe = await geminiExtract(images);
+
+  await setDraft(chatId, { step: 'review', fileIds: allFileIds, recipe });
+  await say(chatId, renderPreview(recipe, allFileIds.length), reviewKeyboard);
+}
+
+async function handleMessage(msg: any) {
+  const chatId: number = msg.chat.id;
+  const text: string = (msg.text || '').trim();
+
+  if (text === '/start' || text === '/help') {
+    await say(
+      chatId,
+      'Привет! Пришлите фотографию рецепта — вырезку, страницу тетради или рукописную запись.\n\n' +
+        'Я прочитаю её и покажу, что получилось. Вы сможете что-то поправить, а потом нажать «Опубликовать» — и рецепт появится на сайте.\n\n' +
+        'Команды:\n/cancel — отменить текущий рецепт'
+    );
+    return;
+  }
+
+  if (text === '/cancel') {
+    await clearDraft(chatId);
+    await say(chatId, 'Отменено. Присылайте новое фото, когда будете готовы.');
+    return;
+  }
+
+  // Photo, either compressed or sent as an uncompressed file
+  const photo = msg.photo?.length ? msg.photo[msg.photo.length - 1] : null;
+  const doc = msg.document?.mime_type?.startsWith('image/') ? msg.document : null;
+  const fileId = photo?.file_id || doc?.file_id;
+
+  if (fileId) {
+    if ((doc?.file_size || 0) > 8_000_000) {
+      await say(chatId, 'Фото слишком большое. Пришлите его как обычное фото, а не как файл.');
+      return;
+    }
+    const draft = await getDraft(chatId);
+    const append = draft?.step === 'awaiting_photo';
+
+    // Several photos sent at once arrive as separate updates sharing a group id.
+    // The first invocation claims the group, waits for its siblings to register
+    // their file ids, then reads them all in — so they become one recipe.
+    if (msg.media_group_id) {
+      const key = `recipe:group:${msg.media_group_id}`;
+      await redis().rpush(key, fileId);
+      await redis().expire(key, 300);
+      const isLead = await redis().set(`${key}:lead`, 1, { nx: true, ex: 300 });
+      if (isLead === null) return;
+      await new Promise((r) => setTimeout(r, 3000));
+      const fileIds = await redis().lrange(key, 0, -1);
+      await handlePhotos(chatId, fileIds, append);
+      return;
+    }
+
+    await handlePhotos(chatId, [fileId], append);
+    return;
+  }
+
+  // Text answer to an edit prompt
+  const draft = await getDraft(chatId);
+  if (draft?.step === 'editing' && draft.editField && text) {
+    const error = applyEdit(draft.recipe, draft.editField, text);
+    if (error) {
+      await say(chatId, `${error}\nПопробуйте ещё раз.`);
+      return;
+    }
+    draft.step = 'review';
+    draft.editField = undefined;
+    await setDraft(chatId, draft);
+    await say(chatId, renderPreview(draft.recipe, draft.fileIds.length), reviewKeyboard);
+    return;
+  }
+
+  if (text) {
+    await say(chatId, 'Пришлите, пожалуйста, фотографию рецепта. /help — как это работает.');
+  }
+}
+
+async function handleCallback(cb: any) {
+  const chatId: number = cb.message.chat.id;
+  const data: string = cb.data || '';
+  await tg('answerCallbackQuery', { callback_query_id: cb.id });
+
+  const draft = await getDraft(chatId);
+  if (!draft) {
+    await say(chatId, 'Этот рецепт уже не в работе. Пришлите фото заново.');
+    return;
+  }
+
+  if (data === 'cancel') {
+    await clearDraft(chatId);
+    await say(chatId, 'Отменено. Ничего не опубликовано.');
+    return;
+  }
+
+  if (data === 'edit') {
+    await say(chatId, 'Что поправить?', editKeyboard);
+    return;
+  }
+
+  if (data === 'back') {
+    draft.step = 'review';
+    draft.editField = undefined;
+    await setDraft(chatId, draft);
+    await say(chatId, renderPreview(draft.recipe, draft.fileIds.length), reviewKeyboard);
+    return;
+  }
+
+  if (data === 'addph') {
+    draft.step = 'awaiting_photo';
+    await setDraft(chatId, draft);
+    await say(chatId, 'Пришлите следующее фото этого же рецепта — я прочитаю их вместе.');
+    return;
+  }
+
+  if (data === 'redo') {
+    await handlePhotos(chatId, [], true);
+    return;
+  }
+
+  if (data === 'ed:category') {
+    await say(chatId, 'Выберите категорию:', categoryKeyboard);
+    return;
+  }
+
+  if (data.startsWith('cat:')) {
+    const id = data.slice(4);
+    if (!CATEGORY_IDS.includes(id)) return;
+    draft.recipe.category = id;
+    draft.step = 'review';
+    await setDraft(chatId, draft);
+    await say(chatId, renderPreview(draft.recipe, draft.fileIds.length), reviewKeyboard);
+    return;
+  }
+
+  if (data.startsWith('ed:')) {
+    const field = data.slice(3);
+    if (!EDIT_HINTS[field]) return;
+    draft.step = 'editing';
+    draft.editField = field;
+    await setDraft(chatId, draft);
+    await say(chatId, `<b>${FIELD_LABELS[field]}</b>\n\n${EDIT_HINTS[field]}`);
+    return;
+  }
+
+  if (data === 'pub') {
+    await say(chatId, '📤 Публикую…');
+    await publish(chatId, draft);
+  }
+}
+
+// ----------------------------------------------------------------------- handler
+
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+
+  if (TG_SECRET && req.headers['x-telegram-bot-api-secret-token'] !== TG_SECRET) {
+    return res.status(401).send('Unauthorized');
+  }
+
+  const update = req.body;
+  const chatId = update?.message?.chat?.id ?? update?.callback_query?.message?.chat?.id;
+
+  // Silently ignore anyone who isn't on the allowlist.
+  if (!chatId || !ALLOWED.includes(String(chatId))) {
+    console.warn('rejected chat', chatId);
+    return res.status(200).send('ok');
+  }
+
+  if (update.update_id && (await alreadyHandled(update.update_id))) {
+    return res.status(200).send('ok');
+  }
+
+  try {
+    if (update.callback_query) await handleCallback(update.callback_query);
+    else if (update.message) await handleMessage(update.message);
+  } catch (err: any) {
+    console.error('handler error', err);
+    await say(chatId, `⚠️ Что-то пошло не так: ${esc(String(err?.message || err))}\n\nПопробуйте ещё раз.`).catch(
+      () => {}
+    );
+  }
+
+  // Always 200 — a non-200 makes Telegram retry the same update.
+  return res.status(200).send('ok');
+}

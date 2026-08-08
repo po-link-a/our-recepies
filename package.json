@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@upstash/redis": "^1.38.2",
     "docx": "^9.0.0",
     "html2pdf.js": "^0.10.1",
     "lucide-react": "^0.344.0",
@@ -16,8 +17,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^26.2.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@vercel/node": "^5.9.7",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"

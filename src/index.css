@@ -468,6 +468,13 @@ ul, ol { list-style: none; }
 .step__num { font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--red); }
 .step__text { font-size: 16.5px; line-height: 1.72; }
 
+/* Original clipping photo */
+.scan-figure { margin-top: 36px; background: var(--arch-paper); border: 1px solid var(--arch-line); padding: 14px; }
+.scan-figure img { display: block; width: 100%; height: auto; }
+.scan-figure figcaption {
+  font-family: var(--hand); font-size: 21px; color: var(--green); margin-top: 10px;
+}
+
 /* Marginal note */
 .note-card { border: 1px solid var(--line); background: var(--paper); padding: 22px; }
 .note-card__label {

@@ -305,6 +305,17 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
               ))}
             </ol>
 
+            {/* Photos of the original clipping, when we have them */}
+            {recipe.scans?.map((src, i) => (
+              <figure className="scan-figure" key={src}>
+                <img src={src} alt={`Оригинал: ${recipe.title}`} loading="lazy" />
+                <figcaption>
+                  оригинал вырезки
+                  {recipe.scans!.length > 1 ? ` — ${i + 1} из ${recipe.scans!.length}` : ''}
+                </figcaption>
+              </figure>
+            ))}
+
             <div style={{ marginTop: 36 }}>
               <AdPlaceholder type="recipe_in_content" />
             </div>
