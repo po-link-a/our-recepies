@@ -34,9 +34,20 @@ const GEMINI_MODEL = 'gemini-2.5-flash';
 /**
  * Built on first use, not at import: a missing Upstash variable would otherwise
  * throw during module load and crash the function before it can report anything.
+ *
+ * Accepts both namings — Vercel's Upstash integration injects KV_REST_API_*,
+ * while a database created directly at upstash.com gives UPSTASH_REDIS_REST_*.
  */
 let _redis: Redis | null = null;
-const redis = () => (_redis ??= Redis.fromEnv());
+function redis(): Redis {
+  if (_redis) return _redis;
+  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+  if (!url || !token) {
+    throw new Error('База не подключена: не заданы UPSTASH_REDIS_REST_URL / _TOKEN');
+  }
+  return (_redis = new Redis({ url, token }));
+}
 
 // ------------------------------------------------------------------ constants
 
