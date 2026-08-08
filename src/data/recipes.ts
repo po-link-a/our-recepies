@@ -134,6 +134,8 @@ export interface Recipe {
   createdAt: string;
   /** Photos of the original clipping, e.g. ["/scans/simple-waffles.jpg"] */
   scans?: string[];
+  /** Set when the text was translated into Russian from another language. */
+  translatedFrom?: 'UK' | 'FR';
 }
 
 /**

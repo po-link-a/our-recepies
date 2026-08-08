@@ -16,6 +16,11 @@ import { RecipeCard } from '../components/RecipeCard';
 import { AdPlaceholder } from '../components/AdPlaceholder';
 import { CookingModeModal } from '../components/CookingModeModal';
 
+const ORIGINAL_LANGUAGES: Record<'UK' | 'FR', string> = {
+  UK: 'украинского',
+  FR: 'французского',
+};
+
 interface RecipeDetailViewProps {
   recipe: Recipe;
   onNavigate: (view: string, param?: string) => void;
@@ -168,6 +173,11 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
             <span className="lang-tag" style={{ alignSelf: 'center' }}>
               {recipe.language}
             </span>
+            {recipe.translatedFrom && (
+              <span className="detail__pill">
+                перевод с {ORIGINAL_LANGUAGES[recipe.translatedFrom]}
+              </span>
+            )}
           </div>
 
           {/* Actions */}
