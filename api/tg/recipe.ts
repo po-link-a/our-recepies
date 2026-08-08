@@ -29,7 +29,11 @@ const ALLOWED = (process.env.TG_CHAT_ID || '')
 
 const RECIPES_PATH = 'src/data/recipes.json';
 const SCANS_DIR = 'public/scans';
-const GEMINI_MODEL = 'gemini-2.5-flash';
+/** First one wins; the rest are fallbacks. Override with GEMINI_MODEL. */
+const GEMINI_MODELS = (process.env.GEMINI_MODEL || 'gemini-flash-latest,gemini-2.0-flash')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
 
 /**
  * Built on first use, not at import: a missing Upstash variable would otherwise
@@ -215,7 +219,10 @@ const GEMINI_PROMPT = `Ты расшифровываешь фотографии 
 
 const RETRYABLE = new Set([408, 429, 500, 502, 503, 504]);
 
-async function geminiExtract(images: Buffer[]): Promise<DraftRecipe> {
+/** A 404 means the model name is retired, not that the request was bad. */
+class ModelGoneError extends Error {}
+
+async function callGemini(model: string, images: Buffer[]): Promise<DraftRecipe> {
   const body = {
     contents: [
       {
@@ -241,7 +248,7 @@ async function geminiExtract(images: Buffer[]): Promise<DraftRecipe> {
     if (attempt > 0) await new Promise((r) => setTimeout(r, 1500 * attempt));
 
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
+      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
       {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'x-goog-api-key': GEMINI_KEY },
@@ -250,7 +257,9 @@ async function geminiExtract(images: Buffer[]): Promise<DraftRecipe> {
     );
 
     if (!res.ok) {
-      lastError = `Gemini ${res.status}: ${(await res.text()).slice(0, 200)}`;
+      const detail = (await res.text()).slice(0, 200);
+      if (res.status === 404) throw new ModelGoneError(`${model}: ${detail}`);
+      lastError = `Gemini ${res.status}: ${detail}`;
       if (RETRYABLE.has(res.status)) continue;
       throw new Error(lastError);
     }
@@ -265,6 +274,76 @@ async function geminiExtract(images: Buffer[]): Promise<DraftRecipe> {
       return normalize(JSON.parse(text));
     } catch {
       lastError = 'Не удалось разобрать ответ Gemini';
+    }
+  }
+  throw new Error(lastError);
+}
+
+/** Models this key can actually use, best vision candidate first. */
+async function listUsableModels(): Promise<string[]> {
+  const res = await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200', {
+    headers: { 'x-goog-api-key': GEMINI_KEY },
+  });
+  if (!res.ok) return [];
+  const json: any = await res.json();
+
+  return (json.models || [])
+    .filter((m: any) => m.supportedGenerationMethods?.includes('generateContent'))
+    .map((m: any) => String(m.name).replace(/^models\//, ''))
+    .filter((n: string) => /^gemini-/.test(n) && !/embedding|aqa|tts|imagen|veo|image/.test(n))
+    .sort((a: string, b: string) => rankModel(b) - rankModel(a));
+}
+
+/** Newer beats older; flash beats pro — fast and cheap is right for OCR. */
+function rankModel(name: string): number {
+  const version = name.match(/gemini-(\d+)(?:[.-](\d+))?/);
+  const major = version ? Number(version[1]) : 0;
+  const minor = version?.[2] ? Number(version[2]) : 0;
+  return (
+    major * 100 +
+    minor * 10 +
+    (name.includes('flash') ? 5 : 0) +
+    (name.includes('latest') ? 3 : 0) -
+    (name.includes('lite') ? 4 : 0) -
+    (/preview|exp/.test(name) ? 2 : 0)
+  );
+}
+
+/**
+ * Google retires model names on its own schedule, so a hardcoded one eventually
+ * 404s. Try the configured names, then fall back to whatever the key can see —
+ * the bot repairs itself instead of going dark until someone redeploys.
+ */
+async function geminiExtract(images: Buffer[]): Promise<DraftRecipe> {
+  const queue = [...GEMINI_MODELS];
+  const tried: string[] = [];
+  let discovered = false;
+  let lastError = 'неизвестная ошибка';
+
+  while (queue.length) {
+    const model = queue.shift()!;
+    if (tried.includes(model)) continue;
+    tried.push(model);
+
+    try {
+      const recipe = await callGemini(model, images);
+      if (model !== GEMINI_MODELS[0]) {
+        console.warn(`gemini: using "${model}" — set GEMINI_MODEL to pin it`);
+      }
+      return recipe;
+    } catch (err) {
+      if (!(err instanceof ModelGoneError)) throw err;
+      lastError = err.message;
+      console.warn(`gemini: "${model}" is no longer available`);
+
+      if (!queue.length && !discovered) {
+        discovered = true;
+        const available = await listUsableModels();
+        queue.push(...available.filter((m) => !tried.includes(m)).slice(0, 3));
+        if (!queue.length) {
+          throw new Error('Ни одна модель Gemini не доступна этому ключу. Проверьте GEMINI_API_KEY.');
+        }
+      }
     }
   }
   throw new Error(lastError);
