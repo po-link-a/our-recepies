@@ -27,51 +27,40 @@ export function App() {
   const initial = parseHash();
   const [currentView, setCurrentView] = useState<string>(initial.view);
   const [viewParam, setViewParam] = useState<string | undefined>(initial.param);
-  const [likedIds, setLikedIds] = useState<string[]>([]);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const [recipesState, setRecipesState] = useState<Recipe[]>(RECIPES);
 
-  // Load likes and favorites from localStorage
+  // Load saved recipes, and reflect them in the counts
   useEffect(() => {
     try {
-      const savedLikes = localStorage.getItem('family_recipes_likes');
-      if (savedLikes) setLikedIds(JSON.parse(savedLikes));
-
-      const savedFavs = localStorage.getItem('family_recipes_favorites');
-      if (savedFavs) setFavoriteIds(JSON.parse(savedFavs));
+      const saved = localStorage.getItem('family_recipes_favorites');
+      if (!saved) return;
+      const ids: string[] = JSON.parse(saved);
+      setFavoriteIds(ids);
+      setRecipesState((list) =>
+        list.map((r) => (ids.includes(r.id) ? { ...r, likes: r.likes + 1 } : r))
+      );
     } catch (e) {
       console.error('LocalStorage error:', e);
     }
   }, []);
 
-  // Save likes
-  const handleToggleLike = (id: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-    setLikedIds((prev) => {
-      const isAlreadyLiked = prev.includes(id);
-      const updated = isAlreadyLiked ? prev.filter((i) => i !== id) : [...prev, id];
-      localStorage.setItem('family_recipes_likes', JSON.stringify(updated));
-
-      // Update recipe object likes count
-      setRecipesState((rList) =>
-        rList.map((r) => {
-          if (r.id === id) {
-            return { ...r, likes: isAlreadyLiked ? r.likes - 1 : r.likes + 1 };
-          }
-          return r;
-        })
-      );
-      return updated;
-    });
-  };
-
-  // Save favorites
+  /**
+   * One heart, one action: saving a recipe adds it to Избранное and bumps its
+   * count, which is what "Самые популярные" sorts by. There is no separate
+   * bookmark any more.
+   */
   const handleToggleFavorite = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
+
     setFavoriteIds((prev) => {
-      const isAlreadyFav = prev.includes(id);
-      const updated = isAlreadyFav ? prev.filter((i) => i !== id) : [...prev, id];
+      const wasSaved = prev.includes(id);
+      const updated = wasSaved ? prev.filter((i) => i !== id) : [...prev, id];
       localStorage.setItem('family_recipes_favorites', JSON.stringify(updated));
+
+      setRecipesState((list) =>
+        list.map((r) => (r.id === id ? { ...r, likes: r.likes + (wasSaved ? -1 : 1) } : r))
+      );
       return updated;
     });
   };
@@ -116,9 +105,9 @@ export function App() {
         {currentView === 'home' && (
           <HomeView
             onNavigate={handleNavigate}
-            onToggleLike={handleToggleLike}
+            onToggleLike={handleToggleFavorite}
             onToggleFavorite={handleToggleFavorite}
-            likedRecipeIds={likedIds}
+            likedRecipeIds={favoriteIds}
             favoriteRecipeIds={favoriteIds}
           />
         )}
@@ -128,9 +117,9 @@ export function App() {
             selectedCategory={currentView === 'category' ? viewParam : undefined}
             searchQueryParam={currentView === 'search' ? viewParam : ''}
             onNavigate={handleNavigate}
-            onToggleLike={handleToggleLike}
+            onToggleLike={handleToggleFavorite}
             onToggleFavorite={handleToggleFavorite}
-            likedRecipeIds={likedIds}
+            likedRecipeIds={favoriteIds}
             favoriteRecipeIds={favoriteIds}
           />
         )}
@@ -139,11 +128,11 @@ export function App() {
           <RecipeDetailView
             recipe={selectedRecipe}
             onNavigate={handleNavigate}
-            onToggleLike={handleToggleLike}
+            onToggleLike={handleToggleFavorite}
             onToggleFavorite={handleToggleFavorite}
-            isLiked={likedIds.includes(selectedRecipe.id)}
+            isLiked={favoriteIds.includes(selectedRecipe.id)}
             isFavorite={favoriteIds.includes(selectedRecipe.id)}
-            likedRecipeIds={likedIds}
+            likedRecipeIds={favoriteIds}
             favoriteRecipeIds={favoriteIds}
           />
         )}
@@ -166,9 +155,9 @@ export function App() {
         {currentView === 'favorites' && (
           <FavoritesView
             favoriteRecipeIds={favoriteIds}
-            likedRecipeIds={likedIds}
+            likedRecipeIds={favoriteIds}
             onNavigate={handleNavigate}
-            onToggleLike={handleToggleLike}
+            onToggleLike={handleToggleFavorite}
             onToggleFavorite={handleToggleFavorite}
           />
         )}

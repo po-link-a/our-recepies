@@ -178,6 +178,8 @@ ul, ol { list-style: none; }
 }
 .icon-btn:hover { border-color: var(--red); color: var(--red); }
 .icon-btn--sm { width: 34px; height: 34px; }
+.icon-btn--plain { border-color: transparent; background: transparent; }
+.icon-btn--plain:hover { border-color: transparent; color: var(--red); }
 .icon-btn__count {
   position: absolute; top: -5px; right: -5px;
   background: var(--red); color: var(--paper);
@@ -265,14 +267,6 @@ ul, ol { list-style: none; }
 .mark--sage { background: var(--sage); }
 .mark--yellow { background: var(--yellow); }
 
-/* Clipping ribbon */
-.ribbon {
-  display: inline-flex; align-items: center; gap: 7px;
-  font-family: var(--hand); font-size: 20px; line-height: 1.2;
-  color: var(--green); background: var(--arch-bg);
-  border: 1px solid var(--arch-line); border-radius: 3px;
-  padding: 3px 12px;
-}
 
 /* Incomplete-scan warning */
 .warn {
@@ -311,7 +305,7 @@ ul, ol { list-style: none; }
   letter-spacing: -0.02em; margin: 10px 0 18px; text-wrap: balance;
 }
 .hero__lede {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 22px; line-height: 1.5; color: var(--ink-soft);
   margin-bottom: 30px; max-width: 34ch;
 }
@@ -334,7 +328,7 @@ ul, ol { list-style: none; }
 .recipe-card { display: flex; flex-direction: column; gap: 12px; height: 100%; }
 .recipe-card__top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .recipe-card__tools { display: flex; align-items: center; gap: 8px; flex: none; }
-.recipe-card__title { font-size: 24px; line-height: 1.15; font-weight: 700; }
+.recipe-card__title { font-family: var(--sans); font-size: 23px; line-height: 1.2; font-weight: 700; }
 .card--link:hover .recipe-card__title { color: var(--red); }
 .recipe-card__note { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
 .recipe-card__foot {
@@ -349,9 +343,6 @@ ul, ol { list-style: none; }
 .recipe-card__like:hover { border-color: var(--red); color: var(--red); }
 .recipe-card__like--on { background: var(--peach); border-color: var(--red); color: var(--red); }
 
-.bookmark-btn { color: var(--ink-mute); display: inline-flex; padding: 2px; transition: color 0.15s; }
-.bookmark-btn:hover { color: var(--red); }
-.bookmark-btn--on { color: var(--red); }
 
 /* Grids */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -370,7 +361,7 @@ ul, ol { list-style: none; }
   width: 54px; height: 54px; border-radius: 999px;
   display: flex; align-items: center; justify-content: center; color: var(--ink);
 }
-.cat-tile__name { font-family: var(--serif); font-weight: 700; font-size: 15px; line-height: 1.25; }
+.cat-tile__name { font-family: var(--sans); font-weight: 600; font-size: 15px; line-height: 1.25; }
 .cat-tile:hover .cat-tile__name { color: var(--red); }
 
 /* ---------- Recipe of the day ---------- */
@@ -381,8 +372,8 @@ ul, ol { list-style: none; }
   flex-wrap: wrap; gap: 12px; margin-bottom: 16px;
 }
 .feature__grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
-.feature__eyebrow { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); }
-.feature__title { font-size: 32px; line-height: 1.12; font-weight: 700; margin: 6px 0 8px; }
+.feature__tags { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.feature__title { font-family: var(--sans); font-size: 30px; line-height: 1.18; font-weight: 700; margin: 6px 0 8px; }
 .feature__text { font-size: 15px; line-height: 1.65; color: var(--ink-soft); }
 
 /* ---------- Archive band ---------- */

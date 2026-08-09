@@ -162,7 +162,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, favorit
         <div className="row" style={{ gap: 10, marginLeft: 'auto' }}>
           <button
             onClick={() => onNavigate('favorites')}
-            className="icon-btn"
+            className="icon-btn icon-btn--plain"
             title="Избранные рецепты"
           >
             <Heart size={18} fill={favoritesCount > 0 ? '#D93A2B' : 'none'} color={favoritesCount > 0 ? '#D93A2B' : 'currentColor'} />

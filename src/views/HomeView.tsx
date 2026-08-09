@@ -58,7 +58,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <p className="hero__lede">
               {RECIPES.length} {plural(RECIPES.length, 'драгоценный', 'драгоценных', 'драгоценных')}{' '}
               {plural(RECIPES.length, 'рецепт', 'рецепта', 'рецептов')} из семейных архивных выписок,
-              старых газетных вырезок и тетрадей.
+              старых газетных вырезок и тетрадей
             </p>
             <div className="hero__actions">
               <button onClick={() => onNavigate('all')} className="btn btn--primary">
@@ -88,9 +88,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <div className="feature__grid">
             <div>
-              <span className="feature__eyebrow">
-                {recipeOfTheDay.categoryName} · {recipeOfTheDay.language}
-              </span>
+              {/* Same chip + language tag as the cards, so tags read alike everywhere */}
+              <div className="feature__tags">
+                <span
+                  className="chip"
+                  style={{ backgroundColor: CATEGORIES[recipeOfTheDay.category]?.bgColor }}
+                >
+                  <CategoryIcon
+                    name={CATEGORIES[recipeOfTheDay.category]?.iconName || 'waffle'}
+                    size={16}
+                  />
+                  {recipeOfTheDay.categoryName}
+                </span>
+                <span className="lang-tag">{recipeOfTheDay.language}</span>
+              </div>
               <h2 className="feature__title">{recipeOfTheDay.title}</h2>
               <p className="feature__text">
                 {recipeOfTheDay.sourceNote} — {recipeOfTheDay.directions[0]}

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   Heart,
-  Bookmark,
   Share2,
   Printer,
   Download,
@@ -191,14 +190,6 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
               {recipe.likes}
             </button>
 
-            <button
-              onClick={(e) => onToggleFavorite(recipe.id, e)}
-              className="icon-btn icon-btn--sm"
-              title="В избранное"
-            >
-              <Bookmark size={16} fill={isFavorite ? '#D93A2B' : 'none'} color={isFavorite ? '#D93A2B' : 'currentColor'} />
-            </button>
-
             <button onClick={handleCopyLink} className="icon-btn icon-btn--sm" title="Поделиться">
               {copiedLink ? <Check size={16} /> : <Share2 size={16} />}
             </button>
@@ -213,7 +204,7 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
               <Download size={13} /> Скачать Word (.docx)
             </button>
             <button onClick={handlePrint} className="btn btn--ghost btn--xs">
-              <Download size={13} /> Сохранить в PDF / Друк
+              <Download size={13} /> Скачать PDF
             </button>
           </div>
         </header>
@@ -282,18 +273,6 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
                 );
               })}
             </ul>
-
-            {/* About the collection */}
-            <div className="note-card" style={{ marginTop: 26 }}>
-              <div className="note-card__label">
-                <DecorativeDoodle type="lemon" size={18} />
-                <span>О коллекции</span>
-              </div>
-              <p className="note-card__text" style={{ fontSize: 14.5 }}>
-                Все рецепты собраны из семейного архива (15 оригинальных сканов). Сохранен
-                оригинальный текст и язык (RU / UK / FR).
-              </p>
-            </div>
 
             <div className="no-print only-wide" style={{ marginTop: 22 }}>
               <AdPlaceholder type="recipe_sidebar" />

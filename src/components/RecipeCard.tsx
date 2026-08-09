@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Bookmark } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { Recipe, CATEGORIES } from '../data/recipes';
 import { CategoryIcon } from './Illustrations';
 
@@ -33,17 +33,8 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
 
         <div className="recipe-card__tools">
           <span className="lang-tag">{recipe.language}</span>
-          <button
-            onClick={(e) => onToggleFavorite(recipe.id, e)}
-            className={`bookmark-btn ${isFavorite ? 'bookmark-btn--on' : ''}`}
-            title={isFavorite ? 'Убрать из избранного' : 'Добавить в избранное'}
-          >
-            <Bookmark size={17} fill={isFavorite ? '#D93A2B' : 'none'} />
-          </button>
         </div>
       </div>
-
-      {recipe.isArchive && <span className="ribbon">из бабушкиных вырезок</span>}
 
       {recipe.isIncomplete && <span className="warn__badge">неполный скан</span>}
 
@@ -57,10 +48,11 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
         {recipe.servings && <span>{recipe.servings} порций</span>}
 
         <button
-          onClick={(e) => onToggleLike(recipe.id, e)}
-          className={`recipe-card__like ${isLiked ? 'recipe-card__like--on' : ''}`}
+          onClick={(e) => onToggleFavorite(recipe.id, e)}
+          className={`recipe-card__like ${isFavorite ? 'recipe-card__like--on' : ''}`}
+          title={isFavorite ? 'Убрать из избранного' : 'В избранное'}
         >
-          <Heart size={13} fill={isLiked ? '#D93A2B' : 'none'} />
+          <Heart size={13} fill={isFavorite ? '#D93A2B' : 'none'} />
           {recipe.likes}
         </button>
       </div>
