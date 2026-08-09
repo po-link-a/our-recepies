@@ -110,36 +110,7 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
         </div>
       </div>
 
-      {/* Situational tag filters */}
-      <div className="filters">
-        <div className="filters__label">
-          <span>Ситуативные ярлыки-фильтры</span>
-          {activeTags.length > 0 && (
-            <button onClick={() => setActiveTags([])} className="filters__reset push">
-              Сбросить ({activeTags.length})
-            </button>
-          )}
-        </div>
-
-        <div className="row-wrap">
-          {(Object.keys(TAG_LABELS) as SituationalTag[]).map((tagKey) => {
-            const isSelected = activeTags.includes(tagKey);
-            const tagData = TAG_LABELS[tagKey];
-            return (
-              <button
-                key={tagKey}
-                onClick={() => toggleTag(tagKey)}
-                className={`pill ${isSelected ? 'pill--active' : ''}`}
-              >
-                {tagData.icon && <TagMicroIcon name={tagData.icon} />}
-                {tagData.label}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Category tabs + sorting */}
+      {/* Categories and situational tags as one cloud */}
       <div className="sortbar">
         <div className="sortbar__tabs">
           <button
@@ -159,6 +130,28 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
               {cat.name}
             </button>
           ))}
+
+          {(Object.keys(TAG_LABELS) as SituationalTag[]).map((tagKey) => {
+            const isSelected = activeTags.includes(tagKey);
+            const tagData = TAG_LABELS[tagKey];
+            return (
+              <button
+                key={tagKey}
+                onClick={() => toggleTag(tagKey)}
+                className={`pill ${isSelected ? 'pill--active' : ''}`}
+                style={{ whiteSpace: 'nowrap' }}
+              >
+                {tagData.icon && <TagMicroIcon name={tagData.icon} />}
+                {tagData.label}
+              </button>
+            );
+          })}
+
+          {activeTags.length > 0 && (
+            <button onClick={() => setActiveTags([])} className="filters__reset">
+              Сбросить ({activeTags.length})
+            </button>
+          )}
         </div>
 
         <div className="sortbar__sort">

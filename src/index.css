@@ -516,7 +516,6 @@ ul, ol { list-style: none; }
 
 /* ---------- Filters bar ---------- */
 
-.filters { padding-bottom: 26px; border-bottom: 1px dotted var(--line-dot); }
 .filters__label {
   display: flex; align-items: center; gap: 7px; margin-bottom: 12px;
   font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute);
