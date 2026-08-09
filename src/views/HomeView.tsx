@@ -1,5 +1,5 @@
 import React from 'react';
-import { RECIPES, CATEGORIES } from '../data/recipes';
+import { RECIPES, CATEGORIES, plural, recipeCount } from '../data/recipes';
 import { HeroPotIllustration, CategoryIcon } from '../components/Illustrations';
 import { RecipeCard } from '../components/RecipeCard';
 import { AdPlaceholder } from '../components/AdPlaceholder';
@@ -54,14 +54,15 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="hero__grid">
           <div>
             <span className="kicker">Душевные семейные рецепты</span>
-            <h1 className="hero__title">Бабушкина шкатулка рецептов в цифре</h1>
+            <h1 className="hero__title">Бабушкина шкатулка рецептов</h1>
             <p className="hero__lede">
-              {RECIPES.length} драгоценных рецепта из семейных архивных выписок, старых газетных вырезок и тетрадей
-              на русском, украинском и французском языках.
+              {RECIPES.length} {plural(RECIPES.length, 'драгоценный', 'драгоценных', 'драгоценных')}{' '}
+              {plural(RECIPES.length, 'рецепт', 'рецепта', 'рецептов')} из семейных архивных выписок,
+              старых газетных вырезок и тетрадей.
             </p>
             <div className="hero__actions">
               <button onClick={() => onNavigate('all')} className="btn btn--primary">
-                Смотреть все {RECIPES.length} рецепта
+                Смотреть все {recipeCount()}
               </button>
               <button onClick={() => onNavigate('category', 'waffles')} className="btn btn--ghost">
                 Вафли и выпечка

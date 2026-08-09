@@ -311,7 +311,7 @@ ul, ol { list-style: none; }
   letter-spacing: -0.02em; margin: 10px 0 18px; text-wrap: balance;
 }
 .hero__lede {
-  font-family: var(--serif); font-style: italic;
+  font-family: var(--serif);
   font-size: 22px; line-height: 1.5; color: var(--ink-soft);
   margin-bottom: 30px; max-width: 34ch;
 }

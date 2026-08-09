@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
-import { RECIPES, CATEGORIES, DishCategory, SituationalTag } from '../data/recipes';
+import { RECIPES, CATEGORIES, DishCategory, SituationalTag, recipeCount } from '../data/recipes';
 import { RecipeCard } from '../components/RecipeCard';
 import { CategoryIcon, TagMicroIcon } from '../components/Illustrations';
 import { AdPlaceholder } from '../components/AdPlaceholder';
@@ -85,7 +85,7 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
         )}
         <div>
           <span className="kicker">
-            {categoryInfo ? categoryInfo.description : `Полный архив ${RECIPES.length} рецептов нашей семьи`}
+            {categoryInfo ? categoryInfo.description : `Полный архив ${recipeCount()} нашей семьи`}
           </span>
           <h1 className="hero__title" style={{ fontSize: 52, margin: '4px 0 0' }}>
             {categoryInfo ? categoryInfo.name : 'Все рецепты коллекции'}

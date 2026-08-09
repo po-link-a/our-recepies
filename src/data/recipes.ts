@@ -143,3 +143,20 @@ export interface Recipe {
  * with a plain JSON read-modify-write. Types and CATEGORIES stay here.
  */
 export const RECIPES: Recipe[] = recipesData as Recipe[];
+
+/**
+ * Russian nouns take three forms after a number — 1 рецепт, 2 рецепта,
+ * 5 рецептов — and the count changes every time the bot publishes.
+ */
+export function plural(count: number, one: string, few: string, many: string): string {
+  const lastTwo = count % 100;
+  if (lastTwo >= 11 && lastTwo <= 14) return many;
+  const last = count % 10;
+  if (last === 1) return one;
+  if (last >= 2 && last <= 4) return few;
+  return many;
+}
+
+/** "80 рецептов", "82 рецепта", "81 рецепт" */
+export const recipeCount = (count = RECIPES.length): string =>
+  `${count} ${plural(count, 'рецепт', 'рецепта', 'рецептов')}`;
