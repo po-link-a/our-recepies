@@ -119,12 +119,12 @@ ul, ol { list-style: none; }
 .nav__caret { display: inline-flex; align-items: center; gap: 5px; }
 
 .dropdown {
-  position: absolute; top: 100%; left: 0; margin-top: 8px; width: 300px;
+  position: absolute; top: 100%; left: 0; margin-top: 8px; width: 340px;
   background: var(--paper); border: 1px solid var(--line); border-radius: 4px;
   padding: 6px; z-index: 50; box-shadow: 0 8px 24px -12px rgba(42, 38, 34, 0.25);
 }
 .dropdown__item {
-  width: 100%; display: flex; align-items: center; gap: 12px;
+  width: 100%; display: flex; align-items: center; gap: 12px; min-width: 0;
   padding: 8px; text-align: left; border-radius: 3px; transition: background 0.15s;
 }
 .dropdown__item:hover { background: var(--bg); }
@@ -132,10 +132,12 @@ ul, ol { list-style: none; }
   width: 34px; height: 34px; border-radius: 999px; flex: none;
   display: flex; align-items: center; justify-content: center; color: var(--ink);
 }
+/* Stacks the two lines; inline spans ignored max-width and text-overflow */
+.dropdown__text { display: flex; flex-direction: column; min-width: 0; }
 .dropdown__name { font-family: var(--serif); font-weight: 700; font-size: 14px; }
 .dropdown__desc {
   font-size: 12px; color: var(--ink-mute); line-height: 1.35;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 210px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 
 /* Search */
@@ -313,7 +315,7 @@ ul, ol { list-style: none; }
   margin-bottom: 30px; max-width: 34ch;
 }
 .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-band { background: var(--hero-bg); overflow: hidden; }
+.hero-band { background: var(--hero-bg); overflow: hidden; border-bottom: 1px solid var(--line); }
 /*
  * The drawing runs out to the viewport edge — its paper is invisible, so the
  * bleed costs nothing. Measured from the container, not the grid column: a

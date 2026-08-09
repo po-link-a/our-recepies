@@ -96,7 +96,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, favorit
                     <span className="dropdown__icon" style={{ backgroundColor: cat.bgColor }}>
                       <CategoryIcon name={cat.iconName} size={20} />
                     </span>
-                    <span>
+                    <span className="dropdown__text">
                       <span className="dropdown__name">{cat.name}</span>
                       <span className="dropdown__desc">{cat.description}</span>
                     </span>
