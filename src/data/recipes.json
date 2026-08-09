@@ -2109,7 +2109,7 @@
   },
   {
     "id": "220-zapikanka-khaust",
-    "title": "Запіканка хустська",
+    "title": "Запеканка хустская",
     "slug": "zapikanka-khustska",
     "category": "vegetables",
     "categoryName": "Овощные блюда и запеканки",
@@ -2124,43 +2124,44 @@
     "cookTimeMinutes": 15,
     "ingredients": [
       {
-        "name": "Локшина",
+        "name": "Лапша",
         "amount": 300,
         "unit": "г"
       },
       {
-        "name": "Яйця сирі",
+        "name": "Яйца сырые",
         "amount": 2,
         "unit": "шт"
       },
       {
-        "name": "Цукор",
+        "name": "Сахар",
         "amount": 60,
         "unit": "г"
       },
       {
-        "name": "Подрібнені горіхи волоські",
+        "name": "Измельчённые грецкие орехи",
         "amount": 180,
         "unit": "г"
       },
       {
-        "name": "Маргарин та сухарі",
-        "note": "для деко"
+        "name": "Маргарин и сухари",
+        "note": "для противня"
       }
     ],
     "directions": [
-      "У підсоленій воді відваріть локшину (300 г). Охолодіть її та змішайте із двома сирими яйцями. Додайте 60 г цукру.",
-      "Змастіть деко маргарином, посипте сухарями.",
-      "Викладіть половину локшини, потім 180 г горіхів, зверху решту локшини.",
-      "Запікайте 10–15 хвилин у духовці. Подають гарячою зі сметаною."
+      "В подсоленной воде отварите лапшу (300 г). Охладите её и смешайте с двумя сырыми яйцами. Добавьте 60 г сахара.",
+      "Смажьте противень маргарином, посыпьте сухарями.",
+      "Выложите половину лапши, затем 180 г орехов, сверху остальную лапшу.",
+      "Запекайте 10–15 минут в духовке. Подают горячей со сметаной."
     ],
     "isArchive": true,
     "likes": 33,
-    "createdAt": "2026-01-26"
+    "createdAt": "2026-01-26",
+    "translatedFrom": "UK"
   },
   {
     "id": "220-dushedyna-pepper-beans",
-    "title": "Душенина з перцем та квасолею",
+    "title": "Душенина с перцем и фасолью",
     "slug": "dushedyna-pepper-beans",
     "category": "meat",
     "categoryName": "Мясо и птица",
@@ -2176,52 +2177,53 @@
     "cookTimeMinutes": 35,
     "ingredients": [
       {
-        "name": "Яловичина",
+        "name": "Говядина",
         "amount": 250,
         "unit": "г"
       },
       {
-        "name": "Червоний солодкий перець",
+        "name": "Красный сладкий перец",
         "amount": 1,
         "unit": "шт"
       },
       {
-        "name": "Велика цибулина",
+        "name": "Большая луковица",
         "amount": 1,
         "unit": "шт"
       },
       {
-        "name": "Консервована квасоля",
+        "name": "Консервированная фасоль",
         "amount": 250,
         "unit": "г"
       },
       {
-        "name": "Нарізані томати",
+        "name": "Нарезанные томаты",
         "amount": 250,
         "unit": "г"
       },
       {
-        "name": "Червоне вино",
+        "name": "Красное вино",
         "amount": 1,
-        "unit": "чарка"
+        "unit": "рюмка"
       },
       {
-        "name": "Олія, сіль, перець",
-        "note": "за смаком"
+        "name": "Масло, соль, перец",
+        "note": "по вкусу"
       }
     ],
     "directions": [
-      "Наріжте кубиками 250 г яловичини та солодкий перець. Подрібніть цибулину, обсмажте в олії, перемішайте з м’ясом та перцем.",
-      "Влийте трохи гарячої води, посоліть, поперчіть. Тушкуйте 25 хвилин на слабкому вогні в закритій каструлі.",
-      "Додайте 250 г квасолі та 250 г томатів. За 5 хвилин влийте чарку червоного вина."
+      "Нарежьте кубиками 250 г говядины и сладкий перец. Измельчите луковицу, обжарьте в масле, перемешайте с мясом и перцем.",
+      "Влейте немного горячей воды, посолите, поперчите. Тушите 25 минут на слабом огне в закрытой кастрюле.",
+      "Добавьте 250 г фасоли и 250 г томатов. Через 5 минут влейте рюмку красного вина."
     ],
     "isArchive": true,
     "likes": 47,
-    "createdAt": "2026-01-27"
+    "createdAt": "2026-01-27",
+    "translatedFrom": "UK"
   },
   {
     "id": "220-veal-cherry",
-    "title": "Телятина з вишнею",
+    "title": "Телятина с вишней",
     "slug": "veal-cherry",
     "category": "meat",
     "categoryName": "Мясо и птица",
@@ -2236,42 +2238,43 @@
     "cookTimeMinutes": 50,
     "ingredients": [
       {
-        "name": "Шматок телятини",
+        "name": "Кусок телятины",
         "amount": 600,
         "unit": "г"
       },
       {
-        "name": "Вишня без кісточок",
+        "name": "Вишня без косточек",
         "amount": 150,
         "unit": "г"
       },
       {
-        "name": "Кориця, олія, сіль",
-        "note": "за смаком"
+        "name": "Корица, масло, соль",
+        "note": "по вкусу"
       },
       {
-        "name": "Вишневий сік",
+        "name": "Вишнёвый сок",
         "amount": 100,
         "unit": "мл"
       },
       {
-        "name": "Борошно",
+        "name": "Мука",
         "amount": 1,
         "unit": "ст. ложка"
       }
     ],
     "directions": [
-      "Зробіть в телятині глибокі проколи ножем уздовж волокон и нашпигуйте вишнею. Посоліть.",
-      "Покладіть у каструлю, полийте олією, посипте корицею. Запікайте 20 хвилин у духовці.",
-      "Полийте вишневим соком, присипте борошном і тушкуйте ще 30 хвилин до готовності. Подавайте із соусом."
+      "Сделайте в телятине глубокие проколы ножом вдоль волокон и нашпигуйте вишней. Посолите.",
+      "Положите в кастрюлю, полейте маслом, посыпьте корицей. Запекайте 20 минут в духовке.",
+      "Полейте вишнёвым соком, присыпьте мукой и тушите ещё 30 минут до готовности. Подавайте с соусом."
     ],
     "isArchive": true,
     "likes": 71,
-    "createdAt": "2026-01-28"
+    "createdAt": "2026-01-28",
+    "translatedFrom": "UK"
   },
   {
     "id": "220-pork-kruchenyky",
-    "title": "Крученики зі свининою",
+    "title": "Крученики со свининой",
     "slug": "pork-kruchenyky",
     "category": "meat",
     "categoryName": "Мясо и птица",
@@ -2286,39 +2289,40 @@
     "cookTimeMinutes": 35,
     "ingredients": [
       {
-        "name": "Свинина (окіст)",
+        "name": "Свинина (окорок)",
         "amount": 500,
         "unit": "г"
       },
       {
-        "name": "Свіжі шампіньйони",
+        "name": "Свежие шампиньоны",
         "amount": 150,
         "unit": "г"
       },
       {
-        "name": "Нежирна шинка",
+        "name": "Нежирная ветчина",
         "amount": 100,
         "unit": "г"
       },
       {
-        "name": "Вершкове масло та густі вершки",
+        "name": "Сливочное масло и густые сливки",
         "amount": 2,
         "unit": "ст. ложки"
       },
       {
-        "name": "Яйце, панірувальні сухарі",
-        "note": "для паніровки"
+        "name": "Яйцо, панировочные сухари",
+        "note": "для панировки"
       }
     ],
     "directions": [
-      "Свинину наріжте широкими шматками и відбийте до 3–4 мм.",
-      "Приготуйте начинку: підсмажте соломку з печериць та шинки на вершковому маслі, додайте трохи вершків.",
-      "Скрутіть свинину трубочками з начинкою, скріпіть зубочистками.",
-      "Підсоліть, змастіть збитим яйцем, обваляйте в сухарях и запікайте у духовці."
+      "Свинину нарежьте широкими кусками и отбейте до 3–4 мм.",
+      "Приготовьте начинку: обжарьте соломку из шампиньонов и ветчины на сливочном масле, добавьте немного сливок.",
+      "Скрутите свинину трубочками с начинкой, скрепите зубочистками.",
+      "Посолите, смажьте взбитым яйцом, обваляйте в сухарях и запекайте в духовке."
     ],
     "isArchive": true,
     "likes": 83,
-    "createdAt": "2026-01-29"
+    "createdAt": "2026-01-29",
+    "translatedFrom": "UK"
   },
   {
     "id": "316-stuffed-eggplants",
@@ -3607,7 +3611,7 @@
   },
   {
     "id": "392-soupe-haricots-verts",
-    "title": "Soupe de haricots verts (Крем-суп из стручковой фасоли)",
+    "title": "Крем-суп из стручковой фасоли",
     "slug": "soupe-haricots-verts",
     "category": "soups",
     "categoryName": "Супы и холодники",
@@ -3623,43 +3627,45 @@
     "servings": 3,
     "ingredients": [
       {
-        "name": "1 grande boîte de haricots verts (стручковая фасоль)",
+        "name": "Стручковая фасоль",
         "amount": 1,
-        "unit": "банка"
+        "unit": "банка",
+        "note": "большая банка"
       },
       {
-        "name": "Oignon (лук)",
-        "amount": 1,
-        "unit": "шт"
-      },
-      {
-        "name": "Yaourt nature (йогурт)",
+        "name": "Лук",
         "amount": 1,
         "unit": "шт"
       },
       {
-        "name": "Bouillon cube (бульонный кубик)",
+        "name": "Йогурт натуральный",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "Бульонный кубик",
         "amount": 0.5,
         "unit": "шт"
       },
       {
-        "name": "Cumin, sel, poivre (кумин, соль, перец)",
+        "name": "Кумин, соль, перец",
         "note": "по вкусу"
       }
     ],
     "directions": [
-      "Émincez l'oignon et faites-le revenir dans une casserole avec les haricots verts.",
-      "Mixez (ou écrasez à la fourchette) puis remettez dans la casserole.",
-      "Ajoutez le yaourt, le bouillon cube dilué dans l'eau chaude, le cumin et assaisonnez.",
-      "Faites chauffer quelques minutes. (Se mange chaud ou froid)."
+      "Нашинкуйте лук и обжарьте его в кастрюле со стручковой фасолью.",
+      "Измельчите блендером (или разомните вилкой), затем верните в кастрюлю.",
+      "Добавьте йогурт, бульонный кубик, разведённый в горячей воде, кумин и приправьте.",
+      "Прогрейте несколько минут. (Едят горячим или холодным)."
     ],
     "isArchive": false,
     "likes": 29,
-    "createdAt": "2026-02-22"
+    "createdAt": "2026-02-22",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-oeufs-cocotte-thon",
-    "title": "Œufs cocotte au thon (Яйца кокотт с тунцом)",
+    "title": "Яйца кокотт с тунцом",
     "slug": "oeufs-cocotte-thon",
     "category": "fish",
     "categoryName": "Рыба и морепродукты",
@@ -3675,37 +3681,38 @@
     "servings": 4,
     "ingredients": [
       {
-        "name": "Œufs (яйца)",
+        "name": "Яйца",
         "amount": 4,
         "unit": "шт"
       },
       {
-        "name": "Crème fraîche (сливки)",
+        "name": "Сливки",
         "amount": 25,
         "unit": "кл"
       },
       {
-        "name": "Boîte de thon (тунец)",
+        "name": "Тунец",
         "amount": 1,
         "unit": "банка"
       },
       {
-        "name": "Persil / herbes aromatiques",
+        "name": "Петрушка / ароматные травы",
         "note": "по вкусу"
       }
     ],
     "directions": [
-      "Faites chauffer la crème sur feu moyen pendant 8 minutes.",
-      "Disposez la crème et le thon émietté dans 4 ramequins. Cassez un œuf au-dessus.",
-      "Enfournez au bain-marie à 180°C pendant 12 à 15 minutes."
+      "Прогрейте сливки на среднем огне 8 минут.",
+      "Разложите сливки и размятый тунец по 4 формочкам. Разбейте сверху по яйцу.",
+      "Запекайте на водяной бане при 180 °C 12–15 минут."
     ],
     "isArchive": false,
     "likes": 48,
-    "createdAt": "2026-02-23"
+    "createdAt": "2026-02-23",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-omelette-ratatouille",
-    "title": "Omelette de ratatouille (Омлет с рататуем)",
+    "title": "Омлет с рататуем",
     "slug": "omelette-ratatouille",
     "category": "vegetables",
     "categoryName": "Овощные блюда и запеканки",
@@ -3721,32 +3728,34 @@
     "servings": 2,
     "ingredients": [
       {
-        "name": "Petite boîte de ratatouille (консервированный рататуй)",
+        "name": "Рататуй консервированный",
         "amount": 1,
-        "unit": "банка"
+        "unit": "банка",
+        "note": "маленькая банка"
       },
       {
-        "name": "Œufs (яйца)",
+        "name": "Яйца",
         "amount": 2,
         "unit": "шт"
       },
       {
-        "name": "Sel, poivre",
+        "name": "Соль, перец",
         "note": "по вкусу"
       }
     ],
     "directions": [
-      "Battez les œufs à la fourchette avec du sel et du poivre.",
-      "Réchauffez la ratatouille dans une poêle.",
-      "Versez par-dessus les œufs battus et laissez cuire jusqu'à la consistance souhaitée."
+      "Взбейте яйца вилкой с солью и перцем.",
+      "Разогрейте рататуй на сковороде.",
+      "Влейте сверху взбитые яйца и готовьте до желаемой консистенции."
     ],
     "isArchive": false,
     "likes": 37,
-    "createdAt": "2026-02-24"
+    "createdAt": "2026-02-24",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-salade-lentilles-thon",
-    "title": "Salade de lentilles au thon (Салат из чечевицы с тунцом)",
+    "title": "Салат из чечевицы с тунцом",
     "slug": "salade-lentilles-thon",
     "category": "salads",
     "categoryName": "Салаты и закуски",
@@ -3762,38 +3771,39 @@
     "servings": 4,
     "ingredients": [
       {
-        "name": "Boîte de lentilles (чечевица)",
+        "name": "Чечевица",
         "amount": 1,
         "unit": "банка"
       },
       {
-        "name": "Boîte de thon (тунец)",
+        "name": "Тунец",
         "amount": 1,
         "unit": "банка"
       },
       {
-        "name": "Échalote émincée (шалот)",
+        "name": "Шалот измельчённый",
         "amount": 1,
         "unit": "шт"
       },
       {
-        "name": "Œufs durs (яйца вкрутую)",
+        "name": "Яйца вкрутую",
         "amount": 3,
         "unit": "шт"
       }
     ],
     "directions": [
-      "Faites cuire les œufs 10 minutes, puis émincez-les.",
-      "Émincez l'échalote.",
-      "Mélangez tous les ingrédients dans un saladier et assaisonnez."
+      "Отварите яйца 10 минут, затем нарежьте их.",
+      "Измельчите шалот.",
+      "Смешайте все ингредиенты в салатнике и заправьте."
     ],
     "isArchive": false,
     "likes": 55,
-    "createdAt": "2026-02-25"
+    "createdAt": "2026-02-25",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-rosti-thon",
-    "title": "Rösti au thon (Рёсти с тунцом и картофелем)",
+    "title": "Рёсти с тунцом и картофелем",
     "slug": "rosti-thon",
     "category": "fish",
     "categoryName": "Рыба и морепродукты",
@@ -3809,43 +3819,44 @@
     "servings": 4,
     "ingredients": [
       {
-        "name": "Boîte de thon",
+        "name": "Тунец",
         "amount": 1,
         "unit": "банка"
       },
       {
-        "name": "Oignon",
+        "name": "Лук",
         "amount": 1,
         "unit": "шт"
       },
       {
-        "name": "Pommes de terre (картофель)",
+        "name": "Картофель",
         "amount": 4,
         "unit": "шт"
       },
       {
-        "name": "Huile",
+        "name": "Масло",
         "amount": 2,
         "unit": "ст. ложки"
       },
       {
-        "name": "Jus de citron",
+        "name": "Лимонный сок",
         "amount": 0.5,
         "unit": "шт"
       }
     ],
     "directions": [
-      "Épluchez et râpez les pommes de terre. Émincez l'oignon et émiettez le thon.",
-      "Faites revenir l'oignon, ajoutez le thon, картофель и лимонный сок.",
-      "Aplatissez pour former une galette et laissez cuire 25 min à feu doux de chaque côté."
+      "Очистите и натрите картофель. Нашинкуйте лук и разомните тунец.",
+      "Обжарьте лук, добавьте тунец, картофель и лимонный сок.",
+      "Придавите, чтобы получилась лепёшка, и жарьте по 25 минут с каждой стороны на слабом огне."
     ],
     "isArchive": false,
     "likes": 64,
-    "createdAt": "2026-02-26"
+    "createdAt": "2026-02-26",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-flan-macedoine",
-    "title": "Flan à la macédoine de légumes (Овощной флан)",
+    "title": "Овощной флан",
     "slug": "flan-macedoine-legumes",
     "category": "vegetables",
     "categoryName": "Овощные блюда и запеканки",
@@ -3861,38 +3872,40 @@
     "servings": 4,
     "ingredients": [
       {
-        "name": "Grosse boîte de macédoine (овощная смесь)",
+        "name": "Овощная смесь",
         "amount": 1,
-        "unit": "банка"
+        "unit": "банка",
+        "note": "большая банка"
       },
       {
-        "name": "Œufs",
+        "name": "Яйца",
         "amount": 3,
         "unit": "шт"
       },
       {
-        "name": "Lait",
+        "name": "Молоко",
         "amount": 0.5,
         "unit": "л"
       },
       {
-        "name": "Gruyère râpé",
+        "name": "Тёртый грюйер",
         "amount": 50,
         "unit": "г"
       }
     ],
     "directions": [
-      "Versez la macédoine égouttée dans un plat à gratin.",
-      "Mélangez les œufs, le lait, le sel et le poivre, puis versez sur les légumes.",
-      "Parsemez de gruyère et faites cuire 30 min à 180°C."
+      "Выложите откинутую на дуршлаг овощную смесь в форму для гратена.",
+      "Смешайте яйца, молоко, соль и перец, затем вылейте на овощи.",
+      "Посыпьте грюйером и выпекайте 30 минут при 180 °C."
     ],
     "isArchive": false,
     "likes": 41,
-    "createdAt": "2026-02-27"
+    "createdAt": "2026-02-27",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-cake-ratatouille",
-    "title": "Cake à la ratatouille (Пирог-кекс с рататуем)",
+    "title": "Пирог-кекс с рататуем",
     "slug": "cake-ratatouille",
     "category": "pies_baking",
     "categoryName": "Пирожки, булки и выпечка",
@@ -3908,53 +3921,54 @@
     "servings": 4,
     "ingredients": [
       {
-        "name": "Boîte de ratatouille",
+        "name": "Рататуй",
         "amount": 1,
         "unit": "банка"
       },
       {
-        "name": "Œufs",
+        "name": "Яйца",
         "amount": 3,
         "unit": "шт"
       },
       {
-        "name": "Farine (мука)",
+        "name": "Мука",
         "amount": 150,
         "unit": "г"
       },
       {
-        "name": "Gruyère râpé",
+        "name": "Тёртый грюйер",
         "amount": 100,
         "unit": "г"
       },
       {
-        "name": "Lait",
+        "name": "Молоко",
         "amount": 12.5,
         "unit": "кл"
       },
       {
-        "name": "Levure chimique (разрыхлитель)",
+        "name": "Разрыхлитель",
         "amount": 1,
         "unit": "пакетик"
       },
       {
-        "name": "Huile d'olive",
+        "name": "Оливковое масло",
         "amount": 8,
         "unit": "кл"
       }
     ],
     "directions": [
-      "Mélangez les œufs, la farine, la levure, l'huile et le lait.",
-      "Incorporez le gruyère puis la ratatouille.",
-      "Versez dans un moule à cake et enfournez 45 min à 180°C."
+      "Смешайте яйца, муку, разрыхлитель, масло и молоко.",
+      "Вмешайте грюйер, затем рататуй.",
+      "Вылейте в форму для кекса и выпекайте 45 минут при 180 °C."
     ],
     "isArchive": false,
     "likes": 76,
-    "createdAt": "2026-02-28"
+    "createdAt": "2026-02-28",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-tarte-thon-tomates",
-    "title": "Tarte thon, tomates et moutarde (Тарт с тунцом и томатами)",
+    "title": "Тарт с тунцом и томатами",
     "slug": "tarte-thon-tomates-moutarde",
     "category": "fish",
     "categoryName": "Рыба и морепродукты",
@@ -3970,53 +3984,54 @@
     "servings": 4,
     "ingredients": [
       {
-        "name": "Pâte feuilletée (слоеное тесто)",
+        "name": "Слоёное тесто",
         "amount": 1,
         "unit": "уп"
       },
       {
-        "name": "Boîtes de thon",
+        "name": "Тунец",
         "amount": 2,
         "unit": "банки"
       },
       {
-        "name": "Tomates",
+        "name": "Томаты",
         "amount": 2,
         "unit": "шт"
       },
       {
-        "name": "Moutarde (горчица)",
+        "name": "Горчица",
         "amount": 3,
         "unit": "ст. ложки"
       },
       {
-        "name": "Œufs",
+        "name": "Яйца",
         "amount": 2,
         "unit": "шт"
       },
       {
-        "name": "Crème fraîche",
+        "name": "Сливки",
         "amount": 20,
         "unit": "кл"
       },
       {
-        "name": "Lait",
+        "name": "Молоко",
         "amount": 3,
         "unit": "ст. ложки"
       }
     ],
     "directions": [
-      "Étalez la pâte et nappez le fond avec la moutarde.",
-      "Émiettez le thon dessus, puis disposez les rondelles de tomates.",
-      "Battez les œufs avec la crème et le lait, versez sur la tarte et enfournez 40 min à 180°C."
+      "Раскатайте тесто и смажьте дно горчицей.",
+      "Разомните сверху тунец, затем разложите кружочки томатов.",
+      "Взбейте яйца со сливками и молоком, вылейте на тарт и выпекайте 40 минут при 180 °C."
     ],
     "isArchive": false,
     "likes": 98,
-    "createdAt": "2026-03-01"
+    "createdAt": "2026-03-01",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-poulet-basquaise",
-    "title": "Poulet basquaise (Курица по-баскски с рататуем)",
+    "title": "Курица по-баскски с рататуем",
     "slug": "poulet-basquaise",
     "category": "meat",
     "categoryName": "Мясо и птица",
@@ -4032,33 +4047,34 @@
     "servings": 4,
     "ingredients": [
       {
-        "name": "Escalopes de poulet (куриное филе)",
+        "name": "Куриное филе",
         "amount": 4,
         "unit": "шт"
       },
       {
-        "name": "Boîte de ratatouille",
+        "name": "Рататуй",
         "amount": 1,
         "unit": "банка"
       },
       {
-        "name": "Oignon",
+        "name": "Лук",
         "amount": 1,
         "unit": "шт"
       }
     ],
     "directions": [
-      "Émincez l'oignon et coupez le poulet.",
-      "Faites revenir le poulet avec l'oignon, ajoutez un peu d'eau и тушите 30 минут.",
-      "Ajoutez la boîte de ratatouille et servez avec du riz."
+      "Нашинкуйте лук и нарежьте курицу.",
+      "Обжарьте курицу с луком, добавьте немного воды и тушите 30 минут.",
+      "Добавьте банку рататуя и подавайте с рисом."
     ],
     "isArchive": false,
     "likes": 52,
-    "createdAt": "2026-03-02"
+    "createdAt": "2026-03-02",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-tomates-farcies-semoule",
-    "title": "Tomates farcies à la viande et semoule (Фаршированные томаты)",
+    "title": "Фаршированные томаты с мясом и манкой",
     "slug": "tomates-farcies-semoule",
     "category": "meat",
     "categoryName": "Мясо и птица",
@@ -4074,47 +4090,48 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Tomates",
+        "name": "Томаты",
         "amount": 12,
         "unit": "шт"
       },
       {
-        "name": "Steak haché (фарш)",
+        "name": "Фарш",
         "amount": 600,
         "unit": "г"
       },
       {
-        "name": "Semoule cuite ou riz",
+        "name": "Варёная манная крупа или рис",
         "amount": 200,
         "unit": "г"
       },
       {
-        "name": "Oignons",
+        "name": "Лук",
         "amount": 2,
         "unit": "шт"
       },
       {
-        "name": "Ail",
+        "name": "Чеснок",
         "amount": 1,
         "unit": "зубчик"
       },
       {
-        "name": "Chapelure (панировка)",
+        "name": "Панировочные сухари",
         "note": "по вкусу"
       }
     ],
     "directions": [
-      "Coupez les chapeaux des tomates et videz-les.",
-      "Faites revenir les oignons et l'ail, ajoutez la viande puis la semoule.",
-      "Remplissez les tomates, saupoudrez de chapelure, remettez les chapeaux et enfournez 45 min à 210°C."
+      "Срежьте у томатов «шляпки» и выньте мякоть.",
+      "Обжарьте лук и чеснок, добавьте мясо, затем манку.",
+      "Наполните томаты, посыпьте сухарями, накройте шляпками и запекайте 45 минут при 210 °C."
     ],
     "isArchive": false,
     "likes": 67,
-    "createdAt": "2026-03-03"
+    "createdAt": "2026-03-03",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-boeuf-chili-con-carne",
-    "title": "Bœuf à la chili con carne (Чили кон карне с фаршем)",
+    "title": "Чили кон карне с фаршем",
     "slug": "boeuf-chili-con-carne",
     "category": "meat",
     "categoryName": "Мясо и птица",
@@ -4130,42 +4147,43 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Steak haché",
+        "name": "Фарш",
         "amount": 400,
         "unit": "г"
       },
       {
-        "name": "Haricots rouges (красная фасоль)",
+        "name": "Красная фасоль",
         "amount": 1,
         "unit": "банка"
       },
       {
-        "name": "Oignon",
+        "name": "Лук",
         "amount": 1,
         "unit": "шт"
       },
       {
-        "name": "Concentré de tomates",
+        "name": "Томатная паста",
         "amount": 1,
         "unit": "ст. ложка"
       },
       {
-        "name": "Ketchup épicé",
+        "name": "Острый кетчуп",
         "amount": 2,
         "unit": "ст. ложки"
       }
     ],
     "directions": [
-      "Faites revenir l'oignon, ajoutez la viande hachée, l'ail et le concentré de tomates avec un fond d'eau.",
-      "Faites cuire 7 minutes, ajoutez les haricots rouges et terminez par le ketchup."
+      "Обжарьте лук, добавьте фарш, чеснок и томатную пасту с небольшим количеством воды.",
+      "Готовьте 7 минут, добавьте красную фасоль и завершите кетчупом."
     ],
     "isArchive": false,
     "likes": 80,
-    "createdAt": "2026-03-04"
+    "createdAt": "2026-03-04",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-gratin-pommes-poulet",
-    "title": "Gratin de pommes de terre au poulet (Гратен из картофеля)",
+    "title": "Гратен из картофеля с курицей",
     "slug": "gratin-pommes-poulet",
     "category": "meat",
     "categoryName": "Мясо и птица",
@@ -4181,42 +4199,43 @@
     "servings": 4,
     "ingredients": [
       {
-        "name": "Pommes de terre",
+        "name": "Картофель",
         "amount": 1000,
         "unit": "г"
       },
       {
-        "name": "Escalopes de poulet",
+        "name": "Куриное филе",
         "amount": 4,
         "unit": "шт"
       },
       {
-        "name": "Crème fraîche",
+        "name": "Сливки",
         "amount": 20,
         "unit": "кл"
       },
       {
-        "name": "Lait",
+        "name": "Молоко",
         "amount": 40,
         "unit": "кл"
       },
       {
-        "name": "Muscade, sel, poivre",
+        "name": "Мускатный орех, соль, перец",
         "note": "по вкусу"
       }
     ],
     "directions": [
-      "Coupez les pommes de terre en lamelles et le poulet en morceaux.",
-      "Disposez dans un plat, recouvrez du mélange lait + crème + muscade + sel.",
-      "Faites cuire 1 heure à 180°C."
+      "Нарежьте картофель ломтиками, а курицу — кусочками.",
+      "Выложите в форму, залейте смесью молока, сливок, мускатного ореха и соли.",
+      "Готовьте 1 час при 180 °C."
     ],
     "isArchive": false,
     "likes": 87,
-    "createdAt": "2026-03-05"
+    "createdAt": "2026-03-05",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-gateau-yaourt",
-    "title": "Gâteau au yaourt (Классический йогуртовый кекс)",
+    "title": "Классический йогуртовый кекс",
     "slug": "gateau-au-yaourt",
     "category": "desserts",
     "categoryName": "Сладкое и десерты",
@@ -4233,48 +4252,50 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Yaourt nature (стаканчик как мера)",
+        "name": "Йогурт натуральный",
         "amount": 1,
-        "unit": "шт"
+        "unit": "шт",
+        "note": "стаканчик как мера"
       },
       {
-        "name": "Sucre (стаканчика сахара)",
+        "name": "Сахар",
         "amount": 2,
         "unit": "стакана"
       },
       {
-        "name": "Farine (стаканчика муки)",
+        "name": "Мука",
         "amount": 3,
         "unit": "стакана"
       },
       {
-        "name": "Huile (стаканчика масла)",
+        "name": "Масло",
         "amount": 0.5,
         "unit": "стакана"
       },
       {
-        "name": "Œufs",
+        "name": "Яйца",
         "amount": 3,
         "unit": "шт"
       },
       {
-        "name": "Sucre vanillé, levure",
+        "name": "Ванильный сахар, разрыхлитель",
         "amount": 1,
         "unit": "пакетик"
       }
     ],
     "directions": [
-      "Verser le yaourt dans un saladier. Ajouter dans l'ordre le sucre, les œufs, la farine, la levure, le sel et l'huile.",
-      "Mélanger avec un fouet.",
-      "Beurrer un moule rond et cuire 30 min à 180°C."
+      "Вылейте йогурт в салатник. Добавьте по очереди сахар, яйца, муку, разрыхлитель, соль и масло.",
+      "Перемешайте венчиком.",
+      "Смажьте маслом круглую форму и выпекайте 30 минут при 180 °C."
     ],
     "isArchive": false,
     "likes": 115,
-    "createdAt": "2026-03-06"
+    "createdAt": "2026-03-06",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-verrines-creme-lentilles",
-    "title": "Verrines de crème de lentilles (Веррины из чечевицы)",
+    "title": "Веррины из чечевичного крема",
     "slug": "verrines-creme-lentilles",
     "category": "salads",
     "categoryName": "Салаты и закуски",
@@ -4290,37 +4311,39 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Petite boîte de lentilles",
+        "name": "Чечевица",
         "amount": 1,
-        "unit": "банка"
+        "unit": "банка",
+        "note": "маленькая банка"
       },
       {
-        "name": "Fromage fondu (плавленый сырок)",
+        "name": "Плавленый сыр",
         "amount": 4,
         "unit": "порции"
       },
       {
-        "name": "Crème liquide",
+        "name": "Жидкие сливки",
         "amount": 2,
         "unit": "ст. ложки"
       },
       {
-        "name": "Ciboulette, sel, poivre",
+        "name": "Шнитт-лук, соль, перец",
         "note": "по вкусу"
       }
     ],
     "directions": [
-      "Égouttez et écrasez les lentilles à la fourchette.",
-      "Ajoutez les portions de fromage, la ciboulette et la crème liquide.",
-      "Mélangez, versez dans des verrines et servez frais."
+      "Откиньте чечевицу и разомните её вилкой.",
+      "Добавьте порции сыра, шнитт-лук и жидкие сливки.",
+      "Перемешайте, разложите по стаканчикам и подавайте охлаждёнными."
     ],
     "isArchive": false,
     "likes": 24,
-    "createdAt": "2026-03-07"
+    "createdAt": "2026-03-07",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-oeufs-mimosa-thon",
-    "title": "Œufs mimosa au thon (Яйца мимоза с тунцом)",
+    "title": "Яйца мимоза с тунцом",
     "slug": "oeufs-mimosa-thon",
     "category": "salads",
     "categoryName": "Салаты и закуски",
@@ -4337,32 +4360,33 @@
     "servings": 3,
     "ingredients": [
       {
-        "name": "Boîte de thon",
+        "name": "Тунец",
         "amount": 1,
         "unit": "банка"
       },
       {
-        "name": "Œufs durs",
+        "name": "Яйца вкрутую",
         "amount": 3,
         "unit": "шт"
       },
       {
-        "name": "Mayonnaise",
+        "name": "Майонез",
         "note": "по вкусу"
       }
     ],
     "directions": [
-      "Faites cuire les œufs 10 min, écalez и отделите желтки.",
-      "Mélangez le thon égoutté, les jaunes d'œufs et la mayonnaise.",
-      "Remplissez les blancs d'œufs avec cette tartinade."
+      "Отварите яйца 10 минут, очистите и отделите желтки.",
+      "Смешайте откинутый тунец, яичные желтки и майонез.",
+      "Наполните этой массой белки."
     ],
     "isArchive": false,
     "likes": 63,
-    "createdAt": "2026-03-08"
+    "createdAt": "2026-03-08",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-pain-de-thon",
-    "title": "Pain de thon (Запеченный рыбный хлебец)",
+    "title": "Запечённый рыбный хлебец",
     "slug": "pain-de-thon",
     "category": "fish",
     "categoryName": "Рыба и морепродукты",
@@ -4378,43 +4402,44 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Boîtes de thon",
+        "name": "Тунец",
         "amount": 2,
         "unit": "банки"
       },
       {
-        "name": "Crème fraîche",
+        "name": "Сливки",
         "amount": 20,
         "unit": "кл"
       },
       {
-        "name": "Œufs",
+        "name": "Яйца",
         "amount": 6,
         "unit": "шт"
       },
       {
-        "name": "Concentré de tomates",
+        "name": "Томатная паста",
         "amount": 1,
         "unit": "маленькая банка"
       },
       {
-        "name": "Gruyère râpé",
+        "name": "Тёртый грюйер",
         "amount": 70,
         "unit": "г"
       }
     ],
     "directions": [
-      "Battez les œufs en omelette, ajoutez la crème, le concentré de tomates, le gruyère et le thon.",
-      "Versez dans un moule à cake beurré.",
-      "Laissez cuire 1h15 au bain-marie à 180°C."
+      "Взбейте яйца как для омлета, добавьте сливки, томатную пасту, грюйер и тунец.",
+      "Вылейте в смазанную маслом форму для кекса.",
+      "Готовьте 1 ч 15 мин на водяной бане при 180 °C."
     ],
     "isArchive": false,
     "likes": 70,
-    "createdAt": "2026-03-09"
+    "createdAt": "2026-03-09",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-boulettes-viande-riz",
-    "title": "Boulettes de viande hachée au riz (Фрикадельки с рисом)",
+    "title": "Фрикадельки из фарша с рисом",
     "slug": "boulettes-viande-riz",
     "category": "meat",
     "categoryName": "Мясо и птица",
@@ -4431,38 +4456,39 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Steak haché",
+        "name": "Фарш",
         "amount": 500,
         "unit": "г"
       },
       {
-        "name": "Oignon, ail",
+        "name": "Лук, чеснок",
         "amount": 1,
         "unit": "шт"
       },
       {
-        "name": "Riz cuit",
+        "name": "Варёный рис",
         "amount": 0.5,
         "unit": "стакана"
       },
       {
-        "name": "Sauce tomate",
+        "name": "Томатный соус",
         "amount": 2,
         "unit": "стакана"
       }
     ],
     "directions": [
-      "Faites cuire le riz 10 minutes et mélangez tous les ingrédients.",
-      "Formez des boulettes avec les mains.",
-      "Faites frire 5 minutes dans une poêle avec un peu d'huile."
+      "Отварите рис 10 минут и смешайте все ингредиенты.",
+      "Сформируйте руками фрикадельки.",
+      "Обжарьте 5 минут на сковороде с небольшим количеством масла."
     ],
     "isArchive": false,
     "likes": 57,
-    "createdAt": "2026-03-10"
+    "createdAt": "2026-03-10",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-croquettes-poisson",
-    "title": "Croquettes de poisson (Рыбные крокеты в панировке)",
+    "title": "Рыбные крокеты в панировке",
     "slug": "croquettes-poisson",
     "category": "fish",
     "categoryName": "Рыба и морепродукты",
@@ -4479,41 +4505,42 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Pommes de terre cuites",
+        "name": "Варёный картофель",
         "amount": 6,
         "unit": "шт"
       },
       {
-        "name": "Poisson cuit émietté (рыба)",
+        "name": "Варёная рыба, размятая",
         "amount": 400,
         "unit": "г"
       },
       {
-        "name": "Beurre ou huile",
+        "name": "Сливочное или растительное масло",
         "amount": 1,
         "unit": "ч. ложка"
       },
       {
-        "name": "Herbes aromatiques, citron",
+        "name": "Ароматные травы, лимон",
         "note": "по вкусу"
       },
       {
-        "name": "Œuf, farine, chapelure",
+        "name": "Яйцо, мука, панировочные сухари",
         "note": "для панировки"
       }
     ],
     "directions": [
-      "Écrasez les pommes de terre avec le poisson, le beurre, les herbes et le jus de citron.",
-      "Formez des croquettes, trempez dans la farine, l'œuf battu et la chapelure.",
-      "Faites frire 2 minutes de chaque côté."
+      "Разомните картофель с рыбой, маслом, травами и лимонным соком.",
+      "Сформируйте крокеты, обваляйте в муке, взбитом яйце и сухарях.",
+      "Обжарьте по 2 минуты с каждой стороны."
     ],
     "isArchive": false,
     "likes": 82,
-    "createdAt": "2026-03-11"
+    "createdAt": "2026-03-11",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-fondant-chocolat",
-    "title": "Fondant au chocolat et compote (Шоколадный фондан)",
+    "title": "Шоколадный фондан",
     "slug": "fondant-chocolat-compote",
     "category": "desserts",
     "categoryName": "Сладкое и десерты",
@@ -4530,48 +4557,49 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Chocolat noir fondu",
+        "name": "Тёмный шоколад растопленный",
         "amount": 200,
         "unit": "г"
       },
       {
-        "name": "Compote de pommes (яблочное пюре)",
+        "name": "Яблочное пюре",
         "amount": 200,
         "unit": "г"
       },
       {
-        "name": "Farine",
+        "name": "Мука",
         "amount": 70,
         "unit": "г"
       },
       {
-        "name": "Sucre",
+        "name": "Сахар",
         "amount": 30,
         "unit": "г"
       },
       {
-        "name": "Œufs",
+        "name": "Яйца",
         "amount": 3,
         "unit": "шт"
       },
       {
-        "name": "Levure chimique",
+        "name": "Разрыхлитель",
         "amount": 0.25,
         "unit": "ч. ложки"
       }
     ],
     "directions": [
-      "Faites fondre le chocolat noir au micro-ondes.",
-      "Mélangez tous les ingrédients dans un saladier.",
-      "Versez dans un moule et enfournez 20 minutes à 180°C."
+      "Растопите тёмный шоколад в микроволновке.",
+      "Смешайте все ингредиенты в салатнике.",
+      "Вылейте в форму и запекайте 20 минут при 180 °C."
     ],
     "isArchive": false,
     "likes": 142,
-    "createdAt": "2026-03-12"
+    "createdAt": "2026-03-12",
+    "translatedFrom": "FR"
   },
   {
     "id": "392-cookies-chocolat",
-    "title": "Cookies au chocolat et compote (Домашнее печенье кукис)",
+    "title": "Домашнее печенье кукис",
     "slug": "cookies-chocolat-compote",
     "category": "desserts",
     "categoryName": "Сладкое и десерты",
@@ -4588,43 +4616,44 @@
     "servings": 6,
     "ingredients": [
       {
-        "name": "Farine",
+        "name": "Мука",
         "amount": 150,
         "unit": "г"
       },
       {
-        "name": "Compote de pommes",
+        "name": "Яблочное пюре",
         "amount": 60,
         "unit": "г"
       },
       {
-        "name": "Sucre",
+        "name": "Сахар",
         "amount": 40,
         "unit": "г"
       },
       {
-        "name": "Œuf",
+        "name": "Яйцо",
         "amount": 1,
         "unit": "шт"
       },
       {
-        "name": "Levure chimique",
+        "name": "Разрыхлитель",
         "amount": 1,
         "unit": "пакетик"
       },
       {
-        "name": "Chocolat noir en pépites",
+        "name": "Тёмный шоколад каплями",
         "amount": 60,
         "unit": "г"
       }
     ],
     "directions": [
-      "Coupez le chocolat en pépites.",
-      "Mélangez le sucre, la farine et la levure, ajoutez l'œuf, la compote et les pépites.",
-      "Déposez des noix de pâte sur une plaque beurrée et enfournez pour 10 minutes environ à 180°C."
+      "Нарежьте шоколад кусочками.",
+      "Смешайте сахар, муку и разрыхлитель, добавьте яйцо, пюре и шоколадные кусочки.",
+      "Выкладывайте тесто небольшими комочками на смазанный маслом противень и выпекайте около 10 минут при 180 °C."
     ],
     "isArchive": false,
     "likes": 130,
-    "createdAt": "2026-03-13"
+    "createdAt": "2026-03-13",
+    "translatedFrom": "FR"
   }
 ]

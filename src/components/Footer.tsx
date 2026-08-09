@@ -50,9 +50,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <span className="lang-tag">UK</span>
               <span className="lang-tag">FR</span>
             </div>
-            <p className="footer__text">
-              Все тексты сохранены дословно, без искажений оригинала.
-            </p>
           </div>
         </div>
 

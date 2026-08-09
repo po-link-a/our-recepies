@@ -514,38 +514,6 @@ ul, ol { list-style: none; }
 .empty__title { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
 .empty__text { font-size: 15px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 22px; }
 
-/* ---------- Cooking mode ---------- */
-
-.cook {
-  position: fixed; inset: 0; z-index: 60; background: var(--bg);
-  display: flex; flex-direction: column; padding: 24px; overflow-y: auto;
-}
-.cook__head {
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 12px;
-  padding-bottom: 18px; border-bottom: 1px dotted var(--line-dot);
-}
-.cook__title { font-size: 26px; font-weight: 700; line-height: 1.15; }
-.cook__body { margin: auto 0; padding: 40px 0; max-width: 760px; width: 100%; margin-left: auto; margin-right: auto; text-align: center; }
-.cook__badge {
-  display: inline-block; background: var(--peach); border-radius: 999px;
-  padding: 7px 18px; font-size: 13px; letter-spacing: 0.04em; margin-bottom: 26px;
-}
-.cook__card {
-  background: var(--paper); border: 1px solid var(--line); border-radius: 4px;
-  padding: 48px 36px; min-height: 240px;
-  display: flex; align-items: center; justify-content: center;
-}
-.cook__step { font-family: var(--serif); font-size: 30px; line-height: 1.45; }
-.cook__bar { height: 3px; background: var(--line); margin-top: 32px; overflow: hidden; }
-.cook__bar span { display: block; height: 100%; background: var(--red); transition: width 0.3s ease; }
-.cook__foot {
-  padding-top: 18px; border-top: 1px dotted var(--line-dot);
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  max-width: 760px; width: 100%; margin: 0 auto;
-}
-.cook__count { font-family: ui-monospace, monospace; font-size: 13px; color: var(--ink-mute); }
-
 /* ---------- Filters bar ---------- */
 
 .filters { padding-bottom: 26px; border-bottom: 1px dotted var(--line-dot); }
@@ -620,8 +588,6 @@ ul, ol { list-style: none; }
   .grid-cats { grid-template-columns: repeat(2, 1fr); }
   .feature__grid { grid-template-columns: 1fr; }
   .feature__title { font-size: 26px; }
-  .cook__step { font-size: 23px; }
-  .cook__card { padding: 32px 22px; min-height: 180px; }
   .footer__cols { grid-template-columns: 1fr; gap: 28px; }
   .stack-lg > * + * { margin-top: 40px; }
 }

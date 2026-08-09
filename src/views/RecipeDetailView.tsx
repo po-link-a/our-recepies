@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 import {
   Heart,
-  Share2,
   Printer,
   Download,
-  Play,
   ChevronRight,
-  Check,
 } from 'lucide-react';
 import { Document, Packer, Paragraph, TextRun, HeadingLevel } from 'docx';
 import { Recipe, RECIPES, CATEGORIES } from '../data/recipes';
 import { CategoryIcon, DecorativeDoodle } from '../components/Illustrations';
 import { RecipeCard } from '../components/RecipeCard';
 import { AdPlaceholder } from '../components/AdPlaceholder';
-import { CookingModeModal } from '../components/CookingModeModal';
 
 const ORIGINAL_LANGUAGES: Record<'UK' | 'FR', string> = {
   UK: 'украинского',
@@ -43,8 +39,6 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
 }) => {
   const [portionMultiplier, setPortionMultiplier] = useState<number>(1);
   const [checkedIngredients, setCheckedIngredients] = useState<Record<number, boolean>>({});
-  const [isCookingModeOpen, setIsCookingModeOpen] = useState(false);
-  const [copiedLink, setCopiedLink] = useState(false);
 
   const categoryInfo = CATEGORIES[recipe.category];
   const totalTime = (recipe.prepTimeMinutes || 0) + (recipe.cookTimeMinutes || 0);
@@ -57,13 +51,6 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
 
   const toggleIngredientCheck = (idx: number) => {
     setCheckedIngredients((prev) => ({ ...prev, [idx]: !prev[idx] }));
-  };
-
-  // Copy link
-  const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href);
-    setCopiedLink(true);
-    setTimeout(() => setCopiedLink(false), 2000);
   };
 
   // Generate Word (.docx) export
@@ -181,17 +168,9 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
 
           {/* Actions */}
           <div className="detail__tools no-print" style={{ marginTop: 22 }}>
-            <button onClick={() => setIsCookingModeOpen(true)} className="btn btn--primary btn--sm">
-              <Play size={14} fill="currentColor" /> Режим готовки
-            </button>
-
             <button onClick={(e) => onToggleLike(recipe.id, e)} className="btn btn--ghost btn--sm">
               <Heart size={14} fill={isLiked ? '#D93A2B' : 'none'} color={isLiked ? '#D93A2B' : 'currentColor'} />
               {recipe.likes}
-            </button>
-
-            <button onClick={handleCopyLink} className="icon-btn icon-btn--sm" title="Поделиться">
-              {copiedLink ? <Check size={16} /> : <Share2 size={16} />}
             </button>
 
             <button onClick={handlePrint} className="icon-btn icon-btn--sm" title="Распечатать">
@@ -343,10 +322,6 @@ export const RecipeDetailView: React.FC<RecipeDetailViewProps> = ({
         </section>
       )}
 
-      {/* Kitchen Cooking Mode Modal */}
-      {isCookingModeOpen && (
-        <CookingModeModal recipe={recipe} onClose={() => setIsCookingModeOpen(false)} />
-      )}
     </div>
   );
 };
