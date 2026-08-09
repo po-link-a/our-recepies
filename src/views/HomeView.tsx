@@ -1,6 +1,6 @@
 import React from 'react';
 import { RECIPES, CATEGORIES, plural, recipeCount } from '../data/recipes';
-import { HeroPotIllustration, CategoryIcon } from '../components/Illustrations';
+import { CategoryIcon } from '../components/Illustrations';
 import { RecipeCard } from '../components/RecipeCard';
 import { AdPlaceholder } from '../components/AdPlaceholder';
 
@@ -28,9 +28,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
   // Top Most Popular (by likes)
   const popularRecipes = [...RECIPES].sort((a, b) => b.likes - a.likes).slice(0, 6);
 
-  // Grandma's Clippings archive showcase
-  const archiveRecipes = RECIPES.filter((r) => r.isArchive).slice(0, 6);
-
   // Recently Added
   const recentRecipes = [...RECIPES].slice(0, 6);
 
@@ -50,6 +47,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   return (
     <div>
       {/* Hero */}
+      <div className="hero-band">
       <section className="container hero">
         <div className="hero__grid">
           <div>
@@ -68,10 +66,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
 
           <div className="hero__art">
-            <HeroPotIllustration />
+            <img src="/hero.jpg" alt="" className="hero__img" />
           </div>
         </div>
       </section>
+      </div>
 
       <div className="container stack-lg" style={{ paddingTop: 40, paddingBottom: 8 }}>
         {/* Ad Placeholder 1: Below Hero */}
@@ -152,21 +151,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Ad Placeholder 2: Section Between */}
         <AdPlaceholder type="section_between" />
       </div>
-
-      {/* Grandma's Clippings Archive */}
-      <section className="archive-band">
-        <div className="container">
-          <span className="kicker kicker--green">бабушкин архив</span>
-          <div className="section-head" style={{ marginTop: 6 }}>
-            <h2 className="section-title">Из старых газетных вырезок</h2>
-          </div>
-          <p className="section-lede" style={{ marginBottom: 28 }}>
-            Оригинальные газетные вырезки, сохраненные с советских времен («ДК», «Летний обед»,
-            «Холодный буфет»).
-          </p>
-          <div className="grid-3">{renderCards(archiveRecipes)}</div>
-        </div>
-      </section>
 
       {/* Recently Added */}
       <div className="container" style={{ paddingTop: 56, paddingBottom: 8 }}>

@@ -42,6 +42,9 @@
   --hand: 'Caveat', cursive;
   --sans: 'Commissioner', system-ui, -apple-system, sans-serif;
 
+  /* Paper colour of the hero drawing, so the scan blends into the band */
+  --hero-bg: #F8F1E4;
+
   --wrap: 1080px;
 }
 
@@ -310,7 +313,10 @@ ul, ol { list-style: none; }
   margin-bottom: 30px; max-width: 34ch;
 }
 .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-band { background: var(--hero-bg); }
 .hero__art { position: relative; }
+/* Scanned drawing: multiply lets its paper blend into the page ground */
+.hero__img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
 .hero__note {
   position: absolute; right: 0; bottom: 6px;
   font-family: var(--hand); font-size: 22px; color: var(--green); transform: rotate(4deg);
