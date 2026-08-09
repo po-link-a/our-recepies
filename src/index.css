@@ -301,8 +301,8 @@ ul, ol { list-style: none; }
 
 /* ---------- Hero ---------- */
 
-.hero { padding: 64px 0 20px; }
-.hero__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
+.hero { padding: 64px 24px 20px; }
+.hero__grid { display: grid; grid-template-columns: minmax(0, 430px) minmax(0, 1fr); gap: 40px; align-items: center; }
 .hero__title {
   font-size: 62px; line-height: 1.0; font-weight: 900;
   letter-spacing: -0.02em; margin: 10px 0 18px; text-wrap: balance;
@@ -313,9 +313,17 @@ ul, ol { list-style: none; }
   margin-bottom: 30px; max-width: 34ch;
 }
 .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-band { background: var(--hero-bg); }
-.hero__art { position: relative; }
-/* Scanned drawing: multiply lets its paper blend into the page ground */
+.hero-band { background: var(--hero-bg); overflow: hidden; }
+/*
+ * The drawing runs out to the viewport edge — its paper is invisible, so the
+ * bleed costs nothing. Measured from the container, not the grid column: a
+ * percentage margin here would resolve against the column and overshoot.
+ */
+.hero__art {
+  position: relative;
+  margin-right: min(0px, calc((var(--wrap) - 100vw) / 2 - 24px));
+}
+/* Scanned drawing: multiply lets its paper blend into the band behind it */
 .hero__img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
 .hero__note {
   position: absolute; right: 0; bottom: 6px;
@@ -568,8 +576,10 @@ ul, ol { list-style: none; }
 
 @media (max-width: 1024px) {
   .hero__grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero__art { margin-right: 0; }
+  .hero__img { width: 100%; }
   .hero__title { font-size: 56px; }
-  .hero__art { max-width: 460px; }
+  .hero__art { max-width: 720px; margin-inline: auto; }
   .detail__body { grid-template-columns: 1fr; gap: 36px; }
   .detail__aside { position: static; }
   .detail__title { font-size: 46px; }
@@ -584,7 +594,7 @@ ul, ol { list-style: none; }
 @media (max-width: 780px) {
   .container { padding: 0 18px; }
   .site-header__inner { padding: 12px 18px; }
-  .hero { padding: 40px 0 12px; }
+  .hero { padding: 40px 18px 12px; }
   .hero__title { font-size: 42px; }
   .hero__lede { font-size: 19px; }
   .section-title { font-size: 30px; }

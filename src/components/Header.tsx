@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Heart, Menu, X, ChevronDown } from 'lucide-react';
 import { RECIPES, CATEGORIES, Recipe } from '../data/recipes';
-import { CategoryIcon, BookMark } from './Illustrations';
+import { CategoryIcon } from './Illustrations';
 
 interface HeaderProps {
   currentView: string;
@@ -59,7 +59,6 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, favorit
       <div className="site-header__inner">
         {/* Brand */}
         <div className="brand" onClick={() => onNavigate('home')}>
-          <BookMark />
           <div>
             <span className="brand__name">Семейные Рецепты</span>
             <span className="brand__tag">кулинарная книга нашей семьи</span>
