@@ -64,9 +64,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <button onClick={() => onNavigate('all')} className="btn btn--primary">
                 Смотреть все {recipeCount()}
               </button>
-              <button onClick={() => onNavigate('category', 'waffles')} className="btn btn--ghost">
-                Вафли и выпечка
-              </button>
             </div>
           </div>
 
@@ -75,10 +72,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
         </div>
       </section>
-
-      <div className="container">
-        <div className="rule-dotted" />
-      </div>
 
       <div className="container stack-lg" style={{ paddingTop: 40, paddingBottom: 8 }}>
         {/* Ad Placeholder 1: Below Hero */}
@@ -116,9 +109,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <section>
           <div className="section-head">
             <h2 className="section-title">Категории кулинарии</h2>
-            <span className="section-lede" style={{ textAlign: 'right' }}>
-              Выбирайте из 10 тематических разделов нашей семейной коллекции
-            </span>
           </div>
 
           <div className="grid-cats">
