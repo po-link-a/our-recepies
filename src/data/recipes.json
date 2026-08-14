@@ -1,5 +1,71 @@
 [
   {
+    "id": "tg-lenivyi-pirog-iz-kapusty",
+    "title": "Ленивый пирог из капусты",
+    "slug": "lenivyi-pirog-iz-kapusty",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "капуста",
+        "amount": 500,
+        "unit": "г"
+      },
+      {
+        "name": "маргарин",
+        "amount": 180,
+        "unit": "гр"
+      },
+      {
+        "name": "яйца",
+        "amount": 3,
+        "unit": "шт."
+      },
+      {
+        "name": "сметана (24% жирности)",
+        "amount": 5,
+        "unit": "ст. ложек"
+      },
+      {
+        "name": "майонез",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "мука",
+        "amount": 6,
+        "unit": "ст. ложек"
+      },
+      {
+        "name": "соль",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "разрыхлитель",
+        "amount": 2,
+        "unit": "ч. ложки"
+      }
+    ],
+    "directions": [
+      "Капусту мелко нашинковать и положить на сковороду или в форму для запекания.                                                                                    2. Растопить маргарин и залить им капусту.                                                                                                                                                                          3. Для теста взбить до однородной массы оставшиеся продукты.                                                                                                               4. Форму с капустой залить тестом и поставить в разогретую до 200-220 градусов духовку на 30 минут.                                          5. Запекать до золотистого цвета."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-14",
+    "scans": [
+      "/scans/lenivyi-pirog-iz-kapusty.jpg"
+    ]
+  },
+  {
     "id": "tg-pirozhki-s-abrikosami-i-slivami",
     "title": "Пирожки с абрикосами и сливами",
     "slug": "pirozhki-s-abrikosami-i-slivami",
