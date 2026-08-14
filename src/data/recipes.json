@@ -1,5 +1,179 @@
 [
   {
+    "id": "tg-4-varianta-blinov-kotorye-vsegda-poluchayutsya",
+    "title": "4 варианта блинов, которые всегда получаются",
+    "slug": "4-varianta-blinov-kotorye-vsegda-poluchayutsya",
+    "category": "pancakes",
+    "categoryName": "Блины и блинчики",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Блины на кипятке                                                                                                                                                                                                                  • Яйца",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "Сахар",
+        "amount": 20,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 3,
+        "unit": "г"
+      },
+      {
+        "name": "Молоко",
+        "amount": 500,
+        "unit": "мл"
+      },
+      {
+        "name": "Мука",
+        "amount": 220,
+        "unit": "г"
+      },
+      {
+        "name": "Кипяток",
+        "amount": 200,
+        "unit": "мл"
+      },
+      {
+        "name": "Растительное масло",
+        "amount": 30,
+        "unit": "г"
+      },
+      {
+        "name": "На кефире ажурные                                                                                                                                                                                                              • Кефир",
+        "amount": 500,
+        "unit": "мл"
+      },
+      {
+        "name": "Яйца",
+        "amount": 2,
+        "unit": "шт"
+      },
+      {
+        "name": "Сахар",
+        "amount": 25,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 3,
+        "unit": "г"
+      },
+      {
+        "name": "Мука",
+        "amount": 230,
+        "unit": "г"
+      },
+      {
+        "name": "Сода",
+        "amount": 4,
+        "unit": "г"
+      },
+      {
+        "name": "Кипяток",
+        "amount": 120,
+        "unit": "мл"
+      },
+      {
+        "name": "Растительное масло",
+        "amount": 30,
+        "unit": "г"
+      },
+      {
+        "name": "Молоко",
+        "amount": 450,
+        "unit": "мл"
+      },
+      {
+        "name": "Без комков, в блендере                                                                                                                                                                                                       • Молоко",
+        "amount": 450,
+        "unit": "мл                                                                                                                                                                                                                       • Яйца — 2 шт"
+      },
+      {
+        "name": "Мука",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Сахар",
+        "amount": 20,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 3,
+        "unit": "г"
+      },
+      {
+        "name": "Масло",
+        "amount": 25,
+        "unit": "г"
+      },
+      {
+        "name": "Ваниль",
+        "amount": 1,
+        "unit": "г"
+      },
+      {
+        "name": "Дрожжевые мягкие                                                                                                                                                                                                                               • Молоко",
+        "amount": 350,
+        "unit": "мл"
+      },
+      {
+        "name": "Вода",
+        "amount": 150,
+        "unit": "мл"
+      },
+      {
+        "name": "Мука",
+        "amount": 260,
+        "unit": "г"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "Сахар",
+        "amount": 25,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 3,
+        "unit": "г"
+      },
+      {
+        "name": "Дрожжи сухие",
+        "amount": 6,
+        "unit": "г"
+      },
+      {
+        "name": "Растительное масло",
+        "amount": 30,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Смешать продукты каждого рецепта. Испечь блины"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-14",
+    "scans": [
+      "/scans/4-varianta-blinov-kotorye-vsegda-poluchayutsya.jpg"
+    ]
+  },
+  {
     "id": "tg-kvashenye-baklazhany",
     "title": "Квашеные баклажаны",
     "slug": "kvashenye-baklazhany",
