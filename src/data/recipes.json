@@ -1,5 +1,55 @@
 [
   {
+    "id": "tg-testo-na-vareniki",
+    "title": "Тесто на вареники",
+    "slug": "testo-na-vareniki",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "На фото присутствует только список ингредиентов, шаги приготовления отсутствуют.",
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 3,
+        "unit": "стакана"
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "соль",
+        "amount": 0.5,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "горячая вода",
+        "amount": 190,
+        "unit": "мл"
+      }
+    ],
+    "directions": [
+      "Из всех ингредиентов замесить заварное тесто."
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-08-14",
+    "scans": [
+      "/scans/testo-na-vareniki.jpg"
+    ]
+  },
+  {
     "id": "tg-4-varianta-blinov-kotorye-vsegda-poluchayutsya",
     "title": "4 варианта блинов, которые всегда получаются",
     "slug": "4-varianta-blinov-kotorye-vsegda-poluchayutsya",
