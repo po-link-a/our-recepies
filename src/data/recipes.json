@@ -1,5 +1,41 @@
 [
   {
+    "id": "tg-rybnaya-holodnaya-zakuska-iz-krasnoi-ryby",
+    "title": "Рыбная холодная закуска из красной рыбы",
+    "slug": "rybnaya-holodnaya-zakuska-iz-krasnoi-ryby",
+    "category": "fish",
+    "categoryName": "Рыба и морепродукты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Солёная соломка в виде тонких палочек"
+      },
+      {
+        "name": "кунжут"
+      },
+      {
+        "name": "филе красной рыбы"
+      },
+      {
+        "name": "лимон"
+      }
+    ],
+    "directions": [
+      "Филе тонко порезать и накрутить на соломку.                                                                                                                                                                             2. Сбрызнуть соком лимона и посыпать кунжутом.                                                                                                                                                                3. Подавать сразу после приготовления, чтобы не размокла соломка."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-15",
+    "scans": [
+      "/scans/rybnaya-holodnaya-zakuska-iz-krasnoi-ryby.jpg"
+    ]
+  },
+  {
     "id": "tg-buzhenina",
     "title": "Буженина",
     "slug": "buzhenina",
