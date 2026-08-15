@@ -1,5 +1,57 @@
 [
   {
+    "id": "tg-govyadina-tushenaya",
+    "title": "Говядина тушёная",
+    "slug": "govyadina-tushenaya",
+    "category": "meat",
+    "categoryName": "Мясо и птица",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 180,
+    "ingredients": [
+      {
+        "name": "Говяжья вырезка",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "свежие помидоры",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "лук репчатый",
+        "amount": 0.5,
+        "unit": "кг"
+      },
+      {
+        "name": "зелень"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "перец"
+      }
+    ],
+    "directions": [
+      "Мясо порезать крупными кубиками, помидоры и лук — кольцами.",
+      "В большую кастрюлю сложить слоями в такой последовательности: мясо, лук, помидоры и т.д. до полного заполнения емкости.",
+      "Посолить и поперчить по вкусу, добавить петрушку.",
+      "Тушить на слабом огне в течении трёх часов."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-15",
+    "scans": [
+      "/scans/govyadina-tushenaya.jpg"
+    ]
+  },
+  {
     "id": "tg-aromatnyi-kartofel",
     "title": "Ароматный картофель",
     "slug": "aromatnyi-kartofel",
