@@ -1,5 +1,135 @@
 [
   {
+    "id": "tg-vidy-testa",
+    "title": "Виды теста",
+    "slug": "vidy-testa",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "Тесто для пиццы"
+      },
+      {
+        "name": "Мука",
+        "amount": 500,
+        "unit": "г"
+      },
+      {
+        "name": "Вода",
+        "amount": 300,
+        "unit": "г"
+      },
+      {
+        "name": "Сухие дрожжи",
+        "amount": 7,
+        "unit": "г"
+      },
+      {
+        "name": "Оливковое масло",
+        "amount": 20,
+        "unit": "г"
+      },
+      {
+        "name": "Сахар",
+        "amount": 10,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 10,
+        "unit": "г"
+      },
+      {
+        "name": "Тесто для булочек"
+      },
+      {
+        "name": "Мука",
+        "amount": 500,
+        "unit": "г"
+      },
+      {
+        "name": "Молоко",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "Сухие дрожжи",
+        "amount": 7,
+        "unit": "г"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "Сахар",
+        "amount": 40,
+        "unit": "г"
+      },
+      {
+        "name": "Сливочное масло",
+        "amount": 60,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 8,
+        "unit": "г"
+      },
+      {
+        "name": "Тесто для фокаччи"
+      },
+      {
+        "name": "Мука",
+        "amount": 500,
+        "unit": "г"
+      },
+      {
+        "name": "Вода",
+        "amount": 350,
+        "unit": "г"
+      },
+      {
+        "name": "Сухие дрожжи",
+        "amount": 5,
+        "unit": "г"
+      },
+      {
+        "name": "Оливковое масло",
+        "amount": 30,
+        "unit": "г"
+      },
+      {
+        "name": "Мёд",
+        "amount": 5,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 10,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Стандартное для каждого вида выпечки"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-15",
+    "scans": [
+      "/scans/vidy-testa.jpg"
+    ]
+  },
+  {
     "id": "tg-drozhzhevye-pirozhki-s-kapustoi-i-yaitsom",
     "title": "Дрожжевые пирожки с капустой и яйцом",
     "slug": "drozhzhevye-pirozhki-s-kapustoi-i-yaitsom",
