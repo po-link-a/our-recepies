@@ -1,5 +1,66 @@
 [
   {
+    "id": "tg-punsh-novogodnii-holodnyi",
+    "title": "Пунш новогодний холодный",
+    "slug": "punsh-novogodnii-holodnyi",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "вода",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "лимон",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "апельсин",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "водка",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "сухое белое вино",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "консервированные фрукты (любые)"
+      }
+    ],
+    "directions": [
+      "Воду вскипятить",
+      "Цедру растереть с сахаром",
+      "Залить крутым кипятком цедру с сахаром, выжать сюда же сок лимона, влить водку, закрыть ёмкость с жидкостью, настоять три часа.",
+      "Процедить, добавить сок апельсина, вино и любые консервированные фрукты.",
+      "Подавать остуженным."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-15",
+    "scans": [
+      "/scans/punsh-novogodnii-holodnyi.jpg"
+    ]
+  },
+  {
     "id": "tg-rybnaya-holodnaya-zakuska-iz-krasnoi-ryby",
     "title": "Рыбная холодная закуска из красной рыбы",
     "slug": "rybnaya-holodnaya-zakuska-iz-krasnoi-ryby",
