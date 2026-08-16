@@ -1,5 +1,47 @@
 [
   {
+    "id": "tg-salat-morkovnyi-s-yaitsom",
+    "title": "Салат морковный с яйцом",
+    "slug": "salat-morkovnyi-s-yaitsom",
+    "category": "salads",
+    "categoryName": "Салаты и закуски",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "морковь"
+      },
+      {
+        "name": "свежие огурцы"
+      },
+      {
+        "name": "зелёный горошек"
+      },
+      {
+        "name": "майонез"
+      },
+      {
+        "name": "яйцо, сваренное в мешочек"
+      },
+      {
+        "name": "зелень"
+      }
+    ],
+    "directions": [
+      "Варёную морковь и свежие огурцы нарежьте кубиками, добавьте зелёный горошек и заправьте майонезом. Украсьте салат яйцом, сваренным в мешочек, огурцами и зеленью"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-16",
+    "scans": [
+      "/scans/salat-morkovnyi-s-yaitsom.jpg"
+    ]
+  },
+  {
     "id": "tg-farshirovannye-pomidory-ogurtsy-i-yaitsa",
     "title": "Фаршированные помидоры, огурцы и яйца",
     "slug": "farshirovannye-pomidory-ogurtsy-i-yaitsa",
