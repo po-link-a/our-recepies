@@ -1,5 +1,51 @@
 [
   {
+    "id": "tg-sup-iz-svinyh-nozhek",
+    "title": "Суп из свиных ножек",
+    "slug": "sup-iz-svinyh-nozhek",
+    "category": "soups",
+    "categoryName": "Супы и холодники",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "ножки свиные",
+        "amount": 1,
+        "unit": "—2 шт."
+      },
+      {
+        "name": "молоко",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "толчёный чеснок (по вкусу)"
+      },
+      {
+        "name": "уксус (по вкусу)"
+      },
+      {
+        "name": "чёрный и красный молотый перец (по вкусу)"
+      }
+    ],
+    "directions": [
+      "Ножки отварить до мягкости.",
+      "Остудить бульон, чтобы всплыл жир, и собрать его.",
+      "Снова слегка подогреть бульон, и отделить мякоть от костей.",
+      "Мелко её порубить, положить обратно в бульон, добавить молоко, чеснок, уксус, перец."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-16",
+    "scans": [
+      "/scans/sup-iz-svinyh-nozhek.jpg"
+    ]
+  },
+  {
     "id": "tg-svinye-nozhki-zapechennye-v-duhovke",
     "title": "Свиные ножки, запечённые в духовке",
     "slug": "svinye-nozhki-zapechennye-v-duhovke",
