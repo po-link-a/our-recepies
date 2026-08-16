@@ -1,5 +1,45 @@
 [
   {
+    "id": "tg-zapechennye-pomidory",
+    "title": "Запечённые помидоры",
+    "slug": "zapechennye-pomidory",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "свежие помидоры"
+      },
+      {
+        "name": "яйца (по количеству помидоров)"
+      },
+      {
+        "name": "брынза"
+      },
+      {
+        "name": "сухари"
+      },
+      {
+        "name": "сливочное масло"
+      }
+    ],
+    "directions": [
+      "Разрежьте пополам помидоры, выньте мякоть.",
+      "В каждую половинку вылейте по яйцу, посыпьте измельчённой брынзой, сухарями, положите сверху кусочек сливочного масла и запеките в духовке."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-16",
+    "scans": [
+      "/scans/zapechennye-pomidory.jpg"
+    ]
+  },
+  {
     "id": "tg-musaka-iz-kartofelya-s-ovoshchami",
     "title": "Мусака из картофеля с овощами",
     "slug": "musaka-iz-kartofelya-s-ovoshchami",
