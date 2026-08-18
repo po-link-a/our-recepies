@@ -1,5 +1,67 @@
 [
   {
+    "id": "tg-tort-medovik",
+    "title": "Торт «Медовик»",
+    "slug": "tort-medovik",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "мёд",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сливочное масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сметана",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "сода",
+        "amount": 0.5,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "мука",
+        "amount": 2.5,
+        "unit": "— 3 стакана"
+      }
+    ],
+    "directions": [
+      "Из всех указанных продуктов замесить некрутое тесто.",
+      "Испечь 4-5 коржей. Пекутся очень. Быстро.",
+      "Крем: всё взбить. Смазать коржи за сутки до употребления.",
+      "Верхний корж посыпать мелко порезанными или пропущенными через мясорубку орехами."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-18",
+    "scans": [
+      "/scans/tort-medovik.jpg"
+    ]
+  },
+  {
     "id": "tg-pirog-s-vishnyami-nalivnoi",
     "title": "Пирог с вишнями (Наливной)",
     "slug": "pirog-s-vishnyami-nalivnoi",
