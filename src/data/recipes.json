@@ -1,5 +1,73 @@
 [
   {
+    "id": "tg-marinovannye-pomidory",
+    "title": "Маринованные помидоры",
+    "slug": "marinovannye-pomidory",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "помидоры"
+      },
+      {
+        "name": "зелень"
+      },
+      {
+        "name": "сладкий перец"
+      },
+      {
+        "name": "Маринад на 3х л бутыль:"
+      },
+      {
+        "name": "вода",
+        "amount": 1.5,
+        "unit": "л"
+      },
+      {
+        "name": "соль",
+        "amount": 70,
+        "unit": "-90 г"
+      },
+      {
+        "name": "лавровый лист"
+      },
+      {
+        "name": "душистый перец",
+        "amount": 10,
+        "unit": "горошин"
+      },
+      {
+        "name": "сахар",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "уксус",
+        "amount": 0.5,
+        "unit": "стакана"
+      }
+    ],
+    "directions": [
+      "На дно банок уложить зелень, сладкий перец, помидоры.  Накрыть крышками.",
+      "2 раза залить банки кипятком, выдержать по 5-7 мин, потом кипяток слить.",
+      "3й раз залить кипящим маринадом и закатать.",
+      "Маринад закипятить без уксуса. Потом влить уксус, довести смесь до кипения и использовать маринад для заливки."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-18",
+    "scans": [
+      "/scans/marinovannye-pomidory.jpg",
+      "/scans/marinovannye-pomidory-2.jpg"
+    ]
+  },
+  {
     "id": "tg-pikantnoe-solene-mozaika-turtsiya",
     "title": "Пикантное соленье «Мозаика» (Турция)",
     "slug": "pikantnoe-solene-mozaika-turtsiya",
