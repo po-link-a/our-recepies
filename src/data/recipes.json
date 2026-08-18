@@ -1,5 +1,64 @@
 [
   {
+    "id": "tg-zapekanka-babka-iz-vermisheli",
+    "title": "Запеканка (Бабка) из вермишели",
+    "slug": "zapekanka-babka-iz-vermisheli",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "вермишель",
+        "amount": 0.5,
+        "unit": "кг"
+      },
+      {
+        "name": "яйца",
+        "amount": 4,
+        "unit": "шт"
+      },
+      {
+        "name": "масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "корица или ванилин"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "панировочные сухари или манка",
+        "note": "для посыпки формы"
+      }
+    ],
+    "directions": [
+      "Отварить вермишель в воде или молоке. Откинуть её на дуршлаг.",
+      "Взбить 4 яйца.",
+      "Смешать вермишель, взбитые яйца, мягкое масло. Добавить корицу или ванилин, соль, сахар.",
+      "Смазать форму сливочным маслом из общего количества, присыпать панировочными сухарями или манкой.",
+      "Выложить вермишелевую массу в форму и запечь до румяной корочки."
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-08-18",
+    "scans": [
+      "/scans/zapekanka-babka-iz-vermisheli.jpg"
+    ]
+  },
+  {
     "id": "tg-marinovannye-pomidory",
     "title": "Маринованные помидоры",
     "slug": "marinovannye-pomidory",
