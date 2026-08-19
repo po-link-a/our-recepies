@@ -1,5 +1,85 @@
 [
   {
+    "id": "tg-tort-orehovyi-retsept-a-e-sobolevoi-savitskoi-napisan-rukoi",
+    "title": "Торт «Ореховый» (рецепт А. Е. Соболевой (Савицкой), написан рукой Е. Е. Савицкой)",
+    "slug": "tort-orehovyi-retsept-a-e-sobolevoi-savitskoi-napisan-rukoi",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Тесто"
+      },
+      {
+        "name": "яйца",
+        "amount": 2,
+        "unit": "шт"
+      },
+      {
+        "name": "сахар",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "масло сливочное",
+        "amount": 40,
+        "unit": "г"
+      },
+      {
+        "name": "мёд",
+        "amount": 125,
+        "unit": "г"
+      },
+      {
+        "name": "орехи",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сода",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "мука (сколько необходимо для получения средней степени мягкости теста)"
+      },
+      {
+        "name": "Крем"
+      },
+      {
+        "name": "свежая сметана",
+        "amount": 2,
+        "unit": "стакана"
+      },
+      {
+        "name": "сахар",
+        "amount": 0.75,
+        "unit": "стакана"
+      },
+      {
+        "name": "орехи",
+        "amount": 100,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Замесить тесто из всех указанных продуктов, испечь 4 коржа, смазать их кремом.",
+      "Крем:",
+      "Взбить сметану с сахаром, добавить орехи, молотые или просто измельчённые."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-19",
+    "scans": [
+      "/scans/tort-orehovyi-retsept-a-e-sobolevoi-savitskoi-napisan-rukoi.jpg"
+    ]
+  },
+  {
     "id": "tg-tort-mishka-retsept-a-e-sobolevoi-savitskoi-napisan-rukoi-e",
     "title": "Торт \"Мишка\" (рецепт А.Е. Соболевой (Савицкой), написан рукой Е.Е.Савицкой))",
     "slug": "tort-mishka-retsept-a-e-sobolevoi-savitskoi-napisan-rukoi-e",
