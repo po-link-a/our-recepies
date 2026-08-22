@@ -1,5 +1,108 @@
 [
   {
+    "id": "tg-pechene-cherez-myasorubku",
+    "title": "Печенье через мясорубку",
+    "slug": "pechene-cherez-myasorubku",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Вариант I"
+      },
+      {
+        "name": "майонез",
+        "amount": 1,
+        "unit": "банка (250 г)"
+      },
+      {
+        "name": "маргарин",
+        "amount": 1,
+        "unit": "пачка (250 г)"
+      },
+      {
+        "name": "яйца",
+        "amount": 2,
+        "unit": "шт"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "спиртное",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "сода"
+      },
+      {
+        "name": "лимонная кислота"
+      },
+      {
+        "name": "крахмал"
+      },
+      {
+        "name": "подсолнечное масло"
+      },
+      {
+        "name": "мука (чтобы замесить тесто)"
+      },
+      {
+        "name": "Вариант II"
+      },
+      {
+        "name": "мука",
+        "amount": 0.5,
+        "unit": "кг"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "пиво",
+        "amount": 0.75,
+        "unit": "стакана"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "сода"
+      },
+      {
+        "name": "лимонная кислота"
+      },
+      {
+        "name": "ваниль"
+      }
+    ],
+    "directions": [
+      "Замесить тесто и поставить его в холодное место на 30 минут.",
+      "Пропустить через мясорубку, испечь."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-22",
+    "scans": [
+      "/scans/pechene-cherez-myasorubku.jpg"
+    ]
+  },
+  {
     "id": "tg-shampinony-marinovannye-retsept-l-trebunskoi",
     "title": "Шампиньоны маринованные\nРецепт Л. Требунской",
     "slug": "shampinony-marinovannye-retsept-l-trebunskoi",
