@@ -1,5 +1,73 @@
 [
   {
+    "id": "tg-tort-smetannik",
+    "title": "Торт «Сметанник»",
+    "slug": "tort-smetannik",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Тесто"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "сметана жирная",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "сода",
+        "amount": 0.5,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "мука",
+        "amount": 2,
+        "unit": "-3 стакана"
+      },
+      {
+        "name": "Крем"
+      },
+      {
+        "name": "сметана",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "сахар",
+        "amount": 1.5,
+        "unit": "стакан"
+      },
+      {
+        "name": "ваниль"
+      },
+      {
+        "name": "грецкие орехи (для посыпки)"
+      }
+    ],
+    "directions": [
+      "Для теста смешать все продукты. Тесто должно быть некрутое.",
+      "Испечь 4 коржа.",
+      "Для крема все продукты взбить смазать коржи, посыпать измельчёнными грецкими орехами."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-22",
+    "scans": [
+      "/scans/tort-smetannik.jpg"
+    ]
+  },
+  {
     "id": "tg-tort-limonnyi-retsept-a-e-sobolevoi-savitskoi-napisan-rukoi",
     "title": "Торт лимонный.\nРецепт А. Е. Соболевой (Савицкой). Написан рукой её мужа, Соболева Фрола Михайловича.",
     "slug": "tort-limonnyi-retsept-a-e-sobolevoi-savitskoi-napisan-rukoi",
