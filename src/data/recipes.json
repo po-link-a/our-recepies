@@ -1,5 +1,72 @@
 [
   {
+    "id": "tg-salat-ovoshchnoi-2",
+    "title": "Салат овощной",
+    "slug": "salat-ovoshchnoi-2",
+    "category": "salads",
+    "categoryName": "Салаты и закуски",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "кабачки",
+        "amount": 1,
+        "unit": "ведро"
+      },
+      {
+        "name": "томатный сок",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 1,
+        "unit": "бутылка"
+      },
+      {
+        "name": "соль",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "уксус",
+        "amount": 0.67,
+        "unit": "стакана"
+      },
+      {
+        "name": "молотый перец",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "чеснок",
+        "amount": 0.25,
+        "unit": "стакана"
+      }
+    ],
+    "directions": [
+      "Кабачки мелко порезать. Всё смешать, кроме чеснока, и поставить тушиться. Через 25 минут от момента закипания добавить чеснок, ещё протушить 5 минут. От закипания тушить 30'. За 5' до готовности добавить чеснок (через чесночницу).",
+      "Разложить смесь в горячие стерильные банки. Закатать, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-22",
+    "scans": [
+      "/scans/salat-ovoshchnoi-2.jpg"
+    ]
+  },
+  {
     "id": "tg-salat-ovoshchnoi",
     "title": "Салат овощной",
     "slug": "salat-ovoshchnoi",
