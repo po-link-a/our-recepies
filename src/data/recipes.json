@@ -1,5 +1,97 @@
 [
   {
+    "id": "tg-salat-ovoshchnoi-3",
+    "title": "Салат овощной",
+    "slug": "salat-ovoshchnoi-3",
+    "category": "salads",
+    "categoryName": "Салаты и закуски",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "помидоры",
+        "amount": 3,
+        "unit": "кг"
+      },
+      {
+        "name": "огурцы",
+        "amount": 6,
+        "unit": "кг"
+      },
+      {
+        "name": "лук",
+        "amount": 1.5,
+        "unit": "кг"
+      },
+      {
+        "name": "морковь",
+        "amount": 3,
+        "unit": "кг"
+      },
+      {
+        "name": "сладкий перец",
+        "amount": 5,
+        "unit": "кг"
+      },
+      {
+        "name": "чеснок"
+      },
+      {
+        "name": "корень хрена"
+      },
+      {
+        "name": "петрушка"
+      },
+      {
+        "name": "душистый перец"
+      },
+      {
+        "name": "горький перец"
+      },
+      {
+        "name": "Маринад."
+      },
+      {
+        "name": "Хватает на 5 шт 0,5л банок"
+      },
+      {
+        "name": "вода",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "соль",
+        "amount": 40,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 40,
+        "unit": "г"
+      },
+      {
+        "name": "уксус",
+        "amount": 5,
+        "unit": "ст. ложек"
+      }
+    ],
+    "directions": [
+      "Продукты порезать и уложить в банки, залить горячим маринадом.",
+      "Накрыть крышками. Стерилизовать 0,5 л банку 35 минут от момента закипания",
+      "Закатать, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-22",
+    "scans": [
+      "/scans/salat-ovoshchnoi-3.jpg"
+    ]
+  },
+  {
     "id": "tg-salat-ovoshchnoi-2",
     "title": "Салат овощной",
     "slug": "salat-ovoshchnoi-2",
