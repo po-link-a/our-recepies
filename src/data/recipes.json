@@ -1,5 +1,66 @@
 [
   {
+    "id": "tg-ikra-iz-svekly",
+    "title": "Икра из свёклы",
+    "slug": "ikra-iz-svekly",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 45,
+    "ingredients": [
+      {
+        "name": "свёкла",
+        "amount": 2,
+        "unit": "кг"
+      },
+      {
+        "name": "помидоры",
+        "amount": 3,
+        "unit": "кг"
+      },
+      {
+        "name": "сладкий перец",
+        "amount": 0.5,
+        "unit": "кг"
+      },
+      {
+        "name": "чеснок",
+        "amount": 400,
+        "unit": "г"
+      },
+      {
+        "name": "горький перец",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 1,
+        "unit": "бут."
+      },
+      {
+        "name": "соль",
+        "note": "по вкусу"
+      }
+    ],
+    "directions": [
+      "Свёклу, помидоры и сладкий перец максимально измельчить любым способом. Варить массу 25 минут.",
+      "После положить чеснок, измельчённый через пресс, посолить по вкусу и влить подсолнечное масло. Варить ещё 20 минут.",
+      "Закатать в стерильные банки, перевернуть вверх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-22",
+    "scans": [
+      "/scans/ikra-iz-svekly.jpg"
+    ]
+  },
+  {
     "id": "tg-pechene-cherez-myasorubku",
     "title": "Печенье через мясорубку",
     "slug": "pechene-cherez-myasorubku",
