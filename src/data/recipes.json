@@ -1,5 +1,55 @@
 [
   {
+    "id": "tg-liker-iz-lepestkov-rozy",
+    "title": "Ликёр из лепестков розы",
+    "slug": "liker-iz-lepestkov-rozy",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "лепестки чайной розы розы",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 0.5,
+        "unit": "кг"
+      },
+      {
+        "name": "алкоголь любой",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "вода кипячёная остуженная",
+        "amount": 2,
+        "unit": "л"
+      },
+      {
+        "name": "лимонная кислота",
+        "amount": 1,
+        "unit": "ч. ложка"
+      }
+    ],
+    "directions": [
+      "Лепестки розы перетереть с сахаром, добавить все остальные ингредиенты.",
+      "держать 4 дня при комнатной температуре, потом в холоде."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-22",
+    "scans": [
+      "/scans/liker-iz-lepestkov-rozy.jpg"
+    ]
+  },
+  {
     "id": "tg-salat-ovoshchnoi-3",
     "title": "Салат овощной",
     "slug": "salat-ovoshchnoi-3",
