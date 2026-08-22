@@ -1,5 +1,71 @@
 [
   {
+    "id": "tg-shampinony-marinovannye-retsept-l-trebunskoi",
+    "title": "Шампиньоны маринованные\nРецепт Л. Требунской",
+    "slug": "shampinony-marinovannye-retsept-l-trebunskoi",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "мелкие шампиньоны",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "вода",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 1.5,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "лимонная кислота",
+        "amount": 0.5,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "соль",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "перец разный"
+      },
+      {
+        "name": "лавровый лист"
+      },
+      {
+        "name": "уксус",
+        "amount": 30,
+        "unit": "г (2 ст. ложки)"
+      }
+    ],
+    "directions": [
+      "Шампиньоны кипятить в обычной воде 15' от момента закипания, вынуть их шумовкой или слить кипяток. Его не выливать.",
+      "Остудить грибы, положить их в 1 л. банку.",
+      "Сварить маринад из указанных продуктов, уксус добавить в уже готовый маринад.",
+      "Залить грибы в банке горячим маринадом. Долить до верха банки кипяток, в котором варились грибы.",
+      "Закрыть банку крышкой, Остудить. Хранить в холодильнике"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-22",
+    "scans": [
+      "/scans/shampinony-marinovannye-retsept-l-trebunskoi.jpg"
+    ]
+  },
+  {
     "id": "tg-tort-ideal-muzhchiny",
     "title": "Торт «Идеал мужчины»",
     "slug": "tort-ideal-muzhchiny",
