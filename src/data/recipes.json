@@ -1,5 +1,74 @@
 [
   {
+    "id": "tg-salat-ovoshchnoi",
+    "title": "Салат овощной",
+    "slug": "salat-ovoshchnoi",
+    "category": "salads",
+    "categoryName": "Салаты и закуски",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "prepTimeMinutes": 120,
+    "cookTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "кабачки",
+        "amount": 4,
+        "unit": "кг"
+      },
+      {
+        "name": "сахар",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "соль",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "горький молотый перец",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "чеснок",
+        "amount": 1,
+        "unit": "головка (пропустить через пресс)"
+      },
+      {
+        "name": "лук",
+        "amount": 5,
+        "unit": "шт"
+      },
+      {
+        "name": "уксус",
+        "amount": 0.75,
+        "unit": "стакана"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 0.75,
+        "unit": "стакана"
+      },
+      {
+        "name": "зелень (порезать)"
+      }
+    ],
+    "directions": [
+      "Кабачки порезать кубиками. Все продукты смешать и оставить на 2 часа. Потом сложить в 1 л банки и стерилизовать 30 минут от момента закипания. Закатать, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-22",
+    "scans": [
+      "/scans/salat-ovoshchnoi.jpg"
+    ]
+  },
+  {
     "id": "tg-ikra-iz-svekly",
     "title": "Икра из свёклы",
     "slug": "ikra-iz-svekly",
