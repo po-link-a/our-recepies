@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-adzhika-retsept-t-n-gasman-napisan-ee-rukoi",
+    "title": "Аджика (рецепт Т. Н. Гасман, написан её рукой)",
+    "slug": "adzhika-retsept-t-n-gasman-napisan-ee-rukoi",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "перец болгарский, красный",
+        "amount": 10,
+        "unit": "шт"
+      },
+      {
+        "name": "помидоры",
+        "amount": 2,
+        "unit": "кг"
+      },
+      {
+        "name": "чищеный чеснок",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "перец горький красный",
+        "amount": 5,
+        "unit": "шт"
+      },
+      {
+        "name": "сахар",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "соль",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "уксус (неполный стакан)"
+      }
+    ],
+    "directions": [
+      "Все овощи прокрутить на мясорубке и хорошо перемешать с остальными ингредиентами. Разложить в банки и держать в холодильнике."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-08-25",
+    "scans": [
+      "/scans/adzhika-retsept-t-n-gasman-napisan-ee-rukoi.jpg"
+    ]
+  },
+  {
     "id": "tg-borshch-ovoshchnoi-postnyi-retsept-o-v-dolzhenko",
     "title": "Борщ овощной постный (рецепт О. В. Долженко)",
     "slug": "borshch-ovoshchnoi-postnyi-retsept-o-v-dolzhenko",
