@@ -1,5 +1,55 @@
 [
   {
+    "id": "tg-zavarnoe-testo-dlya-varenikov-retsept-zh-n-antonovoi-myshko",
+    "title": "Заварное тесто для вареников (рецепт Ж. Н. Антоновой (Мышко))",
+    "slug": "zavarnoe-testo-dlya-varenikov-retsept-zh-n-antonovoi-myshko",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "рецепт Ж. Н. Антоновой (Мышко)",
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 3,
+        "unit": "стакан"
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "соль",
+        "amount": 0.5,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 3,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "горячая вода",
+        "amount": 190,
+        "unit": "мл"
+      }
+    ],
+    "directions": [
+      "Смешать муку, яйцо, соль, подсолнечное масло. Добавить горячую воду. Замесить тесто"
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-09-13",
+    "scans": [
+      "/scans/zavarnoe-testo-dlya-varenikov-retsept-zh-n-antonovoi-myshko.jpg"
+    ]
+  },
+  {
     "id": "tg-pirog-iz-kapusty",
     "title": "Пирог из капусты",
     "slug": "pirog-iz-kapusty",
