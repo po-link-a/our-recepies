@@ -1,5 +1,74 @@
 [
   {
+    "id": "tg-marinovannyi-perets",
+    "title": "Маринованный перец",
+    "slug": "marinovannyi-perets",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "сладкий перец",
+        "amount": 6,
+        "unit": "кг"
+      },
+      {
+        "name": "Маринад"
+      },
+      {
+        "name": "вода",
+        "amount": 2,
+        "unit": "л"
+      },
+      {
+        "name": "уксус",
+        "amount": 1,
+        "unit": "бутылка"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 1,
+        "unit": "бутылка"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "мёд",
+        "amount": 3,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "соль",
+        "amount": 3,
+        "unit": "ст. ложка"
+      }
+    ],
+    "directions": [
+      "Довести воду до кипения, добавить остальные составляющие.",
+      "Опускать перец порциями в кипящий маринад, варить каждую порцию 5-6 минут.",
+      "Доставать и горячим укладывать в чистые горячие банки.",
+      "Залить перец кипящим маринадом.",
+      "Стерилизовать 1/2 л банку 20 минут от момента закипания.",
+      "Закатать, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-11",
+    "scans": [
+      "/scans/marinovannyi-perets.jpg"
+    ]
+  },
+  {
     "id": "tg-salat-ovoshchnoi-4",
     "title": "Салат овощной",
     "slug": "salat-ovoshchnoi-4",
