@@ -1,5 +1,49 @@
 [
   {
+    "id": "tg-priprava-dlya-borshcha",
+    "title": "Приправа для борща",
+    "slug": "priprava-dlya-borshcha",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 15,
+    "ingredients": [
+      {
+        "name": "томатный сок"
+      },
+      {
+        "name": "капуста"
+      },
+      {
+        "name": "морковь"
+      },
+      {
+        "name": "сладкий перец"
+      },
+      {
+        "name": "лук"
+      },
+      {
+        "name": "соль"
+      }
+    ],
+    "directions": [
+      "В кипящей томатный сок опустить порезанную капусту, мелко порезанные морковь, лук, сладкий перец. Всё посолить, прокипятить 10 - 15 минут от момента закипания. Закатать в стерильные банки, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-11",
+    "scans": [
+      "/scans/priprava-dlya-borshcha.jpg"
+    ]
+  },
+  {
     "id": "tg-ikra-iz-zelenyh-pomidor",
     "title": "Икра из зелёных помидор",
     "slug": "ikra-iz-zelenyh-pomidor",
