@@ -1,5 +1,75 @@
 [
   {
+    "id": "tg-ikra-iz-zelenyh-pomidor",
+    "title": "Икра из зелёных помидор",
+    "slug": "ikra-iz-zelenyh-pomidor",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 45,
+    "ingredients": [
+      {
+        "name": "зелёные помидоры",
+        "amount": 2,
+        "unit": "кг"
+      },
+      {
+        "name": "сладкий перец",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "лук",
+        "amount": 600,
+        "unit": "г"
+      },
+      {
+        "name": "морковь",
+        "amount": 600,
+        "unit": "г"
+      },
+      {
+        "name": "уксус",
+        "amount": 6,
+        "unit": "ст. ложек"
+      },
+      {
+        "name": "сахар",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "соль",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 1,
+        "unit": "стакан"
+      }
+    ],
+    "directions": [
+      "Порезать помидоры мелко, перец дольками, лук перьями как на салат, морковь натереть на крупной тёрке.",
+      "Сложить овощи в миску, добавить уксус, сахар, соль, подсолнечное масло.",
+      "Всё хорошо перемешать, дождаться, когда овощи пустят сок.",
+      "Сложить смесь плотно в банку.",
+      "Стерилизовать 1л банку 45 минут от момента закипания.",
+      "Закатать, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-11",
+    "scans": [
+      "/scans/ikra-iz-zelenyh-pomidor.jpg"
+    ]
+  },
+  {
     "id": "tg-zelenye-pomidory-konservirovannye",
     "title": "Зелёные помидоры консервированные",
     "slug": "zelenye-pomidory-konservirovannye",
