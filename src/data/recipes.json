@@ -1,5 +1,79 @@
 [
   {
+    "id": "tg-marinovannaya-krasnokochannaya-kapusta",
+    "title": "Маринованная краснокочанная капуста",
+    "slug": "marinovannaya-krasnokochannaya-kapusta",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "краснокачанная капуста",
+        "amount": 1,
+        "unit": "кочан"
+      },
+      {
+        "name": "укроп",
+        "note": "по вкусу"
+      },
+      {
+        "name": "лавровый лист",
+        "note": "по вкусу"
+      },
+      {
+        "name": "листья чёрной смородины",
+        "note": "по вкусу"
+      },
+      {
+        "name": "горошины горького перца",
+        "note": "по вкусу"
+      },
+      {
+        "name": "гвоздика",
+        "note": "по вкусу"
+      },
+      {
+        "name": "корица",
+        "note": "по вкусу"
+      },
+      {
+        "name": "вода",
+        "amount": 0.5,
+        "unit": "стакан"
+      },
+      {
+        "name": "уксус",
+        "amount": 0.75,
+        "unit": "стакан"
+      },
+      {
+        "name": "соль",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "сахар",
+        "amount": 0.5,
+        "unit": "ст. ложка"
+      }
+    ],
+    "directions": [
+      "Разрезать кочан капусты на 4 части, нашинковать её очень тонко, положить в дуршлаг и бланшировать 1 минут с момента закипания воды. На дно 1 л банки налить немного маринада, затем положить капусту, специи, долить маринад до плечиков банки.",
+      "Стерилизовать 1 л банку 20 минут от момента закипания. Закатать, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-12",
+    "scans": [
+      "/scans/marinovannaya-krasnokochannaya-kapusta.jpg"
+    ]
+  },
+  {
     "id": "tg-marinovannaya-kapusta-2",
     "title": "Маринованная капуста",
     "slug": "marinovannaya-kapusta-2",
