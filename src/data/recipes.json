@@ -1,5 +1,36 @@
 [
   {
+    "id": "tg-kompot-iz-yablok",
+    "title": "Компот из яблок",
+    "slug": "kompot-iz-yablok",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Яблоки некрупные"
+      },
+      {
+        "name": "Сахар",
+        "note": "по вкусу"
+      }
+    ],
+    "directions": [
+      "Вымыть яблоки, удалить хвостик и попку. Бланшировать их в кипятке 1 минут. В горячие стерильные банки укладывать плотно яблоки, заливать кипящим сиропом и закатывать металлическими крышками. Перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-12",
+    "scans": [
+      "/scans/kompot-iz-yablok.jpg"
+    ]
+  },
+  {
     "id": "tg-konservirovannaya-vishnya",
     "title": "Консервированная вишня",
     "slug": "konservirovannaya-vishnya",
