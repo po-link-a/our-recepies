@@ -1,5 +1,40 @@
 [
   {
+    "id": "tg-uksus-iz-yablok",
+    "title": "Уксус из яблок",
+    "slug": "uksus-iz-yablok",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Яблоки некондиционные"
+      },
+      {
+        "name": "сахар",
+        "amount": 70,
+        "unit": "г на каждый килограмм мякоти"
+      },
+      {
+        "name": "тёплая вода"
+      }
+    ],
+    "directions": [
+      "Яблоки очистить от семенной коробки, пропустить через мясорубку, добавить сахар. Залить полученную массу тёплой водой, накрыть марлей и поставить бродить. Затем слить, ещё раз дать перебродить и слить. Перелить всё в бутылки и закрыть их пробками"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-12",
+    "scans": [
+      "/scans/uksus-iz-yablok.jpg"
+    ]
+  },
+  {
     "id": "tg-konservirovannye-zelenye-pomidory",
     "title": "Консервированные зелёные помидоры",
     "slug": "konservirovannye-zelenye-pomidory",
