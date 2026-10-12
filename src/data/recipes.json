@@ -1,5 +1,38 @@
 [
   {
+    "id": "tg-konservirovannaya-vishnya",
+    "title": "Консервированная вишня",
+    "slug": "konservirovannaya-vishnya",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Вишни"
+      },
+      {
+        "name": "Сахар"
+      }
+    ],
+    "directions": [
+      "Вариант1",
+      "Вишни помыть, очистить от косточек, засыпать сахаром, положить в кастрюлю. Проварить 5 минут от момента закипания. Уложить в горячие стерильные банки. Закатать металлическими крышками, перевернуть верх дном, медленно остудить.",
+      "Вариант 2",
+      "Вишни помыть, очистить от косточек, уложить с чистые банки, засыпать сахаром. Стерилизовать ½ л банку 5 - 10 минут от момента закипания. Закатать металлическими крышками, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-12",
+    "scans": [
+      "/scans/konservirovannaya-vishnya.jpg"
+    ]
+  },
+  {
     "id": "tg-konservirovannaya-chernaya-smorodina",
     "title": "Консервированная чёрная смородина",
     "slug": "konservirovannaya-chernaya-smorodina",
