@@ -1,5 +1,35 @@
 [
   {
+    "id": "tg-konservirovannaya-chernaya-smorodina",
+    "title": "Консервированная чёрная смородина",
+    "slug": "konservirovannaya-chernaya-smorodina",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "чёрная смородина"
+      },
+      {
+        "name": "Сироп: на 1 л кипятка 1 ст сахара."
+      }
+    ],
+    "directions": [
+      "Смородину помыть, просушить на солнце, насыпать её в 1/2 л банки, залить кипящим сиропом. Стерилизовать банку 5 минут от момента закипания. Закатать металлическими крышками, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-12",
+    "scans": [
+      "/scans/konservirovannaya-chernaya-smorodina.jpg"
+    ]
+  },
+  {
     "id": "tg-uksus-iz-yablok",
     "title": "Уксус из яблок",
     "slug": "uksus-iz-yablok",
