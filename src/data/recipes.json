@@ -1,5 +1,36 @@
 [
   {
+    "id": "tg-povidlo-iz-abrikosov",
+    "title": "Повидло из абрикосов",
+    "slug": "povidlo-iz-abrikosov",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Абрикосы"
+      },
+      {
+        "name": "Сахар из расчёта: 2 кг на 1 ведро почищенных абрикосов"
+      }
+    ],
+    "directions": [
+      "Абрикосы почистить от косточек, перекрутить на мясорубке с мелкой сеткой. В горячую массу положить сахар. Поставить всё на огонь и проварить от закипания 15 минут.",
+      "Разложить в стерильные банки, закатать металлическими крышками, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-12",
+    "scans": [
+      "/scans/povidlo-iz-abrikosov.jpg"
+    ]
+  },
+  {
     "id": "tg-kompot-iz-yablok-i-abrikosov",
     "title": "Компот из яблок и абрикосов",
     "slug": "kompot-iz-yablok-i-abrikosov",
