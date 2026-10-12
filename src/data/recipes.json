@@ -1,5 +1,41 @@
 [
   {
+    "id": "tg-kompot-iz-yablok-i-abrikosov",
+    "title": "Компот из яблок и абрикосов",
+    "slug": "kompot-iz-yablok-i-abrikosov",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "Яблоки"
+      },
+      {
+        "name": "абрикосы"
+      },
+      {
+        "name": "Сахар",
+        "note": "по вкусу"
+      }
+    ],
+    "directions": [
+      "Из сахара и воды сварить сироп. Яблоки и абрикосы вымыть, почистить от семенной коробочки и косточек, сложить в банки. Залить горячим сиропом. Стерилизовать 1 л банку 10 минут от момента закипания. Закатать металлическими крышками, перевернуть верх дном, медленно остудить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-12",
+    "scans": [
+      "/scans/kompot-iz-yablok-i-abrikosov.jpg"
+    ]
+  },
+  {
     "id": "tg-kompot-iz-yablok",
     "title": "Компот из яблок",
     "slug": "kompot-iz-yablok",
