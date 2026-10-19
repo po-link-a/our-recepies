@@ -1,5 +1,54 @@
 [
   {
+    "id": "tg-testo-zavarnoe-dlya-varenikov",
+    "title": "Тесто заварное для вареников",
+    "slug": "testo-zavarnoe-dlya-varenikov",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "рецепт Ж. Н. Антоновой (Мышко)",
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 3,
+        "unit": "стакана"
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "соль",
+        "amount": 0.5,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "подсолнечное масло",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "горячая вода",
+        "amount": 190,
+        "unit": "мл"
+      }
+    ],
+    "directions": [
+      "Смешать муку, яйцо, соль, подсолнечное масло. Добавить горячую воду. Замесить тесто."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-19",
+    "scans": [
+      "/scans/testo-zavarnoe-dlya-varenikov.jpg"
+    ]
+  },
+  {
     "id": "tg-testo-zavarnoe-dlya-varenikov-i-pelmenei-2",
     "title": "Тесто заварное для вареников и пельменей",
     "slug": "testo-zavarnoe-dlya-varenikov-i-pelmenei-2",
