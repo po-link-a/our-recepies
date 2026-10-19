@@ -1,5 +1,81 @@
 [
   {
+    "id": "tg-klassicheskaya-formula-rascheta-ingredientov-dlya-drozhzhevo",
+    "title": "Классическая формула расчёта ингредиентов для дрожжевого теста",
+    "slug": "klassicheskaya-formula-rascheta-ingredientov-dlya-drozhzhevo",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Расчёт на 1 кг теста"
+      },
+      {
+        "name": "Мука = 1000 г / 1,75 = 572 г"
+      },
+      {
+        "name": "Жидкость = ½ от количества муки:"
+      },
+      {
+        "name": "572 г / 2 =286 г, из них"
+      },
+      {
+        "name": "Вода = ½ от количества муки"
+      },
+      {
+        "name": "286 г / 2 = 143 г"
+      },
+      {
+        "name": "Молоко = количеству воды = ½ от количества муки"
+      },
+      {
+        "name": "286 г / 2 = 143 г"
+      },
+      {
+        "name": "На это количество необходимо"
+      },
+      {
+        "name": "Дрожжи сухие",
+        "amount": 11,
+        "unit": "г (1 пакетик)"
+      },
+      {
+        "name": "Соль",
+        "amount": 15,
+        "unit": "г"
+      },
+      {
+        "name": "Сахар",
+        "amount": 40,
+        "unit": "г"
+      },
+      {
+        "name": "Масло сливочное / маргарин",
+        "amount": 70,
+        "unit": "г"
+      },
+      {
+        "name": "Яйцо среднее",
+        "amount": 1,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "Согласно рецепта"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-19",
+    "scans": [
+      "/scans/klassicheskaya-formula-rascheta-ingredientov-dlya-drozhzhevo.jpg"
+    ]
+  },
+  {
     "id": "tg-pampushki-2",
     "title": "Пампушки",
     "slug": "pampushki-2",
