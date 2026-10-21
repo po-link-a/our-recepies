@@ -1,5 +1,60 @@
 [
   {
+    "id": "tg-domashnii-liker",
+    "title": "Домашний ликёр",
+    "slug": "domashnii-liker",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Сахар -1 кг (для варианта с кофе",
+        "amount": 1,
+        "unit": "ст)"
+      },
+      {
+        "name": "Вода",
+        "amount": 2.5,
+        "unit": "л (для варианта с кофе — ½ л)"
+      },
+      {
+        "name": "Ягоды любые",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "Кофе",
+        "amount": 1,
+        "unit": "ст.л."
+      },
+      {
+        "name": "Алкоголь любой",
+        "amount": 1,
+        "unit": "/2 литра"
+      },
+      {
+        "name": "Ванилин",
+        "note": "по желанию"
+      }
+    ],
+    "directions": [
+      "Закипятить воду, растворить в ней сахар, остудить жидкость до тёплого состояния. Добавить ягоды или кофе.",
+      "На 4 дня поставить в холодильник, потом процедить, при необходимости можно добавить чуть-чуть лимонной кислоты",
+      "Влить спиртное."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-21",
+    "scans": [
+      "/scans/domashnii-liker.jpg"
+    ]
+  },
+  {
     "id": "tg-arbuzy-konservirovannye",
     "title": "Арбузы консервированные",
     "slug": "arbuzy-konservirovannye",
