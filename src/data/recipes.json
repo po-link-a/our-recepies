@@ -1,5 +1,72 @@
 [
   {
+    "id": "tg-testo-drozhzhevoe-dlya-pitstsy",
+    "title": "Тесто дрожжевое для пиццы",
+    "slug": "testo-drozhzhevoe-dlya-pitstsy",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Тесто:"
+      },
+      {
+        "name": "Мука",
+        "amount": 1.5,
+        "unit": "ст"
+      },
+      {
+        "name": "Дрожжи свежие",
+        "amount": 25,
+        "unit": "г"
+      },
+      {
+        "name": "Вода тёплая",
+        "amount": 120,
+        "unit": "мл"
+      },
+      {
+        "name": "Начинка"
+      },
+      {
+        "name": "Колбаса варёная",
+        "amount": 300,
+        "unit": "г"
+      },
+      {
+        "name": "Сыр твёрдый натёртый",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "Масло сливочное",
+        "amount": 1,
+        "unit": "ст. л."
+      },
+      {
+        "name": "Соль",
+        "note": "щепотка"
+      }
+    ],
+    "directions": [
+      "Замесить мягкое тесто",
+      "Расположить начинку.",
+      "Выпечь пиццу"
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-10-21",
+    "scans": [
+      "/scans/testo-drozhzhevoe-dlya-pitstsy.jpg"
+    ]
+  },
+  {
     "id": "tg-domashnii-liker",
     "title": "Домашний ликёр",
     "slug": "domashnii-liker",
