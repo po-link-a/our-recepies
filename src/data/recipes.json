@@ -1,5 +1,34 @@
 [
   {
+    "id": "tg-arbuzy-konservirovannye",
+    "title": "Арбузы консервированные",
+    "slug": "arbuzy-konservirovannye",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Маринад 2: на 6 л воды 6 столовые ложки сахара, 4 столовые ложки соли, 3 табл. аспирина на 3 л банку"
+      }
+    ],
+    "directions": [
+      "Банки и крышки ошпарить кипятком.",
+      "Свежие арбузы порезать треугольниками толщиной в 2 пальца, сложить их в банки. Залить кипящим маринадом арбузы, положить аспирин в каждую.",
+      "Закатать металлическими крышками, перевернуть верх дном, медленно остудить. Поставить в тёмное холодное место для хранения."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-21",
+    "scans": [
+      "/scans/arbuzy-konservirovannye.jpg"
+    ]
+  },
+  {
     "id": "tg-baklazhany-marinovannye",
     "title": "Баклажаны маринованные",
     "slug": "baklazhany-marinovannye",
