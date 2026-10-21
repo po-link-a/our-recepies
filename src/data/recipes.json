@@ -1,5 +1,68 @@
 [
   {
+    "id": "tg-konfety",
+    "title": "Конфеты",
+    "slug": "konfety",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "Сахар",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "Какао",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Мука",
+        "amount": 1,
+        "unit": "ст."
+      },
+      {
+        "name": "Молоко",
+        "amount": 1,
+        "unit": "ст."
+      },
+      {
+        "name": "Орехи очищенные измельчённые",
+        "amount": 3,
+        "unit": "ст."
+      },
+      {
+        "name": "Масло сливочное",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "Ванилин, корица",
+        "note": "по вкусу"
+      }
+    ],
+    "directions": [
+      "Растопить масло",
+      "Смешать все ингредиенты, довести до кипения.",
+      "Кипятить на медленном огне 0,5 ч",
+      "Вылить смесь на поверхность, смазанную подсолнечным маслом без запаха, остудить. Разрезать на квадратики"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-21",
+    "scans": [
+      "/scans/konfety.jpg"
+    ]
+  },
+  {
     "id": "tg-kotlety-iz-luka",
     "title": "Котлеты из лука",
     "slug": "kotlety-iz-luka",
