@@ -1,5 +1,60 @@
 [
   {
+    "id": "tg-pashtet-ih-govyazhei-pecheni",
+    "title": "Паштет их говяжьей печени",
+    "slug": "pashtet-ih-govyazhei-pecheni",
+    "category": "meat",
+    "categoryName": "Мясо и птица",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Говяжья печень"
+      },
+      {
+        "name": "Лук"
+      },
+      {
+        "name": "Морковь"
+      },
+      {
+        "name": "Жир"
+      },
+      {
+        "name": "Масло сливочное мягкое",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Соль, перец чёрный молотый",
+        "note": "по вкусу"
+      },
+      {
+        "name": "Мускатный орех",
+        "note": "по вкусу"
+      }
+    ],
+    "directions": [
+      "Очистить печень от плёнки, порезать её кубиками",
+      "Порезать лук, нашинковать морковь",
+      "Сложить печень, лук, морковь в чугунок, положить свиной жир и поставить тушить до готовности.",
+      "Прокрутить всё 4 раза через мясорубку",
+      "Посолить, поперчить по вкусу.",
+      "Добавить масло, взбивая паштет вилкой.",
+      "Выложить массу в форму."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-21",
+    "scans": [
+      "/scans/pashtet-ih-govyazhei-pecheni.jpg"
+    ]
+  },
+  {
     "id": "tg-testo-drozhzhevoe-dlya-pitstsy",
     "title": "Тесто дрожжевое для пиццы",
     "slug": "testo-drozhzhevoe-dlya-pitstsy",
