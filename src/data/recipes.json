@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-malosolnaya-krasnaya-ryba",
+    "title": "Малосольная красная рыба",
+    "slug": "malosolnaya-krasnaya-ryba",
+    "category": "fish",
+    "categoryName": "Рыба и морепродукты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "филе красной рыбы с кожей",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "алкоголь",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "соль",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "цедра цитрусовых"
+      },
+      {
+        "name": "лавровый лист"
+      },
+      {
+        "name": "перец горошек"
+      }
+    ],
+    "directions": [
+      "Филе рыбы с кожей натереть алкоголем, смесью соли и сахара, цедрой.",
+      "Сложить рыбу в посуду, добавить лавровый лист, перец. Можно имбирь, гвоздику.",
+      "Поставить в холодильник на сутки.",
+      "Потом достать, вытереть от специй, обсушить бумажными полотенцами.",
+      "Сложить назад в посуду, хранить в морозильнике."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-22",
+    "scans": [
+      "/scans/malosolnaya-krasnaya-ryba.jpg"
+    ]
+  },
+  {
     "id": "tg-morozhenoe-po-lezhski",
     "title": "Мороженое по-льежски",
     "slug": "morozhenoe-po-lezhski",
