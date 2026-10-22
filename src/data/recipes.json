@@ -1,5 +1,74 @@
 [
   {
+    "id": "tg-pechene-cherez-myasorubku-2",
+    "title": "Печенье через мясорубку",
+    "slug": "pechene-cherez-myasorubku-2",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "майонез",
+        "amount": 1,
+        "unit": "банка (250 г)"
+      },
+      {
+        "name": "маргарин",
+        "amount": 1,
+        "unit": "пачка (250 г)"
+      },
+      {
+        "name": "яйца",
+        "amount": 2,
+        "unit": "шт"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "спиртное",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "сода"
+      },
+      {
+        "name": "лимонная кислота"
+      },
+      {
+        "name": "крахмал"
+      },
+      {
+        "name": "подсолнечное масло"
+      },
+      {
+        "name": "мука (чтобы замесить тесто)"
+      }
+    ],
+    "directions": [
+      "Замесить тесто и поставить его в холодное место на 30 минут.",
+      "Пропустить через мясорубку, испечь."
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-10-22",
+    "scans": [
+      "/scans/pechene-cherez-myasorubku-2.jpg"
+    ]
+  },
+  {
     "id": "tg-baklazhannyi-sous",
     "title": "Баклажанный соус",
     "slug": "baklazhannyi-sous",
