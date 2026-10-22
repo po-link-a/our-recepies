@@ -1,5 +1,54 @@
 [
   {
+    "id": "tg-testo-dlya-platsind-na-kefire",
+    "title": "Тесто для плацинд на кефире",
+    "slug": "testo-dlya-platsind-na-kefire",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "кефир",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "маргарин",
+        "amount": 0.5,
+        "unit": "пачки (250 г)"
+      },
+      {
+        "name": "сахар",
+        "amount": 0.5,
+        "unit": "стакан"
+      },
+      {
+        "name": "мука"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "лимонная кислота"
+      }
+    ],
+    "directions": [
+      "Замесить мягкое тесто"
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-10-22",
+    "scans": [
+      "/scans/testo-dlya-platsind-na-kefire.jpg"
+    ]
+  },
+  {
     "id": "tg-kabachki-malosolnye-2",
     "title": "Кабачки малосольные",
     "slug": "kabachki-malosolnye-2",
