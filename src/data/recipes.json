@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-nutella",
+    "title": "Нутелла",
+    "slug": "nutella",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Молоко",
+        "amount": 1,
+        "unit": "ст."
+      },
+      {
+        "name": "Орехи молотые",
+        "amount": 1,
+        "unit": "ст."
+      },
+      {
+        "name": "Сахар",
+        "amount": 1,
+        "unit": "ст."
+      },
+      {
+        "name": "Сливочное масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "Какао",
+        "amount": 3,
+        "unit": "ст. л."
+      },
+      {
+        "name": "Мука",
+        "amount": 0.5,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Ваниль"
+      }
+    ],
+    "directions": [
+      "Всё смешать, прокипятить, разлить в креманки."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-24",
+    "scans": [
+      "/scans/nutella.jpg"
+    ]
+  },
+  {
     "id": "tg-farshirovannye-pomidory",
     "title": "Фаршированные помидоры",
     "slug": "farshirovannye-pomidory",
