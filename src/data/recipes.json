@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-pirog-zolotoi-oreshek",
+    "title": "Пирог «Золотой орешек»",
+    "slug": "pirog-zolotoi-oreshek",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 40,
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "очищенные орехи",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "сливочное масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сметана",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "яйца",
+        "amount": 2,
+        "unit": "шт"
+      }
+    ],
+    "directions": [
+      "Орехи вместе с сахаром 2 раза пропустить через мясорубку, добавить растопленное масло и остальные продукты.",
+      "Всё перемешать.",
+      "Уложить в форму и выпекать 35-40 мин."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-24",
+    "scans": [
+      "/scans/pirog-zolotoi-oreshek.jpg"
+    ]
+  },
+  {
     "id": "tg-tort-biskvit",
     "title": "Торт «Бисквит»",
     "slug": "tort-biskvit",
