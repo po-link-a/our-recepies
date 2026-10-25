@@ -1,5 +1,70 @@
 [
   {
+    "id": "tg-testo-drozhzhevoe-bystroe-retsept-n-ya-fedkinoi",
+    "title": "Тесто дрожжевое быстрое (рецепт Н.Я.Федькиной)",
+    "slug": "testo-drozhzhevoe-bystroe-retsept-n-ya-fedkinoi",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "prepTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "дрожжи",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "яйца",
+        "amount": 4,
+        "unit": "-5 шт."
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "маргарин",
+        "amount": 1,
+        "unit": "пачка (250 г)"
+      },
+      {
+        "name": "кефир тёплый",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "мука",
+        "note": "в количестве для мягкого теста"
+      }
+    ],
+    "directions": [
+      "Дрожжи растереть ложкой, посыпав солью.",
+      "В другой меньшей миске взбить яйца и сахар.",
+      "Растопить маргарин до тёплого состояния.",
+      "Добавить в яйца с сахаром.",
+      "Всё это влить в дрожжи и хорошо перемешать.",
+      "Влить тёплый кефир.",
+      "Замесить мягкое тесто.",
+      "Поставить в тёплое место для подъёма на время приготовления начинки (не менее 0,5 ч)."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-25",
+    "scans": [
+      "/scans/testo-drozhzhevoe-bystroe-retsept-n-ya-fedkinoi.jpg"
+    ]
+  },
+  {
     "id": "tg-tvorozhnyi-tort-s-limonnoi-tsedroi",
     "title": "Творожный торт с лимонной цедрой",
     "slug": "tvorozhnyi-tort-s-limonnoi-tsedroi",
