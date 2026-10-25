@@ -1,5 +1,63 @@
 [
   {
+    "id": "tg-zapekanka-tvorozhnaya",
+    "title": "Запеканка творожная",
+    "slug": "zapekanka-tvorozhnaya",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "—",
+    "prepTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "творог",
+        "amount": 300,
+        "unit": "г"
+      },
+      {
+        "name": "яйца",
+        "amount": 4,
+        "unit": "шт"
+      },
+      {
+        "name": "мука",
+        "amount": 2,
+        "unit": "стакана"
+      },
+      {
+        "name": "сода",
+        "amount": 1,
+        "unit": "ч. ложка погасить 1 ст.л. уксусом"
+      },
+      {
+        "name": "сахар",
+        "amount": 1.5,
+        "unit": "-2 стакана"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "ваниль"
+      }
+    ],
+    "directions": [
+      "В творог вбить яйца, всыпать сахар, добавить соль, соду, уксус, всыпать муку и хорошо перемешать.",
+      "Поставить смесь в холод на 1 час, потом выпечь."
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-10-25",
+    "scans": [
+      "/scans/zapekanka-tvorozhnaya.jpg"
+    ]
+  },
+  {
     "id": "tg-napoleon-2",
     "title": "Наполеон",
     "slug": "napoleon-2",
