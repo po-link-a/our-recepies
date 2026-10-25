@@ -1,5 +1,68 @@
 [
   {
+    "id": "tg-ponchiki",
+    "title": "Пончики",
+    "slug": "ponchiki",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Яйцо",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "Сода",
+        "amount": 0.5,
+        "unit": "ч. л."
+      },
+      {
+        "name": "Уксус",
+        "amount": 2,
+        "unit": "ч. л."
+      },
+      {
+        "name": "Сахар",
+        "amount": 1,
+        "unit": "ст. л."
+      },
+      {
+        "name": "Творог",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "Мука",
+        "amount": 2,
+        "unit": "-3 ст. л."
+      },
+      {
+        "name": "Сахарная пудра"
+      },
+      {
+        "name": "Растительное масло",
+        "note": "для жарки"
+      }
+    ],
+    "directions": [
+      "Творог протереть, яйца взбить, перемешать, добавить остальные продукты, замесить тесто.",
+      "Набирать тесто ложкой, обваливать в муке, жарить в разогретом масле до золотистого цвета.",
+      "Остудить. Посыпать сахарной пудрой."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-25",
+    "scans": [
+      "/scans/ponchiki.jpg"
+    ]
+  },
+  {
     "id": "tg-tort-oktyabrskii",
     "title": "Торт «Октябрьский»",
     "slug": "tort-oktyabrskii",
