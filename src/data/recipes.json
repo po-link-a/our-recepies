@@ -1,5 +1,86 @@
 [
   {
+    "id": "tg-tort-oktyabrskii",
+    "title": "Торт «Октябрьский»",
+    "slug": "tort-oktyabrskii",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Тесто"
+      },
+      {
+        "name": "Сливочное масло",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "Яичные желтки",
+        "amount": 6,
+        "unit": "шт"
+      },
+      {
+        "name": "Сахар",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "Сметана",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Сода",
+        "amount": 1,
+        "unit": "ч.л."
+      },
+      {
+        "name": "Мука",
+        "amount": 500,
+        "unit": "г"
+      },
+      {
+        "name": "Крем:"
+      },
+      {
+        "name": "Яичные белки",
+        "amount": 4,
+        "unit": "шт"
+      },
+      {
+        "name": "Сахар",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Орехи очищенные измельчённые",
+        "amount": 200,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Тесто",
+      "Взбить миксером маргарин, желтки и сахар",
+      "Смешать отдельно сметану и соду, влить во взбитую массу, добавить муку и замесить тесто.",
+      "Испечь 2 коржа",
+      "Крем",
+      "Взбить белки с сахаром и орехами.",
+      "Смазать остывшие коржи"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-25",
+    "scans": [
+      "/scans/tort-oktyabrskii.jpg"
+    ]
+  },
+  {
     "id": "tg-testo-drozhzhevoe-bystroe-retsept-n-ya-fedkinoi",
     "title": "Тесто дрожжевое быстрое (рецепт Н.Я.Федькиной)",
     "slug": "testo-drozhzhevoe-bystroe-retsept-n-ya-fedkinoi",
