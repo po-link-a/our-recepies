@@ -1,5 +1,64 @@
 [
   {
+    "id": "tg-korzhiki-rublennye",
+    "title": "Коржики рубленные",
+    "slug": "korzhiki-rublennye",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Тесто"
+      },
+      {
+        "name": "мука",
+        "amount": 2,
+        "unit": "стакана"
+      },
+      {
+        "name": "маргарин",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сметана",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "Намазка"
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "сахар",
+        "amount": 0.5,
+        "unit": "стакан"
+      }
+    ],
+    "directions": [
+      "Приготовить рубленое тесто",
+      "Поставить его в холод",
+      "Раскатать тесто и вырезать стаканом коржики. Напёрстком вырезать в них серединки.",
+      "Взбить яйцо с сахаром, намазать коржики и поставить их в духовку."
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-10-25",
+    "scans": [
+      "/scans/korzhiki-rublennye.jpg"
+    ]
+  },
+  {
     "id": "tg-korzhiki",
     "title": "Коржики",
     "slug": "korzhiki",
