@@ -1,5 +1,67 @@
 [
   {
+    "id": "tg-tort-regina",
+    "title": "Торт «Регина»",
+    "slug": "tort-regina",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "варенье",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "сметана",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "яйца",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "сода",
+        "amount": 2,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "орехи",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "ваниль"
+      },
+      {
+        "name": "мука",
+        "amount": 3,
+        "unit": "стакана"
+      }
+    ],
+    "directions": [
+      "Всё перемешать, соду не гасить, испечь."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-25",
+    "scans": [
+      "/scans/tort-regina.jpg"
+    ]
+  },
+  {
     "id": "tg-tort-na-medovom-teste-retsept-t-n-gasman",
     "title": "Торт на медовом тесте (рецепт Т.Н. Гасман)",
     "slug": "tort-na-medovom-teste-retsept-t-n-gasman",
