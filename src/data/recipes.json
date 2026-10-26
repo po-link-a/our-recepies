@@ -1,5 +1,65 @@
 [
   {
+    "id": "tg-testo-pashalnoe",
+    "title": "Тесто «Пасхальное»",
+    "slug": "testo-pashalnoe",
+    "category": "dough",
+    "categoryName": "Базовое тесто",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 4,
+        "unit": "стакана"
+      },
+      {
+        "name": "сахар",
+        "amount": 4,
+        "unit": "-8 ст. ложек"
+      },
+      {
+        "name": "маргарин",
+        "amount": 4,
+        "unit": "-8 ст. л."
+      },
+      {
+        "name": "желтки",
+        "amount": 2,
+        "unit": "-8 шт."
+      },
+      {
+        "name": "дрожжи свежие",
+        "amount": 20,
+        "unit": "г"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "молоко",
+        "amount": 0.5,
+        "unit": "стакана"
+      }
+    ],
+    "directions": [
+      "Молоко, дрожжи и половину муки смешать. Полученную опару поставить в тёплое место, после подъёма тесто обмять и добавить остальные продукты.",
+      "Размешивать в течение 8 минут.",
+      "Накрыть тесто крышкой и поставить ещё на 1 ч в тепло для подъёма.",
+      "После этого можно разделывать тесто."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-26",
+    "scans": [
+      "/scans/testo-pashalnoe.jpg"
+    ]
+  },
+  {
     "id": "tg-testo-drozhzhevoe",
     "title": "Тесто дрожжевое",
     "slug": "testo-drozhzhevoe",
