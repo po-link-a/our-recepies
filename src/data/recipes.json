@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-pirog-tertyi",
+    "title": "Пирог «Тёртый»",
+    "slug": "pirog-tertyi",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "маргарин",
+        "amount": 400,
+        "unit": "г"
+      },
+      {
+        "name": "яичные желтки",
+        "amount": 8,
+        "unit": "шт."
+      },
+      {
+        "name": "сахар",
+        "amount": 2,
+        "unit": "стакана"
+      },
+      {
+        "name": "сода",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "уксус",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "ваниль"
+      },
+      {
+        "name": "соль"
+      }
+    ],
+    "directions": [
+      "Желтки взбить с сахаром, замесить крутое тесто.",
+      "Смазать противень маргарином",
+      "Протереть тесто через тёрку на листик. И выпечь"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-26",
+    "scans": [
+      "/scans/pirog-tertyi.jpg"
+    ]
+  },
+  {
     "id": "tg-pirozhki-zharenye",
     "title": "Пирожки жареные",
     "slug": "pirozhki-zharenye",
