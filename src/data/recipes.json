@@ -1,5 +1,73 @@
 [
   {
+    "id": "tg-testo-drozhzhevoe",
+    "title": "Тесто дрожжевое",
+    "slug": "testo-drozhzhevoe",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "молоко тёплое",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "дрожжи свежие",
+        "amount": 25,
+        "unit": "г"
+      },
+      {
+        "name": "яйца",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "мука",
+        "amount": 4,
+        "unit": "стакана"
+      },
+      {
+        "name": "растительное масло",
+        "amount": 3,
+        "unit": "-4 ст. ложки"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "ваниль"
+      }
+    ],
+    "directions": [
+      "Сделать опару из молока, сахара, дрожжей, дать ей подойти.",
+      "Потом добавить в неё остальные продукты и замесить мягкое тесто.",
+      "Поставить тесто подходить на 3 ч., потом обмять оставить ещё на 50 минут.",
+      "Потом можно выпекать любые виды изделий. Может быть начинка: творог, яблоки."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-26",
+    "scans": [
+      "/scans/testo-drozhzhevoe.jpg"
+    ]
+  },
+  {
     "id": "tg-sous-k-rybe-ili-myasu",
     "title": "Соус к рыбе или мясу",
     "slug": "sous-k-rybe-ili-myasu",
