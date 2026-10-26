@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-pirog-tertyi-2",
+    "title": "Пирог «Тёртый»",
+    "slug": "pirog-tertyi-2",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "маргарин",
+        "amount": 300,
+        "unit": "г"
+      },
+      {
+        "name": "яичные желтки",
+        "amount": 4,
+        "unit": "шт."
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "-1,5 стакана"
+      },
+      {
+        "name": "майонез",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "сода",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "ваниль"
+      },
+      {
+        "name": "мука",
+        "note": "в количестве для среднего теста"
+      }
+    ],
+    "directions": [
+      "Смазать противень маргарином",
+      "Протереть тесто через тёрку на листик. И выпечь"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-26",
+    "scans": [
+      "/scans/pirog-tertyi-2.jpg"
+    ]
+  },
+  {
     "id": "tg-pirog-tertyi",
     "title": "Пирог «Тёртый»",
     "slug": "pirog-tertyi",
