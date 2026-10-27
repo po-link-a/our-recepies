@@ -1,5 +1,58 @@
 [
   {
+    "id": "tg-otbivnaya-s-plavlenym-syrom-po-shveitsarski",
+    "title": "Отбивная с плавленым сыром по-швейцарски",
+    "slug": "otbivnaya-s-plavlenym-syrom-po-shveitsarski",
+    "category": "meat",
+    "categoryName": "Мясо и птица",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "отбивные",
+        "amount": 4,
+        "unit": "шт."
+      },
+      {
+        "name": "плавленый сыр",
+        "amount": 4,
+        "unit": "кусочка"
+      },
+      {
+        "name": "сухое вино",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "красный молотый перец",
+        "note": "немного"
+      },
+      {
+        "name": "горчица"
+      },
+      {
+        "name": "грибы и жареный картофель на гарнир"
+      }
+    ],
+    "directions": [
+      "Приготовить отбивные и жарить на решётке.",
+      "Между тем на пару растопить плавленый сыр, влить вино, прибавить горчицу и немного красного перца.",
+      "Всё хорошо перемешать и выложить на отбивные.",
+      "Подавать с гарниром."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-27",
+    "scans": [
+      "/scans/otbivnaya-s-plavlenym-syrom-po-shveitsarski.jpg"
+    ]
+  },
+  {
     "id": "tg-romovye-shariki-po-datski",
     "title": "Ромовые шарики по-датски",
     "slug": "romovye-shariki-po-datski",
