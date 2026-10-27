@@ -1,5 +1,57 @@
 [
   {
+    "id": "tg-hlebnaya-zapekanka-s-yablokami",
+    "title": "Хлебная запеканка с яблоками",
+    "slug": "hlebnaya-zapekanka-s-yablokami",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "чёрствый хлеб",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "яблоки",
+        "amount": 800,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "сливочное масло",
+        "amount": 60,
+        "unit": "г"
+      },
+      {
+        "name": "молотая корица"
+      },
+      {
+        "name": "ванилин"
+      }
+    ],
+    "directions": [
+      "Хлеб мелко натереть, очищенные без сердцевины яблоки нарезать тонкими дольками. Хлеб и яблоки перемешать в миске с корицей, сахаром, ванилином.",
+      "Уложить в хорошо смазанную жиром форму, немного прижать и смазать разогретым маслом.",
+      "Печь в умеренно горячей духовке"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-27",
+    "scans": [
+      "/scans/hlebnaya-zapekanka-s-yablokami.jpg"
+    ]
+  },
+  {
     "id": "tg-zrazy-lastochkino-gnezdo",
     "title": "Зразы «Ласточкино гнездо»",
     "slug": "zrazy-lastochkino-gnezdo",
