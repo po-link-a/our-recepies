@@ -1,5 +1,53 @@
 [
   {
+    "id": "tg-orehovye-shariki-v-shokolade",
+    "title": "Ореховые шарики в шоколаде",
+    "slug": "orehovye-shariki-v-shokolade",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "очищенные измельчённые грецкие орехи",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "мёд",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "сок и цедра 1-го апельсина"
+      },
+      {
+        "name": "вино или коньяк",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "шоколад",
+        "amount": 50,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Мёд смешать с молотыми грецкими орехами до густоты, затем добавьте натёртую цедру одного апельсина, апельсиновый сок, вино или коньяк и всё прокипятить.",
+      "Затем разделить массу на маленькие шарики и обвалять в крупно наструганном шоколаде."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-27",
+    "scans": [
+      "/scans/orehovye-shariki-v-shokolade.jpg"
+    ]
+  },
+  {
     "id": "tg-tiramisu-bez-sahara",
     "title": "Тирамису без сахара",
     "slug": "tiramisu-bez-sahara",
