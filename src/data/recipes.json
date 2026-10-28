@@ -1,5 +1,48 @@
 [
   {
+    "id": "tg-kurabe",
+    "title": "Курабье",
+    "slug": "kurabe",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 20,
+    "ingredients": [
+      {
+        "name": "топлёное масло",
+        "amount": 1,
+        "unit": "стакан (250 мл)"
+      },
+      {
+        "name": "сахарная пудра",
+        "amount": 2,
+        "unit": "стакана"
+      },
+      {
+        "name": "мука",
+        "amount": 2,
+        "unit": "— 3 стакана"
+      }
+    ],
+    "directions": [
+      "Масло с пудрой перетереть до пушистого состояния, потом постепенно добавлять муку.",
+      "Духовку нагреть и уменьшить нагрев.",
+      "При слабом огне печь 15-20 минут."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-28",
+    "scans": [
+      "/scans/kurabe.jpg"
+    ]
+  },
+  {
     "id": "tg-tort-karakul",
     "title": "Торт «Каракуль»",
     "slug": "tort-karakul",
