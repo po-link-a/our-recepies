@@ -1,5 +1,59 @@
 [
   {
+    "id": "tg-vafli-bazovye-2",
+    "title": "Вафли базовые",
+    "slug": "vafli-bazovye-2",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 2,
+        "unit": "стакана"
+      },
+      {
+        "name": "вода",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сметана",
+        "amount": 1,
+        "unit": "столовая ложка с горкой"
+      },
+      {
+        "name": "яйцо",
+        "amount": 3,
+        "unit": "шт."
+      },
+      {
+        "name": "масло или маргарин",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 120,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Все ингредиенты смешать до однородной массы, можно взбить миксером. Для выпекания в вафельнице необходима одна столовая ложка смеси."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-29",
+    "scans": [
+      "/scans/vafli-bazovye-2.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-bazovye",
     "title": "Вафли базовые",
     "slug": "vafli-bazovye",
