@@ -1,5 +1,59 @@
 [
   {
+    "id": "tg-vafli-bazovye",
+    "title": "Вафли базовые",
+    "slug": "vafli-bazovye",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "масло или маргарин",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 75,
+        "unit": "г"
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "мука",
+        "amount": 175,
+        "unit": "г"
+      },
+      {
+        "name": "тёплая вода",
+        "amount": 250,
+        "unit": "мл"
+      },
+      {
+        "name": "корица",
+        "amount": 0.5,
+        "unit": "ч. л."
+      }
+    ],
+    "directions": [
+      "Все ингредиенты смешать до однородной массы, можно взбить миксером. Для выпекания в вафельнице необходима одна столовая ложка смеси."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-29",
+    "scans": [
+      "/scans/vafli-bazovye.jpg"
+    ]
+  },
+  {
     "id": "tg-tort-napoleon-2",
     "title": "Торт «Наполеон»",
     "slug": "tort-napoleon-2",
