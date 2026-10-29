@@ -1,5 +1,78 @@
 [
   {
+    "id": "tg-vafelnye-trubochki-s-varenoi-sgushchenkoi-v-shokoladnoi-glaz",
+    "title": "Вафельные трубочки с варёной сгущенкой в шоколадной глазури",
+    "slug": "vafelnye-trubochki-s-varenoi-sgushchenkoi-v-shokoladnoi-glaz",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Тесто:"
+      },
+      {
+        "name": "Маргарин растопленный",
+        "amount": 1,
+        "unit": "пачка"
+      },
+      {
+        "name": "Яйца",
+        "amount": 5,
+        "unit": "шт."
+      },
+      {
+        "name": "Сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "Мука",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "Шоколадная глазурь"
+      },
+      {
+        "name": "Вода",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Сахарная пудра",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "Какао-порошок",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "Сливочное масло растопленное",
+        "amount": 1,
+        "unit": "столовая ложка"
+      }
+    ],
+    "directions": [
+      "Тесто",
+      "Яйца смешать с сахаром, добавить муку, потом влить растопленный маргарин, перемешать и выпечь. Как только снять вафлю с вафельницы, сразу положить варёную сгущёнку и завернуть трубочкой.",
+      "Шоколадная глазурь:",
+      "В миске разогреть воду, просеять туда сахарную пудру, туда же положить какао-порошок. Когда смесь закипит, влить растопленное сливочное масло. После выпекания окунуть обе стороны трубочки в глазурь, и посыпать сахарной пудрой."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-29",
+    "scans": [
+      "/scans/vafelnye-trubochki-s-varenoi-sgushchenkoi-v-shokoladnoi-glaz.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-marselskie-s-kakao-kremom",
     "title": "Вафли марсельские с какао-кремом",
     "slug": "vafli-marselskie-s-kakao-kremom",
