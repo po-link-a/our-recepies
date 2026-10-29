@@ -1,5 +1,67 @@
 [
   {
+    "id": "tg-vafli-syrnye",
+    "title": "Вафли сырные",
+    "slug": "vafli-syrnye",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Сыр твёрдый",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Маргарин",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Яйцо куриное",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "Мука пшеничная",
+        "amount": 250,
+        "unit": "-300 г"
+      },
+      {
+        "name": "Вода газированная (минеральная)",
+        "amount": 200,
+        "unit": "мл"
+      },
+      {
+        "name": "Сода",
+        "amount": 1,
+        "unit": "ч. л."
+      },
+      {
+        "name": "Соль",
+        "amount": 1,
+        "unit": "ч. л."
+      }
+    ],
+    "directions": [
+      "Маргарин растопить, сыр натереть на мелкой тёрке.",
+      "Смешать все ингредиенты, тщательно перемешать ложкой или венчиком, чтобы масса была однородной.",
+      "Тесто должно быть консистенции очень густой сметаны.",
+      "Выкладывать тесто в предварительно разогретую вафельницу"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-29",
+    "scans": [
+      "/scans/vafli-syrnye.jpg"
+    ]
+  },
+  {
     "id": "tg-vafelnye-trubochki-s-varenoi-sgushchenkoi-v-shokoladnoi-glaz",
     "title": "Вафельные трубочки с варёной сгущенкой в шоколадной глазури",
     "slug": "vafelnye-trubochki-s-varenoi-sgushchenkoi-v-shokoladnoi-glaz",
