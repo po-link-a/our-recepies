@@ -1,5 +1,66 @@
 [
   {
+    "id": "tg-vafli-prostye",
+    "title": "Вафли простые",
+    "slug": "vafli-prostye",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Мука",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Пекарский порошок",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 1,
+        "unit": "шт"
+      },
+      {
+        "name": "Молоко или сливки",
+        "amount": 250,
+        "unit": "мл"
+      },
+      {
+        "name": "Растопленное масло или маргарин",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Соль",
+        "amount": 0.25,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "Сахар",
+        "amount": 1.5,
+        "unit": "ст. ложки"
+      }
+    ],
+    "directions": [
+      "Смешайте муку с пекарским порошком и солью, постепенно добавьте молоко, смешанное с желтком, растопленное масло.",
+      "Взбейте тесто до образования однородной массы и дайте постоять 50–60 минут.",
+      "Взбейте белок и перед выпечкой вафель добавьте его в тесто."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-29",
+    "scans": [
+      "/scans/vafli-prostye.jpg"
+    ]
+  },
+  {
     "id": "tg-morkov-po-koreiski",
     "title": "Морковь по-корейски",
     "slug": "morkov-po-koreiski",
