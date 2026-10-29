@@ -1,5 +1,59 @@
 [
   {
+    "id": "tg-salaty-iz-svekly-3-ingredienta",
+    "title": "Салаты из свёклы (3 ингредиента)",
+    "slug": "salaty-iz-svekly-3-ingredienta",
+    "category": "salads",
+    "categoryName": "Салаты и закуски",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Свёкла, чеснок, сметана"
+      },
+      {
+        "name": "Свёкла, сыр Фета, орехи грецкие"
+      },
+      {
+        "name": "Свёкла, яйцо, майонез"
+      },
+      {
+        "name": "Свёкла, морковь, яблоко"
+      },
+      {
+        "name": "Свёкла, чернослив, орехи"
+      },
+      {
+        "name": "Свёкла, сельдь, лук"
+      },
+      {
+        "name": "Свёкла, огурец солёный, зелень"
+      },
+      {
+        "name": "Свёкла, творог, чеснок"
+      },
+      {
+        "name": "Свёкла, авокадо, руккола"
+      },
+      {
+        "name": "Свёкла, греческий йогурт, кунжут"
+      }
+    ],
+    "directions": [
+      "Смешать все ингредиенты"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-29",
+    "scans": [
+      "/scans/salaty-iz-svekly-3-ingredienta.jpg"
+    ]
+  },
+  {
     "id": "tg-bulochki-vyprygivayushchie-iz-formochek",
     "title": "Булочки, «выпрыгивающие» из формочек",
     "slug": "bulochki-vyprygivayushchie-iz-formochek",
