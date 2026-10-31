@@ -1,5 +1,66 @@
 [
   {
+    "id": "tg-vafli-tvorozhnye",
+    "title": "Вафли творожные",
+    "slug": "vafli-tvorozhnye",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Яйца",
+        "amount": 3,
+        "unit": "шт."
+      },
+      {
+        "name": "Сахар",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Творог",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "Лимонная цедра (тёртая)"
+      },
+      {
+        "name": "Соль"
+      },
+      {
+        "name": "Молоко",
+        "amount": 2,
+        "unit": "-3 ст. ложки"
+      },
+      {
+        "name": "Мука с пекарским порошком",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "Растопленный жир/масло",
+        "amount": 2,
+        "unit": "ст. ложки"
+      }
+    ],
+    "directions": [
+      "Яичные желтки взбить с сахаром, добавить творог, растопленный жир, цедру, соль, смешанную с пекарским порошком муку и молоко.",
+      "Белки взбить в крепкую пену и смешать с тестом перед выпечкой."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-tvorozhnye.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-slivochnye",
     "title": "Вафли сливочные",
     "slug": "vafli-slivochnye",
