@@ -1,5 +1,65 @@
 [
   {
+    "id": "tg-vafli-na-drozhzhah",
+    "title": "Вафли на дрожжах",
+    "slug": "vafli-na-drozhzhah",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Яйца",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "Сахар",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Сливочное масло или маргарин",
+        "amount": 75,
+        "unit": "г"
+      },
+      {
+        "name": "Соль"
+      },
+      {
+        "name": "Молоко",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "Дрожжи свежие",
+        "amount": 20,
+        "unit": "г"
+      },
+      {
+        "name": "Тертая цедра с 0,5 лимона"
+      },
+      {
+        "name": "Мука 200 г"
+      }
+    ],
+    "directions": [
+      "Яйца взбить с половиной сахара, добавить растопленное масло, цедру.",
+      "Дрожжи растереть с оставшимся сахаром, смешать с тёплым молоком и добавлять к яично-масляной смеси попеременно с мукой.",
+      "Оставить подниматься на час, ещё раз взбить и выпекать вафли."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-na-drozhzhah.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-tvorozhnye",
     "title": "Вафли творожные",
     "slug": "vafli-tvorozhnye",
