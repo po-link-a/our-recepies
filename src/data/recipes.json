@@ -1,5 +1,59 @@
 [
   {
+    "id": "tg-vafli-sladkie",
+    "title": "Вафли сладкие",
+    "slug": "vafli-sladkie",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "prepTimeMinutes": 60,
+    "ingredients": [
+      {
+        "name": "Яйцо",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "Сахар",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "Сливочное масло или маргарин",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "Молоко",
+        "amount": 250,
+        "unit": "мл"
+      },
+      {
+        "name": "Мука",
+        "amount": 125,
+        "unit": "г"
+      },
+      {
+        "name": "Соль"
+      }
+    ],
+    "directions": [
+      "Яйцо взбить с сахаром, добавить растопленное масло, затем попеременно молоко и муку.",
+      "Тесту дать немного постоять перед выпечкой."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-sladkie.jpg"
+    ]
+  },
+  {
     "id": "tg-halva-iz-gretskih-orehov",
     "title": "Халва из грецких орехов",
     "slug": "halva-iz-gretskih-orehov",
