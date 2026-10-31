@@ -1,5 +1,84 @@
 [
   {
+    "id": "tg-vafli-belgiiskie-s-kabachkom-i-tapenadoi",
+    "title": "Вафли бельгийские с кабачком и тапенадой",
+    "slug": "vafli-belgiiskie-s-kabachkom-i-tapenadoi",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "пшеничная мука",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "молоко",
+        "amount": 200,
+        "unit": "мл"
+      },
+      {
+        "name": "газированная вода",
+        "amount": 200,
+        "unit": "мл"
+      },
+      {
+        "name": "оливковое масло",
+        "amount": 100,
+        "unit": "мл"
+      },
+      {
+        "name": "яичные желтки",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "соль",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "тапенада",
+        "amount": 2,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "яичные белки",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "мелко нашинкованные кабачки",
+        "amount": 300,
+        "unit": "г"
+      },
+      {
+        "name": "оливковое масло для обжарки кабачков",
+        "amount": 1,
+        "unit": "ч. ложка"
+      }
+    ],
+    "directions": [
+      "В большую ёмкость насыпать муку.",
+      "Сделать в центре углубление и добавить молоко, газированную воду, оливковое масло, яичные желтки, соль, тапенаду и яичные белки, взбитые в пену.",
+      "Перемешать до получения однородной смеси. Оставить на час.",
+      "В сковороде обжарить мелко нашинкованные кабачки с оливковым маслом.",
+      "Добавить кабачки в смесь.",
+      "Выпекать в течении 5-6 минут"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-belgiiskie-s-kabachkom-i-tapenadoi.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-belgiiskie-traditsionnye",
     "title": "Вафли бельгийские традиционные",
     "slug": "vafli-belgiiskie-traditsionnye",
