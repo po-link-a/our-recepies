@@ -1,5 +1,59 @@
 [
   {
+    "id": "tg-vafli-belgiiskie-shokoladnye",
+    "title": "Вафли бельгийские шоколадные",
+    "slug": "vafli-belgiiskie-shokoladnye",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 6,
+    "servings": 5,
+    "ingredients": [
+      {
+        "name": "размягчённое сливочное масло",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "яйца",
+        "amount": 4,
+        "unit": "шт."
+      },
+      {
+        "name": "просеянная пшеничная мука",
+        "amount": 170,
+        "unit": "г"
+      },
+      {
+        "name": "какао-порошок",
+        "amount": 30,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "В ёмкости смешать размягчённое сливочное масло, сахар и яйца.",
+      "Отдельно смешать просеянную муку и какао-порошок, добавить муку с какао в первую ёмкость и замесить тесто, оставить на несколько минут.",
+      "Выпекать в течь 5-6 минут"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-belgiiskie-shokoladnye.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-belgiiskie-bryusselskie",
     "title": "Вафли бельгийские брюссельские",
     "slug": "vafli-belgiiskie-bryusselskie",
