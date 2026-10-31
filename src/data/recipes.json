@@ -1,5 +1,74 @@
 [
   {
+    "id": "tg-vafli-belgiiskie-bryusselskie",
+    "title": "Вафли бельгийские брюссельские",
+    "slug": "vafli-belgiiskie-bryusselskie",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 5,
+    "ingredients": [
+      {
+        "name": "пшеничная мука",
+        "amount": 125,
+        "unit": "г"
+      },
+      {
+        "name": "яичные желтки",
+        "amount": 4,
+        "unit": "шт."
+      },
+      {
+        "name": "соль",
+        "amount": 1,
+        "unit": "щепотка"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "молоко",
+        "amount": 250,
+        "unit": "мл"
+      },
+      {
+        "name": "стручок ванили",
+        "amount": 0.25,
+        "unit": "шт."
+      },
+      {
+        "name": "растопленное сливочное масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "яичные белки",
+        "amount": 4,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "В ёмкость насыпьте муку, добавьте яичные желтки, соль и сахар.",
+      "Постепенно влить молоко, вскипячённое с ванилью (удалить стручок ванили, как только молоко закипит).",
+      "Затем добавить растопленное сливочное масло.",
+      "Хорошо перемешать, затем добавить яичные белки, взбитые в пену.",
+      "Выпекать в течь 5-6 минут"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-belgiiskie-bryusselskie.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-belgiiskie-s-kabachkom-i-tapenadoi",
     "title": "Вафли бельгийские с кабачком и тапенадой",
     "slug": "vafli-belgiiskie-s-kabachkom-i-tapenadoi",
