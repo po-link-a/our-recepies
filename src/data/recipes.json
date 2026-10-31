@@ -1,5 +1,70 @@
 [
   {
+    "id": "tg-vafli-belgiiskie-traditsionnye",
+    "title": "Вафли бельгийские традиционные",
+    "slug": "vafli-belgiiskie-traditsionnye",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 6,
+    "ingredients": [
+      {
+        "name": "пшеничная мука",
+        "amount": 300,
+        "unit": "г"
+      },
+      {
+        "name": "разрыхлитель теста",
+        "amount": 10,
+        "unit": "г"
+      },
+      {
+        "name": "соль",
+        "amount": 1,
+        "unit": "щепотка"
+      },
+      {
+        "name": "сахар",
+        "amount": 75,
+        "unit": "г"
+      },
+      {
+        "name": "растопленное сливочное масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "яйца",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "молоко",
+        "amount": 0.5,
+        "unit": "л"
+      }
+    ],
+    "directions": [
+      "В ёмкости смешать муку и разрыхлитель.",
+      "Сделать в центре углубление и добавить соль, сахар, растопленное сливочное масло и яйца.",
+      "Постепенно добавить молоко.",
+      "Оставить на 1 ч.",
+      "Выпекать в течение 5-6 минут."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-belgiiskie-traditsionnye.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-solenye-na-pekarskom-poroshke",
     "title": "Вафли солёные на пекарском порошке",
     "slug": "vafli-solenye-na-pekarskom-poroshke",
