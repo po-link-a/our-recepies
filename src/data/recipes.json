@@ -1,5 +1,55 @@
 [
   {
+    "id": "tg-vafli-delikatesnye",
+    "title": "Вафли деликатесные",
+    "slug": "vafli-delikatesnye",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Сливочное масло или маргарин",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "Сахар",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "Яйца",
+        "amount": 3,
+        "unit": "шт."
+      },
+      {
+        "name": "Картофельный крахмал",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Вода",
+        "amount": 0.5,
+        "unit": "стакана"
+      }
+    ],
+    "directions": [
+      "Масло или маргарин взбить с сахаром, добавить, продолжая взбивать, по одному яичные желтки, крахмал и воду.",
+      "Яичные белки взбить в крепкую пену, добавить в тесто, аккуратно помешивая. Выпекать сразу."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-delikatesnye.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-kartofelnye",
     "title": "Вафли картофельные",
     "slug": "vafli-kartofelnye",
