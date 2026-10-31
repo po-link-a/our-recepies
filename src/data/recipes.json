@@ -1,5 +1,58 @@
 [
   {
+    "id": "tg-vafli-slivochnye",
+    "title": "Вафли сливочные",
+    "slug": "vafli-slivochnye",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Мука",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Холодная вода",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "Соль"
+      },
+      {
+        "name": "Растопленное сливочное масло",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Сливки",
+        "amount": 250,
+        "unit": "мл"
+      },
+      {
+        "name": "Сахар",
+        "amount": 1,
+        "unit": "-2 ст. ложки"
+      }
+    ],
+    "directions": [
+      "Муку просеять в миску, добавить холодной воды, немного соли, растопленное масло.",
+      "Сливки взбить с сахаром, смешать с тестом и сразу выпекать вафли."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-slivochnye.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-sladkie",
     "title": "Вафли сладкие",
     "slug": "vafli-sladkie",
