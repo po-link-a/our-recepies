@@ -1,5 +1,66 @@
 [
   {
+    "id": "tg-vafli-solenye-na-drozhzhah",
+    "title": "Вафли солёные на дрожжах",
+    "slug": "vafli-solenye-na-drozhzhah",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Дрожжи свежие",
+        "amount": 25,
+        "unit": "— 30 г"
+      },
+      {
+        "name": "Сахар",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "Вода",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "Мука",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 0.25,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "Молоко",
+        "amount": 250,
+        "unit": "мл"
+      },
+      {
+        "name": "Сливочное масло или маргарин",
+        "amount": 100,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Дрожжи растереть с сахаром до жидкого состояния, добавить тёплую воду, молоко и соль.",
+      "Муку просеять в миску, добавить тёплую дрожжевую смесь и масло. Смешивать, взбивая, пока тесто не станет однородным и гладким.",
+      "Поставить тесто подниматься в тёплое место."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-solenye-na-drozhzhah.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-delikatesnye",
     "title": "Вафли деликатесные",
     "slug": "vafli-delikatesnye",
