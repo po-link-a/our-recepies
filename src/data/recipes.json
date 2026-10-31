@@ -1,5 +1,71 @@
 [
   {
+    "id": "tg-vafli-solenye-na-pekarskom-poroshke",
+    "title": "Вафли солёные на пекарском порошке",
+    "slug": "vafli-solenye-na-pekarskom-poroshke",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Мука",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "Пекарский порошок",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "Соль",
+        "amount": 0.5,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "Яйца",
+        "amount": 3,
+        "unit": "шт."
+      },
+      {
+        "name": "Молоко",
+        "amount": 1.25,
+        "unit": "стакана"
+      },
+      {
+        "name": "Сметана",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Растопленное сливочное масло",
+        "amount": 3,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Растительное масло",
+        "amount": 3,
+        "unit": "ст. ложки"
+      }
+    ],
+    "directions": [
+      "Муку просеять в миску, смешать с пекарским порошком и солью.",
+      "Яичные желтки, молоко и сметану взбить и постепенно добавлять к муке.",
+      "Тесто вымешивать до тех пор, пока оно не станет однородным и гладким, затем влить растопленное масло. При желании тесто можно заправить красным перцем. Под конец добавить взбитые белки и сразу выпекать"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-10-31",
+    "scans": [
+      "/scans/vafli-solenye-na-pekarskom-poroshke.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-solenye-na-drozhzhah",
     "title": "Вафли солёные на дрожжах",
     "slug": "vafli-solenye-na-drozhzhah",
