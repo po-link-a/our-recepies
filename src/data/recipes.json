@@ -1,5 +1,72 @@
 [
   {
+    "id": "tg-mini-vafli-novogodnie",
+    "title": "Мини-вафли «Новогодние»",
+    "slug": "mini-vafli-novogodnie",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Мука",
+        "note": "кг"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 4,
+        "unit": "шт."
+      },
+      {
+        "name": "Маргарин растопленный",
+        "amount": 375,
+        "unit": "г"
+      },
+      {
+        "name": "Свежие дрожжи",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "Молоко тёплое",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "Соль",
+        "amount": 1,
+        "unit": "щепотка"
+      },
+      {
+        "name": "Ванильный сахар",
+        "amount": 2,
+        "unit": "пакетика"
+      },
+      {
+        "name": "Растительное масло",
+        "amount": 1,
+        "unit": "чайная ложка"
+      }
+    ],
+    "directions": [
+      "Смешать муку, яйца, растопленный маргарин, свежие дрожжи, предварительно растворённые в тёплом молоке, соль, ванильный сахар и растительное масло.",
+      "Оставить тесто подходить в течение 2 ч.",
+      "Сформировать шарики размером со сливу, раскатать их скалкой и поместить в вафельницу.",
+      "Выпекать 3 минуты."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/mini-vafli-novogodnie.jpg"
+    ]
+  },
+  {
     "id": "tg-mini-vafli-s-parmezanom",
     "title": "Мини-вафли с пармезаном",
     "slug": "mini-vafli-s-parmezanom",
