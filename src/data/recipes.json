@@ -1,5 +1,45 @@
 [
   {
+    "id": "tg-panini-s-vetchinoi",
+    "title": "Панини с ветчиной",
+    "slug": "panini-s-vetchinoi",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "Булочки небольшие",
+        "amount": 4,
+        "unit": "шт."
+      },
+      {
+        "name": "Сливочное масло, горчица, сливочный сыр, ветчина."
+      },
+      {
+        "name": "Ломтики нарезанных пополам помидоров."
+      }
+    ],
+    "directions": [
+      "Булочки разрезать пополам. Намазать их сливочным маслом, горчицей и сливочным сыром.",
+      "В каждую булочку вложить ломтик ветчины и ломтик помидора.",
+      "Закрыть булочки.",
+      "Готовить в течении 7-8 минут."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/panini-s-vetchinoi.jpg"
+    ]
+  },
+  {
     "id": "tg-panini-po-baskski",
     "title": "Панини по-баскски",
     "slug": "panini-po-baskski",
