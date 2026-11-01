@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-mini-vafli-s-korichnevym-saharom",
+    "title": "Мини-вафли с коричневым сахаром",
+    "slug": "mini-vafli-s-korichnevym-saharom",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "светло-коричневый сахар",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "сливочное масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "разрыхлитель",
+        "amount": 2,
+        "unit": "г"
+      },
+      {
+        "name": "молоко",
+        "amount": 4,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "Смешать муку, сахар, сливочное масло, разрыхлитель, молоко и яйцо.",
+      "Поставить тесто в холодильник на 2ч.",
+      "Потом скатать 4 шарика величиной со сливу, сплющить их ладонью и выпекать в течение 3-4 минут"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/mini-vafli-s-korichnevym-saharom.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-belgiiskie-shokoladnye",
     "title": "Вафли бельгийские шоколадные",
     "slug": "vafli-belgiiskie-shokoladnye",
