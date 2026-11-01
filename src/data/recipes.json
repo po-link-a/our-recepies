@@ -1,5 +1,45 @@
 [
   {
+    "id": "tg-steik-s-timyanom",
+    "title": "Стейк с тимьяном",
+    "slug": "steik-s-timyanom",
+    "category": "meat",
+    "categoryName": "Мясо и птица",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "Готовый стейк"
+      },
+      {
+        "name": "Растительное масло",
+        "note": "немного"
+      },
+      {
+        "name": "Веточка тимьяна",
+        "amount": 1,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "Смазать стейк растительным маслом.",
+      "Покрыть листочками тимьяна обе стороны стейка.",
+      "Готовить на гриле в течение 2— 5 минут в зависимости от желаемой степени прожарки: с кровью, средняя или полная, или хорошо прожаренный.  Подавать с гарниром на свой выбор."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/steik-s-timyanom.jpg"
+    ]
+  },
+  {
     "id": "tg-panini-s-vetchinoi",
     "title": "Панини с ветчиной",
     "slug": "panini-s-vetchinoi",
