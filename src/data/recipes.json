@@ -1,5 +1,68 @@
 [
   {
+    "id": "tg-mini-vafli-s-parmezanom",
+    "title": "Мини-вафли с пармезаном",
+    "slug": "mini-vafli-s-parmezanom",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "Молоко",
+        "amount": 350,
+        "unit": "г,"
+      },
+      {
+        "name": "Сахар",
+        "amount": 20,
+        "unit": "г"
+      },
+      {
+        "name": "Соль",
+        "amount": 1,
+        "unit": "щепотка"
+      },
+      {
+        "name": "Мука",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 3,
+        "unit": "шт."
+      },
+      {
+        "name": "Сливочное масло растопленное",
+        "amount": 85,
+        "unit": "г"
+      },
+      {
+        "name": "Пармезан натёртый",
+        "amount": 30,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Смешайте молоко, сахар, соль и муку. Добавить яичные желтки и растопленное сливочное масло. Хорошо перемешать.",
+      "Поставить тесто в холодильник на 1 ч.",
+      "Взбить яичные белки до получения крутой пены, добавить в жидкую смесь пармезан и яичные белки. Выпекать в течение 3-5 минут.",
+      "Подавать как закуску или с салатом."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/mini-vafli-s-parmezanom.jpg"
+    ]
+  },
+  {
     "id": "tg-mini-vafli-s-korichnevym-saharom",
     "title": "Мини-вафли с коричневым сахаром",
     "slug": "mini-vafli-s-korichnevym-saharom",
