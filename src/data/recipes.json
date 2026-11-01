@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-vafli-tonkie-hrustyashchie-shokoladnye-po-bernski",
+    "title": "Вафли тонкие хрустящие шоколадные по-бернски",
+    "slug": "vafli-tonkie-hrustyashchie-shokoladnye-po-bernski",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 30,
+    "ingredients": [
+      {
+        "name": "Размягчённое масло",
+        "amount": 125,
+        "unit": "г"
+      },
+      {
+        "name": "Сахар",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "Вода",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Мука",
+        "amount": 250,
+        "unit": "г"
+      },
+      {
+        "name": "Какао-порошок",
+        "amount": 35,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Смешать масло, сахар, яйца и воду.",
+      "Добавить муку и какао.",
+      "Выпекать 1-2 минуты"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/vafli-tonkie-hrustyashchie-shokoladnye-po-bernski.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-tonkie-hrustyashchie-fraiburgskie",
     "title": "Вафли тонкие хрустящие фрайбургские",
     "slug": "vafli-tonkie-hrustyashchie-fraiburgskie",
