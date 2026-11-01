@@ -1,5 +1,64 @@
 [
   {
+    "id": "tg-vafli-hrustyashchie-s-parmskoi-vetchinoi",
+    "title": "Вафли хрустящие с пармской ветчиной.",
+    "slug": "vafli-hrustyashchie-s-parmskoi-vetchinoi",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 30,
+    "ingredients": [
+      {
+        "name": "Мука",
+        "amount": 300,
+        "unit": "г"
+      },
+      {
+        "name": "Сливочное масло размягчённое",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "Пармская ветчина, мелко нарезанная",
+        "amount": 150,
+        "unit": "г"
+      },
+      {
+        "name": "Горчица",
+        "amount": 2,
+        "unit": "чайных ложки"
+      },
+      {
+        "name": "Перец молотый",
+        "note": "по вкусу"
+      },
+      {
+        "name": "Соль",
+        "amount": 0.5,
+        "unit": "чайных ложки"
+      },
+      {
+        "name": "Вода -100 г."
+      }
+    ],
+    "directions": [
+      "Смешать муку, масло, ветчину, горчицу, перец, соль и воду.",
+      "Оставьте как минимум на полчаса.",
+      "Когда тесто станет плотным, сформировать шарики диаметром 3 см и выпекать в вафельнице в течение 3-4 минут."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/vafli-hrustyashchie-s-parmskoi-vetchinoi.jpg"
+    ]
+  },
+  {
     "id": "tg-vafli-tonkie-hrustyashchie-s-syrom-gryuier",
     "title": "Вафли тонкие хрустящие с сыром Грюйер",
     "slug": "vafli-tonkie-hrustyashchie-s-syrom-gryuier",
