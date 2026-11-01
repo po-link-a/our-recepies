@@ -1,5 +1,55 @@
 [
   {
+    "id": "tg-vostochnaya-pita",
+    "title": "Восточная пита",
+    "slug": "vostochnaya-pita",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Цедра с 1 шт. консервированного или свежего лимона"
+      },
+      {
+        "name": "Кинза",
+        "amount": 0.5,
+        "unit": "пучка"
+      },
+      {
+        "name": "Консервированный перец",
+        "amount": 200,
+        "unit": "гр"
+      },
+      {
+        "name": "Хумус",
+        "amount": 100,
+        "unit": "г."
+      },
+      {
+        "name": "Питы"
+      }
+    ],
+    "directions": [
+      "Измельчить цедру лимона, кинзу и перец",
+      "Смешать смесь с хумусом, приправить специями.",
+      "Питы разрезать пополам и заполнить каждую половинку приготовленной смесью.",
+      "Готовить в течение 5 минут.",
+      "Подавать горячими или холодными."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/vostochnaya-pita.jpg"
+    ]
+  },
+  {
     "id": "tg-chiabatta-s-kozim-syrom",
     "title": "Чиабатта с козьим сыром",
     "slug": "chiabatta-s-kozim-syrom",
