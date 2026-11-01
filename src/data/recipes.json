@@ -1,5 +1,67 @@
 [
   {
+    "id": "tg-vafli-tonkie-hrustyashchie-fraiburgskie",
+    "title": "Вафли тонкие хрустящие фрайбургские",
+    "slug": "vafli-tonkie-hrustyashchie-fraiburgskie",
+    "category": "waffles",
+    "categoryName": "Вафли",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 2,
+    "servings": 30,
+    "ingredients": [
+      {
+        "name": "густые сливки",
+        "amount": 125,
+        "unit": "мл"
+      },
+      {
+        "name": "белое вино",
+        "amount": 90,
+        "unit": "мл"
+      },
+      {
+        "name": "сахар",
+        "amount": 80,
+        "unit": "г"
+      },
+      {
+        "name": "пшеничная мука",
+        "amount": 110,
+        "unit": "г"
+      },
+      {
+        "name": "соль",
+        "note": "щепотка"
+      },
+      {
+        "name": "бренди",
+        "amount": 1,
+        "unit": "ст. ложка"
+      }
+    ],
+    "directions": [
+      "Смешать сливки, вино, сахар и тщательно растирать до полного растворения сахара. Добавить муку и соль.",
+      "Перемешать до получения однородной смеси.",
+      "Закрыть ёмкость крышкой и оставить на 2 ч.",
+      "Добавить бренди.",
+      "Для больших вафель использовать 1 столовую ложку жидкого теста.",
+      "Выпекать в течение 2 минут.",
+      "Пока вафли не остыли, намотать их на конус."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-01",
+    "scans": [
+      "/scans/vafli-tonkie-hrustyashchie-fraiburgskie.jpg"
+    ]
+  },
+  {
     "id": "tg-mini-vafli-s-karri",
     "title": "Мини-вафли с карри",
     "slug": "mini-vafli-s-karri",
