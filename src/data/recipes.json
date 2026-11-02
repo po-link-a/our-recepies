@@ -1,5 +1,58 @@
 [
   {
+    "id": "tg-nalistniki",
+    "title": "Налистники",
+    "slug": "nalistniki",
+    "category": "pancakes",
+    "categoryName": "Блины и блинчики",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 30,
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 6,
+        "unit": "ст. ложек"
+      },
+      {
+        "name": "яйца",
+        "amount": 6,
+        "unit": "шт."
+      },
+      {
+        "name": "растительное масло",
+        "amount": 6,
+        "unit": "ст. ложек"
+      },
+      {
+        "name": "молоко",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "соль по вкусу"
+      },
+      {
+        "name": "сахар по вкусу"
+      }
+    ],
+    "directions": [
+      "Смешать все ингредиенты любым способом.",
+      "Выливать на сковородку тонким слоем и выпекать по 10-12 секунд с каждой стороны.",
+      "Очень легко переворачиваются, не прилипают к сковороде."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-02",
+    "scans": [
+      "/scans/nalistniki.jpg"
+    ]
+  },
+  {
     "id": "tg-ogurtsy-mohito-marinovannye",
     "title": "Огурцы «Мохито» маринованные",
     "slug": "ogurtsy-mohito-marinovannye",
