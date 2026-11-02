@@ -1,5 +1,47 @@
 [
   {
+    "id": "tg-napitok-severnyi",
+    "title": "Напиток «Северный»",
+    "slug": "napitok-severnyi",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "морковь",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "клюква",
+        "amount": 0.5,
+        "unit": "кг"
+      },
+      {
+        "name": "вода",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "сахар (по вкусу)"
+      }
+    ],
+    "directions": [
+      "Выжать сок из моркови и клюквы, смешать их, разбавить водой, добавить сахар."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-02",
+    "scans": [
+      "/scans/napitok-severnyi.jpg"
+    ]
+  },
+  {
     "id": "tg-pyanaya-grusha-ot-sofi-marso",
     "title": "«Пьяная груша» от Софи Марсо",
     "slug": "pyanaya-grusha-ot-sofi-marso",
