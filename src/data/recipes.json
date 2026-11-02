@@ -1,5 +1,61 @@
 [
   {
+    "id": "tg-batony",
+    "title": "Батоны",
+    "slug": "batony",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 700,
+        "unit": "г"
+      },
+      {
+        "name": "сухие дрожжи",
+        "amount": 10,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 2,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "соль",
+        "amount": 2,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "вода",
+        "amount": 400,
+        "unit": "г"
+      },
+      {
+        "name": "растительное масло",
+        "amount": 2,
+        "unit": "ст. ложки"
+      }
+    ],
+    "directions": [
+      "Приготовить тесто и выпечь как обычно"
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-11-02",
+    "scans": [
+      "/scans/batony.jpg"
+    ]
+  },
+  {
     "id": "tg-hleb",
     "title": "Хлеб",
     "slug": "hleb",
