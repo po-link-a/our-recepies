@@ -1,5 +1,55 @@
 [
   {
+    "id": "tg-kartofel-s-sousom-iz-seldi",
+    "title": "Картофель с соусом из сельди",
+    "slug": "kartofel-s-sousom-iz-seldi",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Картофель"
+      },
+      {
+        "name": "Сельдь",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "Лук",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "Майонез"
+      },
+      {
+        "name": "Сметана",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "Горчица по вкусу"
+      }
+    ],
+    "directions": [
+      "Очистите картофель и поставьте вариться.",
+      "Соус.",
+      "Сельдь очистить от костей, мелко порубить, добавить мелко порубленную луковицу, смешать всё с майонезом и сметаной, добавить по вкусу горчицу. Соус подавать в салатнике."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/kartofel-s-sousom-iz-seldi.jpg"
+    ]
+  },
+  {
     "id": "tg-prostokvasha-ryazhenka-tvorog",
     "title": "Простокваша, ряженка, творог",
     "slug": "prostokvasha-ryazhenka-tvorog",
