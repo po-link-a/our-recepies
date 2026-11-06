@@ -1,5 +1,60 @@
 [
   {
+    "id": "tg-sloika-iz-tvoroga-i-rzhanogo-hleba",
+    "title": "Слойка из творога и ржаного хлеба.",
+    "slug": "sloika-iz-tvoroga-i-rzhanogo-hleba",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Яблоки",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "Творог",
+        "amount": 160,
+        "unit": "г"
+      },
+      {
+        "name": "Сахар",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Сливки или сметана",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "Чёрствый ржаной хлеб",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "Корица"
+      }
+    ],
+    "directions": [
+      "Творог пропустить через мясорубку, добавить сахар и часть взбитых охлаждённых сливок.",
+      "Чёрствый ржаной хлеб натереть на тёрке и смешать с корицей, сахаром.",
+      "Очистить от сердцевины и нарезать яблоки, отварить их и растереть.",
+      "Уложить на плоскую тарелку слой творога, слой хлеба, слой яблочного пюре и т. д. Сверху залить всё взбитыми сливками или сметаной"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/sloika-iz-tvoroga-i-rzhanogo-hleba.jpg"
+    ]
+  },
+  {
     "id": "tg-pirog-iz-belogo-hleba-s-yablokami",
     "title": "Пирог из белого хлеба с яблоками.",
     "slug": "pirog-iz-belogo-hleba-s-yablokami",
