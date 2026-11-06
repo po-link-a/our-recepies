@@ -1,5 +1,49 @@
 [
   {
+    "id": "tg-medovyi-grog",
+    "title": "Медовый грог",
+    "slug": "medovyi-grog",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "вода",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "мёд",
+        "amount": 200,
+        "unit": "–300 граммов"
+      },
+      {
+        "name": "лимон",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "коньяк",
+        "amount": 1.5,
+        "unit": "— 2 стакана"
+      }
+    ],
+    "directions": [
+      "Мёд растворить в горячей кипячёной воде и налить в стаканы. В каждый стакан положить ломтик лимона и добавить немного коньяка."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/medovyi-grog.jpg"
+    ]
+  },
+  {
     "id": "tg-tomatnyi-napitok-2",
     "title": "Томатный напиток",
     "slug": "tomatnyi-napitok-2",
