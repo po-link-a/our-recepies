@@ -1,5 +1,60 @@
 [
   {
+    "id": "tg-yablochnyi-napitok",
+    "title": "Яблочный напиток",
+    "slug": "yablochnyi-napitok",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "яблочный сок",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "сахар",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "лимон",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "молоко",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "мороженое"
+      },
+      {
+        "name": "пищевой лед"
+      },
+      {
+        "name": "взбитые сливки"
+      }
+    ],
+    "directions": [
+      "Сок, сахар, лимон, мороженое и лёд положить в миксер, взбить.",
+      "Затем влить молоко, 2-3 минуты взбить и разлить напиток в бокалы, украсив его по желанию взбитыми сливками.",
+      "Пить через соломинку."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/yablochnyi-napitok.jpg"
+    ]
+  },
+  {
     "id": "tg-tomatnyi-napitok",
     "title": "Томатный напиток",
     "slug": "tomatnyi-napitok",
