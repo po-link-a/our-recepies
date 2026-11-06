@@ -1,5 +1,49 @@
 [
   {
+    "id": "tg-chai-po-angliiski",
+    "title": "Чай по-английски",
+    "slug": "chai-po-angliiski",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "чёрный чай",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "молоко или сливки",
+        "amount": 50,
+        "unit": "— 75 г"
+      },
+      {
+        "name": "вода",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "сахар по вкусу"
+      }
+    ],
+    "directions": [
+      "В нагретый чайник засыпать чай, в два приёма залить его кипятком, дать ему настояться 5 минут.",
+      "В тёплые чашки влить горячее молоко, затем чай.",
+      "Добавить сахар по вкусу."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/chai-po-angliiski.jpg"
+    ]
+  },
+  {
     "id": "tg-chai-s-krasnym-vinom",
     "title": "Чай с красным вином",
     "slug": "chai-s-krasnym-vinom",
