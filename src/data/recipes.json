@@ -1,5 +1,56 @@
 [
   {
+    "id": "tg-zapekanka-ih-domashnei-lapshi-s-medovym-sousom",
+    "title": "Запеканка их домашней лапши с медовым соусом",
+    "slug": "zapekanka-ih-domashnei-lapshi-s-medovym-sousom",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 7,
+    "ingredients": [
+      {
+        "name": "лапша",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "масло или маргарин"
+      },
+      {
+        "name": "мёд",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "молоко",
+        "amount": 1,
+        "unit": "/3 стакана"
+      },
+      {
+        "name": "грецкие орехи",
+        "amount": 2,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "Отварить лапшу в подсоленной воде, откинуть на дуршлаг.",
+      "Положить её в толстостенную кастрюлю, добавить кусочек масла или маргарина и, непрерывно помешивая, прогреть.",
+      "Мёд растворить в молоке, нагреть, добавить измельчённые грецкие орехи и прокипятить. Выложить лапшу горками на порционные сковороды, залить горячим медовым соусом и на 5—7 минут поставить запекаться в духовку."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/zapekanka-ih-domashnei-lapshi-s-medovym-sousom.jpg"
+    ]
+  },
+  {
     "id": "tg-domashnyaya-lapsha",
     "title": "Домашняя лапша",
     "slug": "domashnyaya-lapsha",
