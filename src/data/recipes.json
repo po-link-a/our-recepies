@@ -1,5 +1,54 @@
 [
   {
+    "id": "tg-glintvein",
+    "title": "Глинтвейн",
+    "slug": "glintvein",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "вино",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "сахар",
+        "amount": 0.5,
+        "unit": "— 1 стакан"
+      },
+      {
+        "name": "гвоздика",
+        "amount": 5,
+        "unit": "шт."
+      },
+      {
+        "name": "корица",
+        "amount": 5,
+        "unit": "шт."
+      },
+      {
+        "name": "лимон",
+        "amount": 1,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "Вино вместе с пряностями нагреть до кипения (но не кипятить), процедить через мелкое ситечко и подать горячим. Лимон нарезать тонкими ломтиками и нагреть вместе с вином. Или же класть по ломтику в каждый стакан с нагретым вином. К вину можно добавить также мелко натёртую цедру и отжатый лимонный сок."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/glintvein.jpg"
+    ]
+  },
+  {
     "id": "tg-limonnyi-punsh",
     "title": "Лимонный пунш",
     "slug": "limonnyi-punsh",
