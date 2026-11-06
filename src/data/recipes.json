@@ -1,5 +1,60 @@
 [
   {
+    "id": "tg-salat-iz-redki",
+    "title": "Салат из редьки",
+    "slug": "salat-iz-redki",
+    "category": "salads",
+    "categoryName": "Салаты и закуски",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "редька",
+        "amount": 500,
+        "unit": "г"
+      },
+      {
+        "name": "средняя луковица",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "растительное масло",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "уксус или лимонный сок"
+      },
+      {
+        "name": "перец"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "мелко нарезанная зелень",
+        "amount": 1,
+        "unit": "ст. ложка"
+      }
+    ],
+    "directions": [
+      "Редьку натереть на тёрке и обдать кипятком.",
+      "Когда обсохнет, смешать её с мелко нарубленным луком.",
+      "Салат приправить растительным маслом, уксусом или лимонным соком, перцем, солью и зеленью."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/salat-iz-redki.jpg"
+    ]
+  },
+  {
     "id": "tg-yabloki-zharennye-v-teste",
     "title": "Яблоки, жаренные в тесте",
     "slug": "yabloki-zharennye-v-teste",
