@@ -1,5 +1,64 @@
 [
   {
+    "id": "tg-pirozhnoe-kartoshka",
+    "title": "Пирожное «Картошка».",
+    "slug": "pirozhnoe-kartoshka",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Сухари белые, лучше ванильные",
+        "amount": 300,
+        "unit": "г"
+      },
+      {
+        "name": "Молоко",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "Сливочное масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "Сахарная пудра",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "Вино",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "Какао для обсыпки."
+      }
+    ],
+    "directions": [
+      "Сухари подсушить в духовке и горячими провернуть через мясорубку.",
+      "Сливочное масло растереть с яйцом и сахаром, добавить вино, молоко и охлаждённую сухарную крошку.",
+      "Из полученного теста сделать «картошку», обваливая каждую в порошке какао. Можно добавить в тесто толчёные сухари."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/pirozhnoe-kartoshka.jpg"
+    ]
+  },
+  {
     "id": "tg-kartofel-s-sousom-iz-seldi",
     "title": "Картофель с соусом из сельди",
     "slug": "kartofel-s-sousom-iz-seldi",
