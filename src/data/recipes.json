@@ -1,5 +1,53 @@
 [
   {
+    "id": "tg-tomatnyi-napitok",
+    "title": "Томатный напиток",
+    "slug": "tomatnyi-napitok",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "томатный сок",
+        "amount": 3,
+        "unit": "стакана"
+      },
+      {
+        "name": "яичный желток",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "сок от 0,5 лимона"
+      },
+      {
+        "name": "сахар по вкусу"
+      },
+      {
+        "name": "соль по вкусу"
+      },
+      {
+        "name": "взбитые сливки"
+      }
+    ],
+    "directions": [
+      "Все продукты, кроме сливок, взбить вместе и разлить в широкие бокалы.",
+      "Чайной ложкой в каждый бокал добавить немного взбитых сливок.",
+      "Пить через соломинку."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/tomatnyi-napitok.jpg"
+    ]
+  },
+  {
     "id": "tg-limonnoe-moloko",
     "title": "Лимонное молоко",
     "slug": "limonnoe-moloko",
