@@ -1,5 +1,45 @@
 [
   {
+    "id": "tg-limonnoe-moloko",
+    "title": "Лимонное молоко",
+    "slug": "limonnoe-moloko",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "лимон",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "молоко",
+        "amount": 0.25,
+        "unit": "л"
+      },
+      {
+        "name": "сахар",
+        "amount": 3,
+        "unit": "–4 чайных ложки"
+      }
+    ],
+    "directions": [
+      "Выжатый лимонный сок налить в миксер, добавить сахар и холодное молоко, взбить и подать холодным с соломинкой.",
+      "Так же можно приготовить апельсинное, земляничное, яблочное и малиновое молоко, используя для этого соответствующие соки или готовый сироп."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/limonnoe-moloko.jpg"
+    ]
+  },
+  {
     "id": "tg-pechene-kurabe",
     "title": "Печенье «Курабье»",
     "slug": "pechene-kurabe",
