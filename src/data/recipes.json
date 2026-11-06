@@ -1,5 +1,53 @@
 [
   {
+    "id": "tg-kofe-de-olla",
+    "title": "Кофе «Де Олла»",
+    "slug": "kofe-de-olla",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "вода",
+        "amount": 2,
+        "unit": "чашки"
+      },
+      {
+        "name": "кофе грубого помола",
+        "amount": 1,
+        "unit": "/3 чашки"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "ст. ложка"
+      },
+      {
+        "name": "палочка корицы",
+        "amount": 1,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "Соединить в турке холодную воду, кофе, сахар и корицу.",
+      "Довести до кипения. Полностью охладить.",
+      "Снова поставить на огонь и варить 3 - 5 минут.",
+      "Процедить.",
+      "Подавать в подогретых чашках с толстыми стенками."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/kofe-de-olla.jpg"
+    ]
+  },
+  {
     "id": "tg-kofe-tantsuyushchii-kapuchchino",
     "title": "Кофе «Танцующий капуччино»",
     "slug": "kofe-tantsuyushchii-kapuchchino",
