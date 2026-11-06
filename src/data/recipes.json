@@ -1,5 +1,54 @@
 [
   {
+    "id": "tg-limonnyi-punsh",
+    "title": "Лимонный пунш",
+    "slug": "limonnyi-punsh",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "лимоны",
+        "amount": 5,
+        "unit": "шт."
+      },
+      {
+        "name": "сахар",
+        "amount": 2,
+        "unit": "стакана"
+      },
+      {
+        "name": "красное вино",
+        "amount": 1,
+        "unit": "бутылка"
+      },
+      {
+        "name": "ром или коньяк",
+        "amount": 0.25,
+        "unit": "л"
+      },
+      {
+        "name": "вода",
+        "amount": 1,
+        "unit": "л"
+      }
+    ],
+    "directions": [
+      "Мелко натёртую лимонную цедру закипятить в воде вместе с сахаром. Воду процедить, добавить лимонный сок и вино, нагреть почти до кипения. Затем влить ром или коньяк. Напиток разлить по стаканам. В каждый стакан можно положить по тонкому ломтику лимона."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/limonnyi-punsh.jpg"
+    ]
+  },
+  {
     "id": "tg-chainyi-grog",
     "title": "Чайный грог",
     "slug": "chainyi-grog",
