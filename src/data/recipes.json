@@ -1,5 +1,61 @@
 [
   {
+    "id": "tg-pirog-iz-belogo-hleba-s-yablokami",
+    "title": "Пирог из белого хлеба с яблоками.",
+    "slug": "pirog-iz-belogo-hleba-s-yablokami",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Хлеб белый",
+        "amount": 400,
+        "unit": "г"
+      },
+      {
+        "name": "Яблоки",
+        "amount": 500,
+        "unit": "г"
+      },
+      {
+        "name": "Молоко",
+        "amount": 2.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "Сахар",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "Сухари для обсыпки формы",
+        "amount": 1,
+        "unit": "ст. ложка."
+      }
+    ],
+    "directions": [
+      "Яблоки очистить от семян, нарезать ломтиками, посыпать сахаром. Хлеб тоже нарезать тонкими ломтиками.",
+      "Смешать яйца с молоком и сахаром.",
+      "Форму смазать маслом, уложить туда слоями хлеб и яблоки, залить яично-молочной смесью и выпекать."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/pirog-iz-belogo-hleba-s-yablokami.jpg"
+    ]
+  },
+  {
     "id": "tg-pirozhnoe-kartoshka",
     "title": "Пирожное «Картошка».",
     "slug": "pirozhnoe-kartoshka",
