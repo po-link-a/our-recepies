@@ -1,5 +1,49 @@
 [
   {
+    "id": "tg-chainyi-grog",
+    "title": "Чайный грог",
+    "slug": "chainyi-grog",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "крепкий чай",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "сахар",
+        "amount": 100,
+        "unit": "–150 граммов"
+      },
+      {
+        "name": "лимон",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "коньяк, ром, джин, водка или какой-либо другой крепкий напиток",
+        "amount": 0.25,
+        "unit": "л"
+      }
+    ],
+    "directions": [
+      "Сахар растворить в горячем чае, который разлить потом в стаканы, класть по ломтику лимона и добавить алкоголь."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/chainyi-grog.jpg"
+    ]
+  },
+  {
     "id": "tg-medovyi-grog",
     "title": "Медовый грог",
     "slug": "medovyi-grog",
