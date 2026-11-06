@@ -1,5 +1,54 @@
 [
   {
+    "id": "tg-chai-s-krasnym-vinom",
+    "title": "Чай с красным вином",
+    "slug": "chai-s-krasnym-vinom",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 5,
+    "ingredients": [
+      {
+        "name": "красное столовое вино",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "черный чай",
+        "amount": 0.75,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 2,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "корица и гвоздика по 0,2 г"
+      }
+    ],
+    "directions": [
+      "Нагреть красное вино",
+      "В горячее вино положить сахар, корицу и гвоздику, кипятить 2 мин.",
+      "Чай заварить отдельно.",
+      "Вино со специями процедить через ситечко и смешать с чаем.",
+      "Подавать горячим."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/chai-s-krasnym-vinom.jpg"
+    ]
+  },
+  {
     "id": "tg-kofe-de-olla",
     "title": "Кофе «Де Олла»",
     "slug": "kofe-de-olla",
