@@ -1,5 +1,47 @@
 [
   {
+    "id": "tg-kofe-tantsuyushchii-kapuchchino",
+    "title": "Кофе «Танцующий капуччино»",
+    "slug": "kofe-tantsuyushchii-kapuchchino",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "кофе свежесваренный",
+        "amount": 1,
+        "unit": "порция"
+      },
+      {
+        "name": "горячее молоко",
+        "amount": 1,
+        "unit": "/3 порции"
+      },
+      {
+        "name": "холодное молоко, взбитое со льдом",
+        "amount": 2,
+        "unit": "/3 порции"
+      }
+    ],
+    "directions": [
+      "Сваренный кофе перелить в маленький кувшин.",
+      "Кувшин поставить в ёмкость с холодной водой и, как можно быстрее, остудить кофе.",
+      "В бокал налить холодное взбитое молоко со льдом.",
+      "Сюда же добавить охлаждённый кофе и сразу же долить горячее взбитое до пены молоко. От такого сочетания горячие и холодные слои начинают «танцевать»."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-06",
+    "scans": [
+      "/scans/kofe-tantsuyushchii-kapuchchino.jpg"
+    ]
+  },
+  {
     "id": "tg-glintvein",
     "title": "Глинтвейн",
     "slug": "glintvein",
