@@ -1,5 +1,55 @@
 [
   {
+    "id": "tg-perets-tushenyi-s-ovoshchnoi-smesyu",
+    "title": "Перец, тушёный с овощной смесью",
+    "slug": "perets-tushenyi-s-ovoshchnoi-smesyu",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 75,
+    "ingredients": [
+      {
+        "name": "репчатый лук"
+      },
+      {
+        "name": "растительное масло"
+      },
+      {
+        "name": "баклажаны"
+      },
+      {
+        "name": "болгарский перец"
+      },
+      {
+        "name": "картофель"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "зелень"
+      },
+      {
+        "name": "помидоры"
+      }
+    ],
+    "directions": [
+      "Нашинкованный репчатый лук положить в кастрюлю и потушить до мягкости в растительном масле. Потом добавить ещё растительное масло и нарезанные кружочками баклажаны.",
+      "Потушив всё вместе 15 минут, добавить болгарский перец, картофель, соль, нарезанную зелень, влить измельчённые помидоры, закрыть кастрюлю крышкой и варить около часа."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/perets-tushenyi-s-ovoshchnoi-smesyu.jpg"
+    ]
+  },
+  {
     "id": "tg-perets-farshirovannyi-risom-i-syrom",
     "title": "Перец, фаршированный рисом и сыром",
     "slug": "perets-farshirovannyi-risom-i-syrom",
