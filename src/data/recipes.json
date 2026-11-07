@@ -1,5 +1,47 @@
 [
   {
+    "id": "tg-kartofelnaya-zapekanka",
+    "title": "Картофельная запеканка",
+    "slug": "kartofelnaya-zapekanka",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "картофель"
+      },
+      {
+        "name": "яйца"
+      },
+      {
+        "name": "молоко горячее"
+      },
+      {
+        "name": "грибы сушёные или солёные"
+      },
+      {
+        "name": "лук"
+      }
+    ],
+    "directions": [
+      "Отваренный и протёртый картофель заправить яйцами и горячим молоком.",
+      "Отварить сушёные грибы. Если используются солёные грибы, непременно их промыть. Грибы нашинковать и поджарить с мелко нарезанным луком.",
+      "На сковороду выкладывать слоями: слой картофеля, грибы и снова слой картофеля."
+    ],
+    "isArchive": true,
+    "isIncomplete": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/kartofelnaya-zapekanka.jpg"
+    ]
+  },
+  {
     "id": "tg-tvorozhnaya-zapekanka",
     "title": "Творожная запеканка",
     "slug": "tvorozhnaya-zapekanka",
