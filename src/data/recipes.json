@@ -1,5 +1,78 @@
 [
   {
+    "id": "tg-orehovoe-pirozhnoe",
+    "title": "Ореховое пирожное",
+    "slug": "orehovoe-pirozhnoe",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_ru",
+      "quick"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 30,
+    "ingredients": [
+      {
+        "name": "мука",
+        "amount": 2,
+        "unit": "стакана"
+      },
+      {
+        "name": "яйцо",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "дрожжи свежие",
+        "amount": 25,
+        "unit": "г"
+      },
+      {
+        "name": "соль по вкусу"
+      },
+      {
+        "name": "сметана",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "сливочный маргарин",
+        "amount": 125,
+        "unit": "г"
+      },
+      {
+        "name": "сахар",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "орехи",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "изюм",
+        "amount": 0.5,
+        "unit": "стакана"
+      }
+    ],
+    "directions": [
+      "Тесто:",
+      "Муку, желтки, дрожжи, соль, сметану, сливочный маргарин порубить ножом, скатать в шар, поставить на 30 минут в холодильник.",
+      "Белки взбить в крепкую пену, добавить, взбивая, сахар, орехи и изюм.",
+      "Тесто раскатать в пласт, смазать противень маслом, уложить на него тесто и поставить в духовку.",
+      "Когда тесто зарумянится, вынуть и вылить на него сверху взбитые белки. Печь до готовности, а потом разрезать на квадратики."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/orehovoe-pirozhnoe.jpg"
+    ]
+  },
+  {
     "id": "tg-pirozhki-s-sosiskami-i-syrom-bystrogo-prigotovleniya",
     "title": "Пирожки с сосисками и сыром быстрого приготовления",
     "slug": "pirozhki-s-sosiskami-i-syrom-bystrogo-prigotovleniya",
