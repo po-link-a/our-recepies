@@ -1,5 +1,55 @@
 [
   {
+    "id": "tg-perets-farshirovannyi-risom-i-syrom",
+    "title": "Перец, фаршированный рисом и сыром",
+    "slug": "perets-farshirovannyi-risom-i-syrom",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 45,
+    "ingredients": [
+      {
+        "name": "стручки сладкого перца"
+      },
+      {
+        "name": "рис"
+      },
+      {
+        "name": "бульон"
+      },
+      {
+        "name": "сметанный или томатный соус (готовый)"
+      },
+      {
+        "name": "свиной шпик"
+      },
+      {
+        "name": "голландский сыр"
+      },
+      {
+        "name": "зелёный лук"
+      },
+      {
+        "name": "соль"
+      }
+    ],
+    "directions": [
+      "Стручки сладкого перца наполнить рисовым фаршем, затем уложить их в два-три ряда в сотейник, залить бульоном и полчаса тушить, накрыв крышкой, при слабом кипении. После этого в посуду с перцем влить готовый сметанный или томатный соус и тушить ещё минут 10—15.",
+      "Для приготовления фарша рис сварить в подсоленной воде до полуготовности, затем, слив воду, добавить к нему нарезанные мелкими кубиками свиной шпик, голландский сыр и измельчённый зелёный лук."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/perets-farshirovannyi-risom-i-syrom.jpg"
+    ]
+  },
+  {
     "id": "tg-perets-farshirovannyi-ovoshchami-v-tomatnom-souse",
     "title": "Перец, фаршированный овощами в томатном соусе",
     "slug": "perets-farshirovannyi-ovoshchami-v-tomatnom-souse",
