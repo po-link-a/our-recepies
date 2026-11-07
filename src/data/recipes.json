@@ -1,5 +1,45 @@
 [
   {
+    "id": "tg-perets-farshirovannyi-brynzoi-i-yaitsami",
+    "title": "Перец, фаршированный брынзой и яйцами",
+    "slug": "perets-farshirovannyi-brynzoi-i-yaitsami",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Сладкий перец"
+      },
+      {
+        "name": "Брынза",
+        "amount": 500,
+        "unit": "г"
+      },
+      {
+        "name": "Яйцо",
+        "amount": 5,
+        "unit": "шт."
+      },
+      {
+        "name": "Масло любое"
+      }
+    ],
+    "directions": [
+      "У крепких прямых стручков перца надрезать верхнюю широкую часть не до конца, в виде «крышечки», удалить стержень с семенами, не нарушая целости стручка, и «крышечки» открыть. Брынзу размять и вылить в нее яйца. Для окраски можно добавить немного красного перца. Этой смесью наполнить стручки перца, закрыть их крышечками, чтобы начинка не выпала при поджаривании. В подходящей посуде нагреть немного масла и подрумянить в нем со всех сторон фаршированный перец, после чего поставить его ещё на 10 минут в духовку. Подать горячим."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/perets-farshirovannyi-brynzoi-i-yaitsami.jpg"
+    ]
+  },
+  {
     "id": "tg-priprava-iz-krasnogo-struchkovogo-pertsa",
     "title": "Приправа из красного стручкового перца",
     "slug": "priprava-iz-krasnogo-struchkovogo-pertsa",
