@@ -1,5 +1,70 @@
 [
   {
+    "id": "tg-zapekanka-iz-kvashenoi-kapusty-po-grecheski",
+    "title": "Запеканка из квашеной капусты по-гречески",
+    "slug": "zapekanka-iz-kvashenoi-kapusty-po-grecheski",
+    "category": "meat",
+    "categoryName": "Мясо и птица",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "кислая капуста",
+        "amount": 1,
+        "unit": "головка"
+      },
+      {
+        "name": "жир",
+        "amount": 3,
+        "unit": "-4 ст. ложки"
+      },
+      {
+        "name": "лук",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "мясо",
+        "amount": 750,
+        "unit": "г"
+      },
+      {
+        "name": "рис",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "соль по вкусу"
+      },
+      {
+        "name": "перец по вкусу"
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "сметана для поливки"
+      }
+    ],
+    "directions": [
+      "Мелко нашинковать и потушить до мягкости кочан кислой капусты.",
+      "Разогреть жир, потушить на нём мелко нарезанный лук, добавить и слегка обжарить пропущенное через мясорубку мясо, рис, посолить, поперчить, снять с плиты, охладить и перемешать со взбитым яйцом.",
+      "Затем уложить на противень слоями капусту и фарш, поливая каждый слой взбитой сметаной, и запечь в умеренно горячем духовом шкафу."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/zapekanka-iz-kvashenoi-kapusty-po-grecheski.jpg"
+    ]
+  },
+  {
     "id": "tg-desert-so-vkusom-morozhenogo",
     "title": "Десерт со вкусом мороженого",
     "slug": "desert-so-vkusom-morozhenogo",
