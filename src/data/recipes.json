@@ -1,5 +1,41 @@
 [
   {
+    "id": "tg-priprava-iz-krasnogo-struchkovogo-pertsa",
+    "title": "Приправа из красного стручкового перца",
+    "slug": "priprava-iz-krasnogo-struchkovogo-pertsa",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Красный стручковый перец, пропущенный через мясорубку",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "Соль",
+        "note": "не более 2 ч. ложек"
+      },
+      {
+        "name": "Винный уксус по вкусу"
+      }
+    ],
+    "directions": [
+      "Перец пропустить через мясорубку, добавить соль и винный уксус (последний в очень малом количестве). Всё перемешать, сложить в маленькие баночки и герметически закупорить. Употребляется в качестве приправы."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/priprava-iz-krasnogo-struchkovogo-pertsa.jpg"
+    ]
+  },
+  {
     "id": "tg-perets-farshirovannyi-yaitsom",
     "title": "Перец, фаршированный яйцом",
     "slug": "perets-farshirovannyi-yaitsom",
