@@ -1,5 +1,64 @@
 [
   {
+    "id": "tg-limonnyi-tart",
+    "title": "Лимонный тарт",
+    "slug": "limonnyi-tart",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_fr"
+    ],
+    "language": "FR",
+    "sourceNote": "Из семейного архива",
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "песочное тесто (pâte brisée)",
+        "amount": 1,
+        "unit": "упаковка"
+      },
+      {
+        "name": "сахар",
+        "amount": 130,
+        "unit": "г"
+      },
+      {
+        "name": "сливочное масло",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "яйца",
+        "amount": 3,
+        "unit": "шт."
+      },
+      {
+        "name": "лимон",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "листочек мяты",
+        "amount": 1,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "Разогреть духовку до 200 °C.",
+      "Уложить песочное тесто в форму, сделав бортики. Поставить в духовку на 10 мин.",
+      "Взбить яйца с сахарным песком до получения пенистой смеси. Добавить цедру лимонов и их сок, затем растопленное сливочное масло. Вылить на основу тарта.",
+      "Поставить в духовку и дать подрумяниться около 30 мин. Поставить на холод минимум на 3 ч перед подачей."
+    ],
+    "translatedFrom": "FR",
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/limonnyi-tart.jpg"
+    ]
+  },
+  {
     "id": "tg-zharenyi-tsyplenok-s-limonom",
     "title": "Жареный цыпленок с лимоном",
     "slug": "zharenyi-tsyplenok-s-limonom",
