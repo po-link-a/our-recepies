@@ -1,5 +1,52 @@
 [
   {
+    "id": "tg-treska-zharenaya-so-sladkim-struchkovym-pertsem",
+    "title": "Треска жареная со сладким стручковым перцем",
+    "slug": "treska-zharenaya-so-sladkim-struchkovym-pertsem",
+    "category": "fish",
+    "categoryName": "Рыба и морепродукты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "лимонная цедра"
+      },
+      {
+        "name": "подсолнечное масло"
+      },
+      {
+        "name": "сладкий стручковый перец"
+      },
+      {
+        "name": "филе трески"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "перец"
+      },
+      {
+        "name": "мука"
+      }
+    ],
+    "directions": [
+      "Нарезать тонкой соломкой лимонную цедру, ошпарить кипятком, обсушить и поджарить на подсолнечном масле, прибавить тонко нарезанный сладкий стручковый перец и припустить.",
+      "Филе трески, нарезанное на куски, посыпать солью, перцем, запанировать в муке и поджарить на подсолнечном масле.",
+      "Рыбу выложить на блюдо, поверх рыбы уложить перец с лимонной цедрой. Возможный гарнир — рисовая рассыпчатая каша."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-07",
+    "scans": [
+      "/scans/treska-zharenaya-so-sladkim-struchkovym-pertsem.jpg"
+    ]
+  },
+  {
     "id": "tg-perets-tushenyi-s-ovoshchnoi-smesyu",
     "title": "Перец, тушёный с овощной смесью",
     "slug": "perets-tushenyi-s-ovoshchnoi-smesyu",
