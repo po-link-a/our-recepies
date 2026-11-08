@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-pechene-maslyanoe",
+    "title": "Печенье «Масляное»",
+    "slug": "pechene-maslyanoe",
+    "category": "pies_baking",
+    "categoryName": "Пирожки, булки и выпечка",
+    "tags": [
+      "archive",
+      "lang_uk",
+      "quick"
+    ],
+    "language": "UK",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 10,
+    "ingredients": [
+      {
+        "name": "Выход: 1 кг готового печенья"
+      },
+      {
+        "name": "мука",
+        "amount": 3,
+        "unit": "стакана"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "сливочное масло",
+        "amount": 400,
+        "unit": "г"
+      },
+      {
+        "name": "яйца",
+        "amount": 3,
+        "unit": "шт."
+      },
+      {
+        "name": "ваниль",
+        "note": "на кончике ножа"
+      }
+    ],
+    "directions": [
+      "Масло хорошо растереть с сахаром, добавить яйца и ваниль.",
+      "В приготовленную смесь всыпать просеянную муку, замесить тесто. Отсадить его через кондитерский мешок в виде «цветков» или «ушек».",
+      "Печенье выпекать в горячей духовке 8—10 минут.",
+      "После остудить."
+    ],
+    "translatedFrom": "UK",
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-08",
+    "scans": [
+      "/scans/pechene-maslyanoe.jpg"
+    ]
+  },
+  {
     "id": "tg-pechene-romashka",
     "title": "Печенье «Ромашка»",
     "slug": "pechene-romashka",
