@@ -1,5 +1,50 @@
 [
   {
+    "id": "tg-tushenoe-myaso-s-sousom-i-s-chernoslivom",
+    "title": "Тушёное мясо с соусом и с черносливом",
+    "slug": "tushenoe-myaso-s-sousom-i-s-chernoslivom",
+    "category": "meat",
+    "categoryName": "Мясо и птица",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "сырое мясо"
+      },
+      {
+        "name": "лук"
+      },
+      {
+        "name": "томат"
+      },
+      {
+        "name": "чернослив"
+      },
+      {
+        "name": "мёд"
+      },
+      {
+        "name": "Жир для жарки"
+      }
+    ],
+    "directions": [
+      "Сырое мясо, нарезанное на порции, поджарить, сложить в кастрюлю, добавить поджаренный лук, томат, промытый и очищенный от косточек чернослив.",
+      "Всё вместе потушить.",
+      "Перед выключением огня добавить мёд.",
+      "Подаётся с гарниром из тушеных овощей."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-08",
+    "scans": [
+      "/scans/tushenoe-myaso-s-sousom-i-s-chernoslivom.jpg"
+    ]
+  },
+  {
     "id": "tg-medovyi-tort",
     "title": "Медовый торт",
     "slug": "medovyi-tort",
