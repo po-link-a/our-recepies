@@ -1,5 +1,65 @@
 [
   {
+    "id": "tg-ogurtsy-farshirovannye",
+    "title": "Огурцы фаршированные",
+    "slug": "ogurtsy-farshirovannye",
+    "category": "salads",
+    "categoryName": "Салаты и закуски",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "На 1 порцию"
+      },
+      {
+        "name": "огурцы",
+        "amount": 100,
+        "unit": "г"
+      },
+      {
+        "name": "помидоры",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "капуста",
+        "amount": 30,
+        "unit": "г"
+      },
+      {
+        "name": "сметана",
+        "amount": 30,
+        "unit": "г"
+      },
+      {
+        "name": "зелень",
+        "amount": 3,
+        "unit": "г"
+      },
+      {
+        "name": "яйца",
+        "amount": 0.25,
+        "unit": "шт."
+      }
+    ],
+    "directions": [
+      "Очищенные огурцы нарезать вдоль пополам и удалить сердцевину.",
+      "Свежую капусту и сваренные вкрутую яйца, сердцевину огурцов и помидоры мелко порубить и заправить сметаной, солью и перцем.",
+      "Этой массой фаршировать половинки огурцов, перед подачей на стол посыпать их укропом или зеленью петрушки."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-09",
+    "scans": [
+      "/scans/ogurtsy-farshirovannye.jpg"
+    ]
+  },
+  {
     "id": "tg-keks-orehovyi",
     "title": "Кекс «Ореховый»",
     "slug": "keks-orehovyi",
