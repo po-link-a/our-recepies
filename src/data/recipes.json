@@ -1,5 +1,78 @@
 [
   {
+    "id": "tg-kartofel-farshirovannyi-myasom",
+    "title": "Картофель, фаршированный мясом",
+    "slug": "kartofel-farshirovannyi-myasom",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_uk"
+    ],
+    "language": "UK",
+    "sourceNote": "Из семейного архива",
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "На 4 порции"
+      },
+      {
+        "name": "картофель",
+        "amount": 1,
+        "unit": "кг"
+      },
+      {
+        "name": "говядина",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "свинина",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "репчатый лук",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "яйцо",
+        "amount": 1,
+        "unit": "шт."
+      },
+      {
+        "name": "сметана",
+        "amount": 200,
+        "unit": "г"
+      },
+      {
+        "name": "соль"
+      },
+      {
+        "name": "перец"
+      },
+      {
+        "name": "специи"
+      },
+      {
+        "name": "бульон"
+      }
+    ],
+    "directions": [
+      "Крупный картофель очистить и чайной ложкой вынуть середину.",
+      "Приготовить фарш из свинины и говядины пополам, добавив мелко нарезанный кубиками лук, яйцо, специи.",
+      "Заполненный фаршем картофель положить в кастрюлю, залить бульоном, добавить сметану и тушить в духовке до готовности."
+    ],
+    "translatedFrom": "UK",
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-10",
+    "scans": [
+      "/scans/kartofel-farshirovannyi-myasom.jpg"
+    ]
+  },
+  {
     "id": "tg-zrazy-rossiiskie",
     "title": "Зразы российские",
     "slug": "zrazy-rossiiskie",
