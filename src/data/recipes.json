@@ -1,5 +1,50 @@
 [
   {
+    "id": "tg-traditsionnaya-myatnaya-nastoika",
+    "title": "Традиционная мятная настойка",
+    "slug": "traditsionnaya-myatnaya-nastoika",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "свежая мята",
+        "amount": 3,
+        "unit": "— 4 веточки (или 1 ст. л. сухой)"
+      },
+      {
+        "name": "лимон",
+        "amount": 1,
+        "unit": "шт. (цедра и сок)"
+      },
+      {
+        "name": "водка",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "сахар"
+      }
+    ],
+    "directions": [
+      "Натереть цедру и выдавить сок из лимона.",
+      "Отмерять сахар из расчёта 1 ч. л. сахара на 1 ст. л. сока.",
+      "Мяту, лимонную цедру и сок залить водкой и на 2 дня поставить в прохладное тёмное помещение.",
+      "Затем добавить сахар."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-11",
+    "scans": [
+      "/scans/traditsionnaya-myatnaya-nastoika.jpg"
+    ]
+  },
+  {
     "id": "tg-domashnii-brendi",
     "title": "Домашний бренди",
     "slug": "domashnii-brendi",
