@@ -1,5 +1,62 @@
 [
   {
+    "id": "tg-domashnii-vinnyi-napitok-russkoe-bogatstvo",
+    "title": "Домашний винный напиток «Русское богатство»",
+    "slug": "domashnii-vinnyi-napitok-russkoe-bogatstvo",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "сухое красное вино",
+        "amount": 3,
+        "unit": "л"
+      },
+      {
+        "name": "кислые яблоки (например, антоновские)",
+        "amount": 5,
+        "unit": "-6 шт."
+      },
+      {
+        "name": "корица",
+        "amount": 5,
+        "unit": "г"
+      },
+      {
+        "name": "кориандр",
+        "amount": 5,
+        "unit": "г"
+      },
+      {
+        "name": "водка",
+        "amount": 1.5,
+        "unit": "— 2 л"
+      },
+      {
+        "name": "сахар",
+        "amount": 2.5,
+        "unit": "кг"
+      }
+    ],
+    "directions": [
+      "В вино положить измельчённые специи, очень мелко порезанные яблоки, корицу, кориандр.",
+      "Вино закрыть и поставить в тёмное прохладное помещение на 2 недели.",
+      "После этого долить в вино водку и сахарный сироп.",
+      "Ещё на неделю поставить в тёмное прохладное помещение, после процедить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-11",
+    "scans": [
+      "/scans/domashnii-vinnyi-napitok-russkoe-bogatstvo.jpg"
+    ]
+  },
+  {
     "id": "tg-pirog-s-yablokami-grushami-ili-slivami",
     "title": "Пирог с яблоками, грушами или сливами",
     "slug": "pirog-s-yablokami-grushami-ili-slivami",
