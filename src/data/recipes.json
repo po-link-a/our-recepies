@@ -1,5 +1,49 @@
 [
   {
+    "id": "tg-klassicheskaya-pertsovka",
+    "title": "Классическая перцовка",
+    "slug": "klassicheskaya-pertsovka",
+    "category": "vegetables",
+    "categoryName": "Овощные блюда",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "водка",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "петрушка",
+        "amount": 2,
+        "unit": "веточки"
+      },
+      {
+        "name": "чеснок",
+        "amount": 1,
+        "unit": "зубчик"
+      },
+      {
+        "name": "перец чили",
+        "amount": 0.5,
+        "unit": "стручка"
+      }
+    ],
+    "directions": [
+      "Измельчить петрушку, чеснок, перец чили, залить водкой, дать настояться в течение 5 часов. Потом процедить"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-11",
+    "scans": [
+      "/scans/klassicheskaya-pertsovka.jpg"
+    ]
+  },
+  {
     "id": "tg-nastoika-faraon",
     "title": "Настойка «Фараон»",
     "slug": "nastoika-faraon",
