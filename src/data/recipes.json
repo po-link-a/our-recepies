@@ -1,5 +1,56 @@
 [
   {
+    "id": "tg-domashnii-brendi",
+    "title": "Домашний бренди",
+    "slug": "domashnii-brendi",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "водка",
+        "amount": 3,
+        "unit": "л"
+      },
+      {
+        "name": "дубовая кора",
+        "amount": 4,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "жжёный сахар",
+        "amount": 3,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "мускатный орех измельчённый— 0.25 шт."
+      },
+      {
+        "name": "гвоздика",
+        "amount": 2,
+        "unit": "шт."
+      },
+      {
+        "name": "ванилин на кончике ножа"
+      }
+    ],
+    "directions": [
+      "Все специи залить водкой и поставить её настаиваться в прохладное тёмное место на неделю.",
+      "После отфильтровать."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-11",
+    "scans": [
+      "/scans/domashnii-brendi.jpg"
+    ]
+  },
+  {
     "id": "tg-domashnii-vinnyi-napitok-russkoe-bogatstvo",
     "title": "Домашний винный напиток «Русское богатство»",
     "slug": "domashnii-vinnyi-napitok-russkoe-bogatstvo",
