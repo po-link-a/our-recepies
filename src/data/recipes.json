@@ -1,5 +1,47 @@
 [
   {
+    "id": "tg-nastoika-faraon",
+    "title": "Настойка «Фараон»",
+    "slug": "nastoika-faraon",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "водка",
+        "amount": 0.5,
+        "unit": "л"
+      },
+      {
+        "name": "цедра мандаринов",
+        "amount": 2,
+        "unit": "-3 шт. или 1 апельсина"
+      },
+      {
+        "name": "сухой каркаде",
+        "amount": 2,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "мёд"
+      }
+    ],
+    "directions": [
+      "Смешать водку с цедрой, каркаде.  Поставить на 10-12 дней в тёмное прохладное помещение, потом добавить мёд и процедить."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-11",
+    "scans": [
+      "/scans/nastoika-faraon.jpg"
+    ]
+  },
+  {
     "id": "tg-nastoika-erofeich",
     "title": "Настойка «Ерофеич»",
     "slug": "nastoika-erofeich",
