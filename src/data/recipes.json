@@ -1,5 +1,67 @@
 [
   {
+    "id": "tg-farshirovannaya-sheika-helzl",
+    "title": "Фаршированная шейка (Хелзль)",
+    "slug": "farshirovannaya-sheika-helzl",
+    "category": "meat",
+    "categoryName": "Мясо и птица",
+    "tags": [
+      "archive",
+      "lang_uk"
+    ],
+    "language": "UK",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "кожа шейки гуся или 2—3 цыплят"
+      },
+      {
+        "name": "просеянная мука",
+        "amount": 1.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "натёртый на тёрке лук",
+        "amount": 4,
+        "unit": "ст. ложки"
+      },
+      {
+        "name": "смалец",
+        "amount": 0.5,
+        "unit": "стакана"
+      },
+      {
+        "name": "соль",
+        "amount": 1.25,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "чёрный перец",
+        "amount": 0.25,
+        "unit": "ч. ложки"
+      },
+      {
+        "name": "красный перец",
+        "amount": 1,
+        "unit": "ч. ложка"
+      }
+    ],
+    "directions": [
+      "Осторожно снять кожу шейки с птицы.",
+      "Зашить один конец кожи.",
+      "Смешать все продукты и нафаршировать шейку нетуго, зашить другой конец.",
+      "Шейку можно тушить вместе с птицей или сварить в бульоне.",
+      "Перед подачей на стол нарезать кусочками."
+    ],
+    "translatedFrom": "UK",
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-11",
+    "scans": [
+      "/scans/farshirovannaya-sheika-helzl.jpg"
+    ]
+  },
+  {
     "id": "tg-bulon-iz-kuritsy",
     "title": "Бульон из курицы",
     "slug": "bulon-iz-kuritsy",
