@@ -1,5 +1,76 @@
 [
   {
+    "id": "tg-nastoika-erofeich",
+    "title": "Настойка «Ерофеич»",
+    "slug": "nastoika-erofeich",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Классический (орловский) вариант"
+      },
+      {
+        "name": "водка",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "мята",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "анис",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "тёртый мускатный орех",
+        "amount": 25,
+        "unit": "г"
+      },
+      {
+        "name": "Южный вариант"
+      },
+      {
+        "name": "водка",
+        "amount": 1,
+        "unit": "л"
+      },
+      {
+        "name": "мята",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "анис",
+        "amount": 50,
+        "unit": "г"
+      },
+      {
+        "name": "апельсиновая или мандариновая цедры",
+        "amount": 50,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Смешать водку, мяту, анис, мускатный орех или цедру.",
+      "Поставить на 10-12 дней в тёмное прохладное помещение, потом процедить"
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-11",
+    "scans": [
+      "/scans/nastoika-erofeich.jpg"
+    ]
+  },
+  {
     "id": "tg-nastoika-orehovaya",
     "title": "Настойка ореховая",
     "slug": "nastoika-orehovaya",
