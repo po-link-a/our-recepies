@@ -1,5 +1,49 @@
 [
   {
+    "id": "tg-nalivka-iz-klubniki-maliny",
+    "title": "Наливка из клубники, малины",
+    "slug": "nalivka-iz-klubniki-maliny",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_uk"
+    ],
+    "language": "UK",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "ягоды (клубника, малина) на 3-литровую бутыль",
+        "amount": 2.5,
+        "unit": "кг,"
+      },
+      {
+        "name": "на 10-литровую",
+        "amount": 7,
+        "unit": "кг"
+      },
+      {
+        "name": "сахар на 3-литровую бутыль",
+        "amount": 800,
+        "unit": "г"
+      },
+      {
+        "name": "на 10-литровую —2,5 кг"
+      }
+    ],
+    "directions": [
+      "Наливки готовят обязательно под водяным затвором. Процесс брожения длится 12—50 дней и зависит от вида фруктов или ягод и температуры воздуха. Наилучшая — 22—27 градусов.",
+      "Ягоды засыпают в бутыль. Завязывают марлей и оставляют на 2—4 дня. Затем устанавливают водяной затвор, ставят в тёмное место и держат 12—20 дней. Наливку фильтруют и разливают по бутылкам."
+    ],
+    "translatedFrom": "UK",
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-12",
+    "scans": [
+      "/scans/nalivka-iz-klubniki-maliny.jpg"
+    ]
+  },
+  {
     "id": "tg-perebrodivshii-sok-iz-chernoi-i-krasnoi-smorodiny-i-vinograd",
     "title": "Перебродивший сок из чёрной и красной смородины и винограда (типа полусухого вина)",
     "slug": "perebrodivshii-sok-iz-chernoi-i-krasnoi-smorodiny-i-vinograd",
