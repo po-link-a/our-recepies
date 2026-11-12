@@ -1,5 +1,33 @@
 [
   {
+    "id": "tg-perebrodivshii-sok-iz-chernoi-i-krasnoi-smorodiny-i-vinograd",
+    "title": "Перебродивший сок из чёрной и красной смородины и винограда (типа полусухого вина)",
+    "slug": "perebrodivshii-sok-iz-chernoi-i-krasnoi-smorodiny-i-vinograd",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_uk"
+    ],
+    "language": "UK",
+    "sourceNote": "Из семейного архива",
+    "ingredients": [
+      {
+        "name": "Ягоды чёрной, красной смородины или винограда"
+      }
+    ],
+    "directions": [
+      "Ягоды размять, полученную массу поместить в бутыли ( в 3-литровую — 2 кг, в 10-литровую — 8 кг). Накрыть марлей и оставить на 2—4 дня. Когда мезга поднимется, сок слить в чистую бутыль и под водяным затвором оставить добродить на 12—20 дней. Потом сок через сифонную трубку слить и поставить на 1,5—2 месяца в холодное место. При холодном хранении из него выпадают виннокаменная кислота и осадок. Чистый и осветлённый сок разлить в бутылки."
+    ],
+    "translatedFrom": "UK",
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-12",
+    "scans": [
+      "/scans/perebrodivshii-sok-iz-chernoi-i-krasnoi-smorodiny-i-vinograd.jpg"
+    ]
+  },
+  {
     "id": "tg-perebrodivshii-slivovyi-sok",
     "title": "Перебродивший сливовый сок",
     "slug": "perebrodivshii-slivovyi-sok",
