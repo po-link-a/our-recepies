@@ -1,5 +1,40 @@
 [
   {
+    "id": "tg-perebrodivshii-slivovyi-sok",
+    "title": "Перебродивший сливовый сок",
+    "slug": "perebrodivshii-slivovyi-sok",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_uk"
+    ],
+    "language": "UK",
+    "sourceNote": "Из семейного архива",
+    "cookTimeMinutes": 64800,
+    "ingredients": [
+      {
+        "name": "сливы"
+      },
+      {
+        "name": "сахар",
+        "amount": 150,
+        "unit": "г на 1 кг слив"
+      }
+    ],
+    "directions": [
+      "Плоды разрезать на половинки и удалить косточки. Поместить в бутыль, добавив сахар.",
+      "Затем бутыль закрыть водяным затвором и поставить на 35—45 дней в тёплое место, пока не прекратится брожение. Полученный сок разлить в бутылки и закупорить."
+    ],
+    "translatedFrom": "UK",
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-12",
+    "scans": [
+      "/scans/perebrodivshii-slivovyi-sok.jpg"
+    ]
+  },
+  {
     "id": "tg-perebrodivshii-yablochnyi-sok",
     "title": "Перебродивший яблочный сок",
     "slug": "perebrodivshii-yablochnyi-sok",
