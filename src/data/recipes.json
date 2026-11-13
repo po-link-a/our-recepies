@@ -1,5 +1,50 @@
 [
   {
+    "id": "tg-kakao-s-morozhennym",
+    "title": "Какао с мороженным",
+    "slug": "kakao-s-morozhennym",
+    "category": "desserts",
+    "categoryName": "Сладкое и десерты",
+    "tags": [
+      "archive",
+      "lang_ru"
+    ],
+    "language": "RU",
+    "sourceNote": "Из семейного архива",
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "какао порошок",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "молоко",
+        "amount": 1,
+        "unit": "стакан"
+      },
+      {
+        "name": "сахар",
+        "amount": 1,
+        "unit": "ч. ложка"
+      },
+      {
+        "name": "мороженое",
+        "amount": 50,
+        "unit": "г"
+      }
+    ],
+    "directions": [
+      "Сварить какао с молоком, охладить. Разлить по стаканам. В каждый стакан положить сливочное мороженое и залить какао."
+    ],
+    "isArchive": true,
+    "likes": 0,
+    "createdAt": "2026-11-13",
+    "scans": [
+      "/scans/kakao-s-morozhennym.jpg"
+    ]
+  },
+  {
     "id": "tg-goryashchie-persiki-s-vanilnym-morozhenym",
     "title": "Горящие персики с ванильным мороженым",
     "slug": "goryashchie-persiki-s-vanilnym-morozhenym",
